@@ -6,8 +6,9 @@ import (
 	"admin-app/watchlist/business"
 	"admin-app/watchlist/commons/constants"
 	"admin-app/watchlist/models"
+
 	genericConstants "omnenest-backend/src/constants"
-	genericModel "omnenest-backend/src/models"
+	genericModels "omnenest-backend/src/models"
 	"omnenest-backend/src/utils/logger"
 	"omnenest-backend/src/utils/responseUtils"
 	"omnenest-backend/src/utils/tracer"
@@ -18,17 +19,17 @@ import (
 	"go.uber.org/zap"
 )
 
-type PlaylistController struct {
-	service *business.CreateUserPlaylistService
+type PlaylistHandler struct {
+	service *business.CreateSongPlaylistService
 }
 
-func NewPlaylistController(service *business.CreateUserPlaylistService) *PlaylistController {
-	return &PlaylistController{
+func NewPlaylistHandler(service *business.CreateSongPlaylistService) *PlaylistHandler {
+	return &PlaylistHandler{
 		service: service,
 	}
 }
 
-func (controller *PlaylistController) HandleCreatePlaylist(ctx *gin.Context) {
+func (h *PlaylistHandler) HandleCreatePlaylist(ctx *gin.Context) {
 	spanCtx, span := tracer.AddToSpan(ctx.Request.Context(), "HandleCreatePlaylist")
 	defer func() {
 		if span != nil {
@@ -38,58 +39,60 @@ func (controller *PlaylistController) HandleCreatePlaylist(ctx *gin.Context) {
 
 	log := logger.GetLogger(ctx)
 
-	var createRequest models.BFFPlaylistRequest
-	if err := ctx.ShouldBindJSON(&createRequest); err != nil {
-		var errorMsg genericModel.ErrorMessage
+	var req models.BFFPlaylistRequest
+	if err := ctx.ShouldBindJSON(&req); err != nil {
+		var errorMsg genericModels.ErrorMessage
 		if unmarshalErr, ok := err.(*json.UnmarshalTypeError); ok {
-			errorMsg = genericModel.ErrorMessage{
+			errorMsg = genericModels.ErrorMessage{
 				Key:          unmarshalErr.Field,
 				ErrorMessage: genericConstants.JsonBindingFailedError,
 			}
 		} else {
-			errorMsg = genericModel.ErrorMessage{
+			errorMsg = genericModels.ErrorMessage{
 				Key:          constants.Name,
 				ErrorMessage: genericConstants.JsonBindingFailedError,
 			}
 		}
-		log.With(zap.Error(err)).Error(err.Error())
-		responseUtils.SendBadRequest(ctx, []genericModel.ErrorMessage{errorMsg})
+		log.With(zap.Error(err)).Error("JSON binding error")
+		responseUtils.SendBadRequest(ctx, []genericModels.ErrorMessage{errorMsg})
 		return
 	}
 
-	ctx.Set(genericConstants.RequestBody, createRequest)
+	ctx.Set(genericConstants.RequestBody, req)
 
-	if err := validations.GetBFFValidator(spanCtx).Struct(createRequest); err != nil {
-		validationErrors, validationErrorsStr := validations.FormatValidationErrors(spanCtx, err.(validator.ValidationErrors))
-		log.With(zap.Error(err)).Error(validationErrorsStr)
+	if err := validations.GetBFFValidator(spanCtx).Struct(req); err != nil {
+		validationErrors, validationErrMsg := validations.FormatValidationErrors(spanCtx, err.(validator.ValidationErrors))
+		log.With(zap.Error(err)).Error(validationErrMsg)
 		responseUtils.SendBadRequest(ctx, validationErrors)
 		return
 	}
 
-	response, err := controller.service.CreateUserPlaylist(ctx, spanCtx, createRequest)
+	playlistID, err := h.service.CreatePlaylist(ctx, spanCtx, req)
 	if err != nil {
-		log.With(zap.Error(err)).Error(err.Error())
-		if err.Error() == constants.DuplicatePlaylistError {
-			responseUtils.SendBadRequest(ctx, []genericModel.ErrorMessage{
+		log.With(zap.Error(err)).Error("Service failed to create playlist")
+		switch err.Error() {
+		case constants.DuplicatePlaylistError:
+			responseUtils.SendBadRequest(ctx, []genericModels.ErrorMessage{
 				{Key: constants.Name, ErrorMessage: constants.DuplicatePlaylistError},
 			})
 			return
-		}
-		if err.Error() == constants.InvalidSongIDsError {
-			responseUtils.SendBadRequest(ctx, []genericModel.ErrorMessage{
-				{Key: constants.Song_ids, ErrorMessage: constants.InvalidSongIDsError},
-			})
-			return
-		}
-		if err.Error() == constants.NoUserIdFoundError {
-			responseUtils.SendBadRequest(ctx, []genericModel.ErrorMessage{
+		case constants.InvalidUserID:
+			responseUtils.SendBadRequest(ctx, []genericModels.ErrorMessage{
 				{Key: constants.User_id, ErrorMessage: constants.InvalidUserID},
 			})
 			return
+		default:
+			responseUtils.SendInternalServerError(ctx, err)
+			return
 		}
-		responseUtils.SendInternalServerError(ctx, err)
-		return
 	}
 
-	responseUtils.SendStatusOK(ctx, genericConstants.BFFResponseSuccessMessage, response)
+	resp := models.BFFPlaylistResponse{
+		SuccessMessage: constants.SuccessfullyCreatedPlaylist,
+	}
+	respData := map[string]interface{}{
+		"playlist_id": playlistID,
+		"message":     resp.SuccessMessage,
+	}
+	responseUtils.SendStatusOK(ctx, genericConstants.BFFResponseSuccessMessage, respData)
 }

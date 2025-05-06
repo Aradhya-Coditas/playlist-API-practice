@@ -2,87 +2,75 @@ package business
 
 import (
 	"context"
+	"errors"
 	"fmt"
-	"time"
+	"strings"
 
 	"admin-app/watchlist/commons/constants"
 	"admin-app/watchlist/models"
 	"admin-app/watchlist/repositories"
+
 	genericConstants "omnenest-backend/src/constants"
-	"omnenest-backend/src/utils/logger"
+	genericModels "omnenest-backend/src/models"
 	"omnenest-backend/src/utils/postgres"
 	"omnenest-backend/src/utils/tracer"
 
-	"go.uber.org/zap"
+	"gorm.io/gorm"
 )
 
-type CreateUserPlaylistService struct {
-	createUserPlaylistRepository repositories.CreateUserPlaylistRepository
+type CreateSongPlaylistService struct {
+	repo repositories.CreateUserPlaylistRepository
 }
 
-func NewCreateUserPlaylistService(createPlaylistRepository repositories.CreateUserPlaylistRepository) *CreateUserPlaylistService {
-	if createPlaylistRepository == nil {
-		panic(constants.CreatePlaylistRepositoryNilError)
-	}
-	return &CreateUserPlaylistService{
-		createUserPlaylistRepository: createPlaylistRepository,
+func NewCreateSongPlaylistService(repo repositories.CreateUserPlaylistRepository) *CreateSongPlaylistService {
+	return &CreateSongPlaylistService{
+		repo: repo,
 	}
 }
 
-func (service *CreateUserPlaylistService) CreateUserPlaylist(ctx context.Context, spanCtx context.Context, request models.BFFPlaylistRequest) (models.BFFPlaylistResponse, error) {
-	log := logger.GetLogger(ctx)
-	startTime := time.Now()
-
-	childSpanCtx, span := tracer.AddToSpan(spanCtx, "CreatePlaylist")
-	if span == nil {
-		childSpanCtx = spanCtx
-	}
+func (s *CreateSongPlaylistService) CreatePlaylist(ctx context.Context, spanCtx context.Context, req models.BFFPlaylistRequest) (*int, error) {
+	childCtx, span := tracer.AddToSpan(spanCtx, "CreatePlaylistService")
 	defer func() {
 		if span != nil {
 			span.End()
 		}
 	}()
 
-	postgresClient := postgres.GetPostGresClient().GormDb
-	if postgresClient == nil {
-		log.Error(genericConstants.DatabaseInstanceNilError)
-		return models.BFFPlaylistResponse{}, fmt.Errorf(genericConstants.DatabaseInstanceNilError)
+	db := postgres.GetPostGresClient().GormDb
+	if db == nil {
+		return nil, fmt.Errorf(genericConstants.DatabaseInstanceNilError)
 	}
 
-	playlistData := map[string]interface{}{
-		constants.Name:        request.Name,
-		constants.Description: request.Description,
-		constants.User_id:     request.UserID,
+	playlist := genericModels.Playlist{
+		UserID:      req.UserID,
+		Name:        req.Name,
+		Description: req.Description,
 	}
 
-	var playlistSongs []map[string]interface{}
-	for _, songID := range request.SongIDs {
-		playlistSong := map[string]interface{}{
-			constants.Song_id: songID,
-		}
-		playlistSongs = append(playlistSongs, playlistSong)
-	}
-
-	songCondition := map[string]interface{}{
-		constants.ID_IN: request.SongIDs,
-	}
-
-	condition := map[string]interface{}{
-		constants.User_id:       request.UserID,
-		constants.SongCondition: songCondition,
-		constants.PlaylistData:  playlistData,
-		constants.PlaylistSongs: playlistSongs,
-	}
-
-	response, err := service.createUserPlaylistRepository.CreatePlaylistWithSongs(childSpanCtx, postgresClient, condition)
+	playlistID, err := s.repo.CreatePlaylist(childCtx, db, playlist)
 	if err != nil {
-		log.Error(constants.PlaylistCreationError, zap.Error(err), zap.Any("request", request))
-		return models.BFFPlaylistResponse{}, err
+		if strings.Contains(err.Error(), constants.DuplicatePlaylistError) {
+			return nil, fmt.Errorf(constants.DuplicatePlaylistError)
+		}
+		if errors.Is(err, gorm.ErrRecordNotFound) {
+			return nil, gorm.ErrRecordNotFound
+		}
+		return nil, err
 	}
 
-	log.Info(constants.PlaylistAPILog,
-		zap.String("message", constants.SuccessfullyCreatedPlaylist),
-		zap.Int64("latency", time.Since(startTime).Milliseconds()))
+	if len(req.SongIDs) > 0 {
+		var playlistSongs []genericModels.PlaylistSongs
+		for _, songID := range req.SongIDs {
+			playlistSongs = append(playlistSongs, genericModels.PlaylistSongs{
+				PlaylistID: *playlistID,
+				SongID:     songID,
+			})
+		}
 
-	return response, nil
+		if err := s.repo.CreatePlaylistSongs(childCtx, db, playlistSongs); err != nil {
+			return nil, err
+		}
+	}
+
+	return playlistID, nil
 }
