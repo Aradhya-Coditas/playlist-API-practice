@@ -1,0 +1,5641 @@
+validPwd:
+  mockResponse:
+    stat: Ok
+    tdata: OneTimePassword
+    Result: ''
+  encryptionNeeded: false
+SendOnMailOTP:
+  mockResponse:
+    stat: Ok
+    Result: Y
+  encryptionNeeded: false
+ValidOTP :
+  mockResponse:
+    stat: Ok
+    Message: null
+    loginMessage: RISK DISCLOSURES ON DERIVATIVES \\n\\n  1. 9 out of 10 individual traders in equity Futures and Options Segment, incurred net losses.\\n   2. On an average, loss makers registered net trading loss close to Rs. 50,000.\\n   3. Over and above the net trading losses incurred, loss makers expended an additional 28% of net trading losses as transaction costs.\\n   4. Those making net trading profits, incurred between 15% to 50% of such profits as transaction cost.\\n\\n Source:\\n\\n 1. SEBI study dated January 25, 2023 on Analysis of Profit and Loss of Individual Traders dealing in equity Futures and Options (F&O) Segment, wherein Aggregate Level findings are based on annual Profit/Loss incurred by individual traders in equity F&O during FY 2021-22\\n\\n\\n \\n https://www.sebi.gov.in/reports-and-statistics/research/jan-2023/study-analysis-of-profit-and-loss-of-individual-traders-dealing-in-equity-fando-segment_67525.html
+    sUserToken: |
+      -----BEGIN PUBLIC KEY-----
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi0JMV7C3F3lPnqyxrwkU
+      w2PxTmTn1eyMfTWXtEbbsl/I4ceMHCOP6WqiPflt7feu8GbMJcjFd6AdF6A7QXfp
+      5AHj1v0/YZ2RR5wSjZ//11UHAXfsxIupwKDEguubR9b7kIoQXtJDmWMg7dc8RT9P
+      s5nyRWReei5hL6MvAH24xQtcMJvg6k61GvsIU0M7eAfjXJZz/tE/oikRo5vEBhkA
+      AKBfTitCHOcQFaGICC3hpp0x9YYfHujjw9Y5d+xm4iS9pYWM3diW2ruxoQfkn7CE
+      REKcMczz1SHk0AJHngU9rjn8lQWM/ei2gCKAMEn5LzqytxR64Gpj8jeRckiLRZRF
+      ZwIDAQAB
+      -----END PUBLIC KEY-----
+    UserSessionId: '6522998973'
+  encryptionNeeded: True
+setpassword:
+  mockResponse:
+    stat: Ok
+    message: Success
+  encryptionNeeded: false
+ForgotPasswordOTP:
+  mockResponse: 
+    stat: Ok
+    msg: SUCCESS 
+  encryptionNeeded: false
+AuthenticateOTP:
+  mockResponse:
+    stat: Ok
+    msg: SUCCESS
+  encryptionNeeded: false
+ForgotLoginId:
+  mockResponse:
+    stat: Ok
+    msg: SUCCESS
+  encryptionNeeded: false
+SortMarketwatchScrips:
+  mockResponse:
+    stat: Ok
+    Result: success
+  encryptionNeeded: false
+broker/mw/list:
+  mockResponse:
+    stat: Ok
+    values:
+    - sGroupLeg3: nse_fo|41428
+      sMwScripList: MW
+    - sGroupLeg3: nse_dm|1420,nse_dm|1130
+      sMwScripList: MW1
+  encryptionNeeded: false
+AddMultiScripsToMW:
+  mockResponse:
+    stat: Ok
+    Result: success
+  encryptionNeeded: false
+RenameMW:
+  mockResponse:
+    stat: Ok
+    Result: success
+  encryptionNeeded: false
+DeleteMW:
+  mockResponse:
+    stat: Ok
+    Result: Selected market watch deleted successfully
+  encryptionNeeded: false
+DeleteMultiMWScrips:
+  mockResponse:
+    stat: Ok
+    Result: success
+  encryptionNeeded: false
+MWList:
+  mockResponse:
+    stat: Ok
+    values:
+          - NSE
+          - MW1
+          - '123'
+          - New2
+          - Giri123456
+          - RUSH
+    MaxMWCount: 30
+    logindefaultmw: FD
+  encryptionNeeded: false
+PositionBook:
+  mockResponse:
+    stat: Ok
+    Emsg:
+    data:
+      - Instname: OPTCUR
+        Expdate: 27 Dec, 2023
+        CFsellqty: '10'
+        Opttype: PE
+        Token: '12310'
+        CFSellavgprc: '0.1850'
+        sSqrflg: Y
+        unrealisedprofitloss: '75.0000'
+        s_NetQtyPosConv: Y
+        FillbuyamtCF: '0.0000'
+        Sqty: '0'
+        Sellavgprc: '0.0000'
+        actid: NAYAN-OTPUAT
+        netbuyamt: '0.0000'
+        Pcode: NRML
+        Bqty: '0'
+        NetBuyavgprc: '0.0000'
+        Exchange: CDS
+        CFActualSAP: '0.0000'
+        companyname: ''
+        netbuyqty: '0'
+        realisedprofitloss: '0.0000'
+        Fillsellamt: '0.0000'
+        Netqty: "-10"
+        Symbol: USDINR
+        LTP: '0.1775'
+        BLQty: 1
+        Fillbuyamt: '0.0000'
+        Fillsellqty: '0'
+        Tsym: USDINR23DEC83PE
+        CFbuyqty: '0'
+        Buyavgprc: '0.0000'
+        netSellamt: '1,850.0000'
+        MtoM: '75.0000'
+        FillsellamtCF: '1,850.0000'
+        PriceDenomenator: '1'
+        netsellqty: '10'
+        PriceNumerator: '1'
+        CFActualBAP: '0.0000'
+        posflag: 'true'
+        Stikeprc: '83.0'
+        BEP: '0.1850'
+        Series: XX
+        GeneralDenomenator: '1'
+        Type: NET1
+        Netamt: '1,850.0000'
+        UniqueKey: USDINR23DEC83PE
+        overallMtoM: "-1,775.0000"
+        NetSellavgprc: '0.1850'
+        CFBuyavgprc: '0.0000'
+        Fillbuyqty: '0'
+        GeneralNumerator: '1'
+        Exchangeseg: cde_fo
+        discQty: '10'
+      - Instname: FUTSTK
+        Expdate: 28 Dec, 2023
+        CFsellqty: '0'
+        Opttype: XX
+        Token: '63340'
+        CFSellavgprc: '0.00'
+        sSqrflg: Y
+        unrealisedprofitloss: '14,441.45'
+        s_NetQtyPosConv: Y
+        FillbuyamtCF: '681,188.70'
+        Sqty: '0'
+        Sellavgprc: '0.00'
+        actid: NAYAN-OTPUAT
+        netbuyamt: '681,188.70'
+        Pcode: NRML
+        Bqty: '0'
+        NetBuyavgprc: '1,856.10'
+        Exchange: NFO
+        CFActualSAP: '0.00'
+        companyname: ''
+        netbuyqty: '367'
+        realisedprofitloss: '0.00'
+        Fillsellamt: '0.00'
+        Netqty: '367'
+        Symbol: ASTRAL
+        LTP: '1,895.45'
+        BLQty: 367
+        Fillbuyamt: '0.00'
+        Fillsellqty: '0'
+        Tsym: ASTRAL23DECFUT
+        CFbuyqty: '367'
+        Buyavgprc: '0.00'
+        netSellamt: '0.00'
+        MtoM: '14,441.45'
+        FillsellamtCF: '0.00'
+        PriceDenomenator: '1'
+        netsellqty: '0'
+        PriceNumerator: '1'
+        CFActualBAP: '0.00'
+        posflag: 'true'
+        Stikeprc: '0'
+        BEP: '1,856.10'
+        Series: XX
+        GeneralDenomenator: '1'
+        Type: NET1
+        Netamt: "-681,188.70"
+        UniqueKey: NA
+        overallMtoM: '255,296,265.05'
+        NetSellavgprc: '0.00'
+        CFBuyavgprc: '1,856.10'
+        Fillbuyqty: '0'
+        GeneralNumerator: '1'
+        Exchangeseg: nse_fo
+        discQty: NA
+      - Instname: NA
+        Expdate: NA
+        CFsellqty: '0'
+        Opttype: XX
+        Token: '22'
+        CFSellavgprc: '0.00'
+        sSqrflg: Y
+        unrealisedprofitloss: "-3,229.00"
+        s_NetQtyPosConv: Y
+        FillbuyamtCF: '0.00'
+        Sqty: '0'
+        Sellavgprc: '0.00'
+        actid: NAYAN-OTPUAT
+        netbuyamt: '21,984.00'
+        Pcode: NRML
+        Bqty: '10'
+        NetBuyavgprc: '2,198.40'
+        Exchange: NSE
+        CFActualSAP: '0.00'
+        companyname: ACC LIMITED
+        netbuyqty: '10'
+        realisedprofitloss: '0.00'
+        Fillsellamt: '0.00'
+        Netqty: '10'
+        Symbol: ACC
+        LTP: '1,875.50'
+        BLQty: 1
+        Fillbuyamt: '21,984.00'
+        Fillsellqty: '0'
+        Tsym: ACC-EQ
+        CFbuyqty: '0'
+        Buyavgprc: '2,198.40'
+        netSellamt: '0.00'
+        MtoM: "-3,229.00"
+        FillsellamtCF: '0.00'
+        PriceDenomenator: '1'
+        netsellqty: '0'
+        PriceNumerator: '1'
+        CFActualBAP: '0.00'
+        posflag: 'true'
+        Stikeprc: '0'
+        BEP: '2,198.40'
+        Series: EQ
+        GeneralDenomenator: '1'
+        Type: DAY1
+        Netamt: "-21,984.00"
+        UniqueKey: ACC
+        overallMtoM: "-3,229.00"
+        NetSellavgprc: '0.00'
+        CFBuyavgprc: '0.00'
+        Fillbuyqty: '10'
+        GeneralNumerator: '1'
+        Exchangeseg: nse_cm
+        discQty: '10'
+      - Instname: NA
+        Expdate: NA
+        CFsellqty: '0'
+        Opttype: XX
+        Token: '22'
+        CFSellavgprc: '0.00'
+        sSqrflg: Y
+        unrealisedprofitloss: "-3,229.00"
+        s_NetQtyPosConv: Y
+        FillbuyamtCF: '0.00'
+        Sqty: '0'
+        Sellavgprc: '0.00'
+        actid: NAYAN-OTPUAT
+        netbuyamt: '21,984.00'
+        Pcode: BO
+        Bqty: '10'
+        NetBuyavgprc: '2,198.40'
+        Exchange: NSE
+        CFActualSAP: '0.00'
+        companyname: ACC LIMITED
+        netbuyqty: '10'
+        realisedprofitloss: '0.00'
+        Fillsellamt: '0.00'
+        Netqty: '10'
+        Symbol: ACC
+        LTP: '1,875.50'
+        BLQty: 1
+        Fillbuyamt: '21,984.00'
+        Fillsellqty: '0'
+        Tsym: ACC-EQ
+        CFbuyqty: '0'
+        Buyavgprc: '2,198.40'
+        netSellamt: '0.00'
+        MtoM: "-3,229.00"
+        FillsellamtCF: '0.00'
+        PriceDenomenator: '1'
+        netsellqty: '0'
+        PriceNumerator: '1'
+        CFActualBAP: '0.00'
+        posflag: 'true'
+        Stikeprc: '0'
+        BEP: '2,198.40'
+        Series: EQ
+        GeneralDenomenator: '1'
+        Type: DAY1
+        Netamt: "-21,984.00"
+        UniqueKey: ACC
+        overallMtoM: "-3,229.00"
+        NetSellavgprc: '0.00'
+        CFBuyavgprc: '0.00'
+        Fillbuyqty: '10'
+        GeneralNumerator: '1'
+        Exchangeseg: nse_cm
+        discQty: '10'
+      - realisedprofitloss: '0.00'
+        Fillsellamt: '0.00'
+        Netqty: '10'
+        Symbol: RELIANCE
+        Instname: NA
+        Expdate: NA
+        LTP: '3,173.25'
+        Opttype: XX
+        BLQty: 1
+        Token: '500325'
+        Fillbuyamt: '31,630.00'
+        Fillsellqty: '0'
+        Tsym: RELIANCE
+        sSqrflg: Y
+        unrealisedprofitloss: '102.50'
+        Buyavgprc: '3,163.00'
+        MtoM: '102.50'
+        s_NetQtyPosConv: Y
+        Sqty: '0'
+        Sellavgprc: '0.00'
+        PriceDenomenator: '1'
+        multiplier: 1
+        PriceNumerator: '1'
+        actid: GAURAVI
+        posflag: 'true'
+        Pcode: CO
+        Stikeprc: '0'
+        Bqty: '10'
+        BEP: '3,163.00'
+        Exchange: BSE
+        Series: A
+        GeneralDenomenator: '1'
+        Type: DAY1
+        Netamt: "-31,630.00"
+        UniqueKey: RELIANCE
+        overallMtoM: '102.50'
+        companyname: RELIANCE INDUSTRIES LTD.
+        Fillbuyqty: '10'
+        GeneralNumerator: '1'
+        Exchangeseg: bse_cm
+        discQty: '10'
+      - realisedprofitloss: "-40.00"
+        Fillsellamt: '31,620.00'
+        Netqty: '10'
+        Symbol: RELIANCE
+        Instname: NA
+        Expdate: NA
+        LTP: '3,173.25'
+        Opttype: XX
+        BLQty: 1
+        Token: '500325'
+        Fillbuyamt: '31,660.00'
+        Fillsellqty: '10'
+        Tsym: RELIANCE
+        sSqrflg: Y
+        unrealisedprofitloss: '0.00'
+        Buyavgprc: '3,166.00'
+        MtoM: "-40.00"
+        s_NetQtyPosConv: Y
+        Sqty: '10'
+        Sellavgprc: '3,162.00'
+        PriceDenomenator: '1'
+        multiplier: 1
+        PriceNumerator: '1'
+        actid: GAURAVI
+        posflag: 'true'
+        Pcode: BO
+        Stikeprc: '0'
+        Bqty: '10'
+        BEP: '0.00'
+        Exchange: BSE
+        Series: A
+        GeneralDenomenator: '1'
+        Type: DAY1
+        Netamt: "-40.00"
+        UniqueKey: RELIANCE
+        overallMtoM: "-40.00"
+        companyname: RELIANCE INDUSTRIES LTD.
+        Fillbuyqty: '10'
+        GeneralNumerator: '1'
+        Exchangeseg: bse_cm
+        discQty: '10'
+  encryptionNeeded: false
+SetDefaultMarketWatch:
+  mockResponse:
+    stat: Ok
+    Result: success
+  encryptionNeeded: false
+MarketWatch:
+  mockResponse:
+    stat: Ok
+    values:
+    - BestBuyPrice: "43182.05"
+      BestBuySize: "30"
+      BestSellPrice: "43190.60"
+      BestSellSize: "30"
+      Change: "-127.85"
+      CombinedSymbol: "NA"
+      ExchSeg: "nse_fo"
+      Exchange: "NFO"
+      Expiry: "28 Dec, 2023"
+      Instrument: "FUTIDX"
+      PerChange: "-0.30"
+      Series: "XX"
+      TradSym: "BANKNIFTY23DECFUT"
+      TradeVolume: "18975"
+      UniqueKey: "BANKNIFTY23DECFUT"
+      averageprice: "0"
+      bodlot: 15
+      close: "43316.80"
+      companyname: ""
+      corporateaction: "NA"
+      decimalPrecision: 2
+      defmktproval: "3"
+      discQty: "NA"
+      expdate: "1388241000"
+      high: "43293.20"
+      lasttradedquantity: "15"
+      lasttradedtime: "01/11/2023 10:26:15"
+      low: "43124.85"
+      ltp: "43188.95"
+      maxQty: 999999999
+      minQty: 1
+      mktpro: "1"
+      multiplier: 1
+      noMktPro: "0"
+      open: "43200.05"
+      openinterest: "150060"
+      optiontype: "PE"
+      series: "XX"
+      rmsMarketProtection: ""
+      scripRemarks: "NA"
+      settlementType: "Cash"
+      spotprice: "0.0"
+      strikeprice: "-0.01"
+      symbolname: "BANKNIFTY"
+      tcksize: "5"
+      token: "61627"
+      totalbuyqty: "18510"
+      totalsellqty: "16620"
+    ScripCount: 1
+    indexvalues: []
+  encryptionNeeded: false
+Logout:
+  mockResponse:
+    stat: Ok
+    Check: OK
+  encryptionNeeded: false
+SearchHoldingDetails:
+  mockResponse:
+    stat: Ok
+    ExchSeg: nse_cm
+    TradSym: ADANIENT-EQ
+    ltp: '2291.95'
+    PerChange: '0.00'
+    token: '25'
+    Exchange: NSE
+    BestBuyPrice: '2291.90'
+    BestBuySize: '10'
+    BestSellPrice: '0.00'
+    BestSellSize: '33'
+    TradeVolume: '233130'
+    Change: '45.95'
+    Instrument: ''
+    decimalPrecision: 0
+    multiplier: 1
+    bodlot: 1
+    noMktPro: '0'
+    minQty: 1
+    maxQty: 999999999
+    discQty: '10'
+    mktpro: '1'
+    expdate: NA
+    tcksize: '5'
+    defmktproval: '3'
+    high: '2312.25'
+    low: '2287.55'
+    UniqueKey: ADANIENT
+    CombinedSymbol: NA
+    openinterest: 0
+    symbolname: ADANIENT
+    optiontype: XX
+    strikeprice: '0.00'
+    lasttradedquantity: '5'
+    open: '2299.00'
+    close: 2246
+    spotprice: '0.0'
+    lasttradedtime: 01/11/2023 09:52:09
+    corporateaction: NA
+    averageprice: '2297.55'
+    totalbuyqty: '104392'
+    totalsellqty: '93646'
+    companyname: ADANI ENTERPRISES LIMITED
+    Expiry: NA
+  encryptionNeeded: false
+Holding:
+  mockResponse:
+    stat: Ok
+    HoldingVal:
+      - WCqty: '0'
+        BSEHOldingValue: '510'
+        hsflag: Y
+        Series1: A
+        HUqty: '00'
+        YSXHOldingValue: '0.00'
+        Ttrind: N
+        DaysMTM: '0'
+        csflag: Y
+        WHqty: '0'
+        Pcode: CNC
+        Price: '30.00'
+        epiBtstHoldingQty: '0'
+        Bsetsym: 360ONE
+        Exch5: '0'
+        MCXHOldingValue: '0.00'
+        Holdqty: '10'
+        Exch1: nse_cm
+        Exch2: bse_cm
+        Exch3: '0'
+        LTysx: '0.00'
+        Haircut: '0.00'
+        Scripcode: '542772'
+        LTPValuation: '0'
+        NSEHOldingValue: '500.00'
+        Ysxtsym: '0'
+        Ltp: '50'
+        Coltype: "--"
+        Btst: '0'
+        LTmcxsxcm: '0.00'
+        Usedqty: '0'
+        epiHoldingQty: '0'
+        Token5: '0'
+        Nsetsym: 360ONE-EQ
+        actualBuyPrice: '30.00'
+        PrevClosBSE: '697.25'
+        PrevClosNSE: '0'
+        PrevClosMCXSXCM: '0'
+        CUqty: '0'
+        Token2: '542772'
+        Token1: '13061'
+        Token4: '0'
+        Token3: '0'
+        SellableQty: '10'
+        Mcxsxcmsym: '0'
+        LTnse: '50'
+        t1actualBuyPrice: '0.00'
+        Series: EQ
+        Colqty: '0'
+        ExchSeg5:
+        ExchSeg2: BSE
+        ExchSeg1: NSE
+        LTbse: '51'
+        ExchSeg4:
+        ExchSeg3:
+        isin: INE466L01038
+        Tprod: NA
+        symbolName: 360ONE
+      - WCqty: '0'
+        BSEHOldingValue: '2100.00'
+        hsflag: Y
+        Series1: A
+        HUqty: '00'
+        YSXHOldingValue: '0.00'
+        Ttrind: N
+        DaysMTM: '0'
+        csflag: Y
+        WHqty: '0'
+        Pcode: CNC
+        Price: '80.00'
+        epiBtstHoldingQty: '0'
+        Bsetsym: INFY
+        Exch5: '0'
+        MCXHOldingValue: '0.00'
+        Holdqty: '20'
+        Exch1: nse_cm
+        Exch2: bse_cm
+        Exch3: '0'
+        LTysx: '0.00'
+        Haircut: '0.00'
+        Scripcode: '500209'
+        LTPValuation: '0'
+        NSEHOldingValue: '2000.00'
+        Ysxtsym: '0'
+        Ltp: '100.00'
+        Coltype: "--"
+        Btst: '0'
+        LTmcxsxcm: '0.00'
+        Usedqty: '0'
+        epiHoldingQty: '0'
+        Token5: '0'
+        Nsetsym: INFY-EQ
+        actualBuyPrice: '80.00'
+        PrevClosBSE: '82.05'
+        PrevClosNSE: '81.99'
+        PrevClosMCXSXCM: '0'
+        CUqty: '0'
+        Token2: '500209'
+        Token1: '1594'
+        Token4: '0'
+        Token3: '0'
+        SellableQty: '20'
+        Mcxsxcmsym: '0'
+        LTnse: '100.00'
+        t1actualBuyPrice: '0.00'
+        Series: EQ
+        Colqty: '0'
+        ExchSeg5:
+        ExchSeg2: BSE
+        ExchSeg1: NSE
+        LTbse: '101.00'
+        ExchSeg4:
+        ExchSeg3:
+        isin: INE009A01021
+        Tprod: NA
+        symbolName: INFY
+      - WCqty: '0'
+        BSEHOldingValue: '1005.00'
+        hsflag: Y
+        Series1: A
+        HUqty: '00'
+        YSXHOldingValue: '0.00'
+        Ttrind: N
+        DaysMTM: '0'
+        csflag: Y
+        WHqty: '0'
+        Pcode: CNC
+        Price: '150.00'
+        epiBtstHoldingQty: '0'
+        Bsetsym: SBIN
+        Exch5: '0'
+        MCXHOldingValue: '0.00'
+        Holdqty: '5'
+        Exch1: nse_cm
+        Exch2: bse_cm
+        Exch3: '0'
+        LTysx: '0.00'
+        Haircut: '0.00'
+        Scripcode: '500112'
+        LTPValuation: '0'
+        NSEHOldingValue: '1000.00'
+        Ysxtsym: '0'
+        Ltp: '200'
+        Coltype: "--"
+        Btst: '0'
+        LTmcxsxcm: '0.00'
+        Usedqty: '0'
+        epiHoldingQty: '0'
+        Token5: '0'
+        Nsetsym: SBIN-EQ
+        actualBuyPrice: '150.00'
+        PrevClosBSE: '148.67'
+        PrevClosNSE: '147.11'
+        PrevClosMCXSXCM: '0'
+        CUqty: '0'
+        Token2: '500112'
+        Token1: '3045'
+        Token4: '0'
+        Token3: '0'
+        SellableQty: '5'
+        Mcxsxcmsym: '0'
+        LTnse: '200.00'
+        t1actualBuyPrice: '0.00'
+        Series: EQ
+        Colqty: '0'
+        ExchSeg5:
+        ExchSeg2: BSE
+        ExchSeg1: NSE
+        LTbse: '201.00'
+        ExchSeg4:
+        ExchSeg3:
+        isin: INE062A01020
+        Tprod: NA
+        symbolName: SBI
+      - WCqty: '25'
+        BSEHOldingValue: '0.00'
+        hsflag: Y
+        Series1: A
+        HUqty: '80'
+        YSXHOldingValue: '0.00'
+        Ttrind: N
+        DaysMTM: '0'
+        csflag: Y
+        WHqty: '30'
+        Pcode: CNC
+        Price: '100.00'
+        epiBtstHoldingQty: '0'
+        Bsetsym: SBIN
+        Exch5: '0'
+        MCXHOldingValue: '0.00'
+        Holdqty: '100'
+        Exch1: nse_cm
+        Exch2: bse_cm
+        Exch3: '0'
+        LTysx: '0.00'
+        Haircut: '2000.00'
+        Scripcode: '500112'
+        LTPValuation: '0'
+        NSEHOldingValue: '0.00'
+        Ysxtsym: '0'
+        Ltp: '566.80'
+        Coltype: LT
+        Btst: '0'
+        LTmcxsxcm: '0.00'
+        Usedqty: '210'
+        epiHoldingQty: '0'
+        Token5: '0'
+        Nsetsym: SBIN-EQ
+        actualBuyPrice: '100.00'
+        PrevClosBSE: '99.24'
+        PrevClosNSE: '99.99'
+        PrevClosMCXSXCM: '0'
+        CUqty: '70'
+        Token2: '500112'
+        Token1: '3044'
+        Token4: '0'
+        Token3: '0'
+        SellableQty: '0'
+        Mcxsxcmsym: '0'
+        LTnse: '566.75'
+        t1actualBuyPrice: '0.00'
+        Series: EQ
+        Colqty: '80'
+        ExchSeg5: 
+        ExchSeg2: BSE
+        ExchSeg1: NSE
+        LTbse: '566.80'
+        ExchSeg4: 
+        ExchSeg3: 
+        isin: INE062A01020
+        Tprod: NRML
+        symbolName: SBI
+    clientid: PSHUBHAM-OTPUAT
+    Totalval:
+      TotalMCXHoldingValue: '0.00'
+      TotalNSEHoldingValue: '1066672.75'
+      TotalYSXHoldingValue: '0.00'
+      TotalBSEHoldingValue: '1065234.90'
+  encryptionNeeded: false
+DefaultLogin:
+  mockResponse:
+    stat: Ok
+    brkname: OTP-UAT
+    email: john@example.com
+    GtcGtdNLMFlag: enabled
+    sAccountId: MOBILE-OTPUAT
+    accountName: John Doe
+    exarr:
+    - NFO
+    - NSE
+    orarr:
+    - L
+    prarr:
+    - BO
+    - CO
+    - CNC
+    - MIS
+    - NRML
+    exchDeatil:
+      DERIVATIVE:
+      - exchseg: bse_fo
+        product:
+        - BO
+        - CO
+        - MIS
+        - MTF
+        - NRML
+        exch: BFO
+      - exchseg: nse_fo
+        product:
+        - BO
+        - CO
+        - MIS
+        - MTF
+        - NRML
+        exch: NFO
+      CURRENCY:
+      - exchseg: bcs_fo
+        product:
+        - BO
+        - CO
+        - MIS
+        - MTF
+        - NRML
+        exch: BCD
+      - exchseg: cde_fo
+        product:
+        - BO
+        - CO
+        - MIS
+        - MTF
+        - NRML
+        exch: CDS
+      IPO:
+      - exchseg: nse_ipo
+        product: []
+        exch: NSE IPO
+      COMMODITY:
+      - exchseg: nse_com
+        product:
+        - MIS
+        - MTF
+        - NRML
+        exch: NCO
+      - exchseg: bse_com
+        product:
+        - MIS
+        - MTF
+        - NRML
+        exch: BCO
+      - exchseg: mcx_fo
+        product:
+        - BO
+        - CO
+        - MIS
+        - MTF
+        - NRML
+        exch: MCX
+      - exchseg: ncx_fo
+        product:
+        - BO
+        - CO
+        - MIS
+        - MTF
+        - NRML
+        exch: NCDEX
+      EQUITY:
+      - exchseg: bse_cm
+        product:
+        - BO
+        - CNC
+        - CO
+        - MIS
+        - MTF
+        - NRML
+        exch: BSE
+      - exchseg: nse_cm
+        product:
+        - BO
+        - CNC
+        - CO
+        - MIS
+        - MTF
+        - NRML
+        exch: NSE
+  encryptionNeeded: false
+CancelOrder:
+  mockResponse:
+    stat: Ok
+    Result: ''
+    orderCriteria: 'MANUAL'
+    customText: 'not required'
+  encryptionNeeded: false
+TradeBook:
+  mockResponse:
+  - stat: Ok
+    Exchange: NSE
+    Tsym: HDFCBANK-EQ
+    Filledqty: 1
+    AvgPrice: '1600.00'
+    Pcode: NRML
+    Nstordno: '231027000000051'
+    Trantype: S
+    FillId: '4'
+    Symbol: '1333'
+    Fillqty: 1
+    Price: '1600.00'
+    Exchseg: nse_cm
+    Custofrm: C
+    Prctype: L
+    Ordduration: DAY
+    NOReqID: '1'
+    FillLeg: 1
+    Filldate: 27-Oct-2023
+    Filltime: '17:33:02'
+    Qty: 1
+    ExchordID: '231027000000004'
+    Time: 27/10/2023 17:33:02
+    Exchtime: 27-Oct-2023 17:33:02
+    posflag: 'true'
+    Minqty: 0
+    BrokerClient: '--'
+    user: CODITAS
+    accountId: PROTEST3-OTPUAT
+    ReportType: fill
+    PriceNumerator: '1'
+    GeneralNumerator: '1'
+    PriceDenomenator: '1'
+    GeneralDenomenator: '1'
+    bqty: 1
+    companyname: HDFC BANK LTD
+    series: EQ
+    ordergenerationtype: '--'
+    remarks: '--'
+    symbolname: HDFCBANK
+    iSinceBOE: 1698408182
+    usecs: '892891'
+    OrderUserMessage: ''
+    UniqueKey: HDFCBANK
+  - stat: Ok
+    Exchange: NSE
+    Tsym: HDFCBANK-EQ
+    Filledqty: 1
+    AvgPrice: '1600.00'
+    Pcode: NRML
+    Nstordno: '231027000000050'
+    Trantype: S
+    FillId: '3'
+    Symbol: '1333'
+    Fillqty: 1
+    Price: '1600.00'
+    Exchseg: nse_cm
+    Custofrm: C
+    Prctype: L
+    Ordduration: DAY
+    NOReqID: '1'
+    FillLeg: 1
+    Filldate: 27-Oct-2023
+    Filltime: '17:32:19'
+    Qty: 1
+    ExchordID: '231027000000003'
+    Time: 27/10/2023 17:32:19
+    Exchtime: 27-Oct-2023 17:32:19
+    posflag: 'true'
+    Minqty: 0
+    BrokerClient: '--'
+    user: CODITAS
+    accountId: PROTEST3-OTPUAT
+    ReportType: fill
+    PriceNumerator: '1'
+    GeneralNumerator: '1'
+    PriceDenomenator: '1'
+    GeneralDenomenator: '1'
+    bqty: 1
+    companyname: HDFC BANK LTD
+    series: EQ
+    ordergenerationtype: '--'
+    remarks: '--'
+    symbolname: HDFCBANK
+    iSinceBOE: 1698408139
+    usecs: '830013'
+    OrderUserMessage: ''
+    UniqueKey: HDFCBANK
+  encryptionNeeded: false
+checkCrktPriceRange:
+  mockResponse:
+    Stat: Ok
+    Resp: OK
+  encryptionNeeded: false
+PlaceOrder:
+  mockResponse:
+    stat: Ok
+    NOrdNo: '160808000000027'
+    orderCriteria: 'MANUAL'
+    customText: 'not required'
+  encryptionNeeded: false
+user/spread/place:
+  mockResponse:
+    stat: Ok
+    nestOrderNumber: '160808000000028'
+  encryptionNeeded: false
+user/mf/placeorder:
+  mockResponse:
+    stat: Ok
+    pgUrl: "https://ontz51001.omnenest.com:47130/PaymentGateway/Main/MutualFund.jsp?data=eyJ6aXAiOiJERUYiLCJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0."
+    nestOrderNumber: '240701950000109'
+  encryptionNeeded: false
+PlaceGTDOrder:
+  mockResponse:
+    stat: Ok
+    Result: Task Successfully Completed,
+    triggerId: '20090214'
+  encryptionNeeded: false
+BasketOrder:
+  mockResponse:
+      stat: Ok
+      message: order placed successfully
+  encryptionNeeded: false
+ModifyOrder:
+  mockResponse:
+    stat: Ok
+    Result: '123456789'
+    orderCriteria: Order criteria set for this order
+    customText: not required
+  encryptionNeeded: false
+OrderBook:
+  mockResponse:
+  - Prc: '46430.60'
+    RequestID: '1'
+    Cancelqty: 0
+    discQtyPerc: NA
+    customText: NA
+    triggerid: '2401102'
+    Mktpro: '0'
+    defmktproval: '3'
+    optionType: XX
+    usecs: '813383'
+    mpro: '1'
+    Qty: 1
+    ordergenerationtype: '--'
+    Unfilledsize: 0
+    orderAuthStatus: ''
+    orderInitialStatus: NA
+    Usercomments: NA
+    ticksize: '5'
+    Prctype: L
+    Status: rejected
+    Minqty: 0
+    orderCriteria: NA
+    Exseg: nse_fo
+    Sym: BANKNIFTY
+    multiplier: '1'
+    ExchOrdID: NA
+    ExchConfrmtime: '--'
+    Pcode: NRML
+    SyomOrderId: ''
+    Dscqty: 0
+    Exchange: NFO
+    Ordvaldate: 04/06/2024 00:00:00
+    accountId: ABHIJEET-OTPUAT
+    exchangeuserinfo: '111111111111130'
+    OriginalPrctype: L
+    Avgprc: '0.00'
+    Trgprc: '0.00'
+    Trantype: B
+    bqty: '15'
+    guiOrderId: 50F6C439-D423-43FA-89EB-7152F70F963A-CHIEF-TWS
+    Trsym: BANKNIFTY23OCTFUT
+    Fillshares: 0
+    AlgoCategory: NA
+    sipindicator: "N"
+    strikePrice: '-0.01'
+    reporttype: failure
+    AlgoID: NA
+    noMktPro: '0'
+    BrokerClient: '--'
+    OrderUserMessage: ''
+    decprec: '2'
+    ExpDate: 26 Oct, 2023
+    COPercentage: 0
+    marketprotectionpercentage: '--'
+    Nstordno: '231020000000003'
+    ExpSsbDate: '1382797800'
+    OrderedTime: 20/10/2023 10:24:07
+    RejReason: '--'
+    modifiedBy: "--"
+    Scripname: ''
+    stat: Ok
+    orderentrytime: Oct 20 2023 10:24:07
+    PriceDenomenator: '1'
+    panNo: AAAAA1244A
+    RefLmtPrice: 0
+    PriceNumerator: '1'
+    sip_sequence_number: NA
+    token: '35078'
+    ordersource: TWS
+    Validity: DAY
+    GeneralDenomenator: '1'
+    UniqueKey: BANKNIFTY23OCTFUT
+    series: XX
+    InstName: FUTIDX
+    GeneralNumerator: '1'
+    user: CHIEF
+    remarks: '--'
+    iSinceBOE: 1697777647
+    auctionNumber: "1697777647"
+  - accountId: PROTEST2-OTPUAT
+    AlgoCategory: ALGO_CAT4
+    AlgoID: '0123456789'
+    Avgprc: '0.00'
+    bqty: '1'
+    BrokerClient: "--"
+    Cancelqty: 0
+    COPercentage: 0
+    customText: NA
+    decprec: '2'
+    defmktproval: '3'
+    discQtyPerc: '10'
+    Qty: 1
+    Dscqty: 0
+    Exchange: NSE
+    exchangeuserinfo: '111111111111030'
+    ExchConfrmtime: 13-Dec-2023 12:29:38
+    ExchOrdID: '231213000000026'
+    ExpDate: NA
+    ExpSsbDate: NA
+    Exseg: nse_cm
+    Fillshares: 0
+    GeneralDenomenator: '1'
+    GeneralNumerator: '1'
+    guiOrderId: 1702450778-715908-NARAYAN-BO
+    InstName: ''
+    iSinceBOE: 1702450778
+    marketprotectionpercentage: "--"
+    Minqty: 0
+    Mktpro: NA
+    modifiedBy: "--"
+    mpro: '1'
+    multiplier: '1'
+    noMktPro: '0'
+    Nstordno: '231213000000064'
+    optionType: XX
+    orderAuthStatus: ''
+    orderCriteria: NA
+    OrderedTime: 13/12/2023 12:29:38
+    orderentrytime: Dec 13 2023 12:29:38
+    ordergenerationtype: "--"
+    orderInitialStatus: NA
+    ordersource: "--"
+    OrderUserMessage: '1'
+    Ordvaldate: 04/06/2024 00:00:00
+    OriginalPrctype: L
+    panNo: AAAAA1234A
+    Pcode: BO
+    Prc: '238.00'
+    Prctype: L
+    PriceDenomenator: '1'
+    PriceNumerator: '1'
+    RefLmtPrice: 0
+    RejReason: "--"
+    remarks: "--"
+    reporttype: status
+    RequestID: '1'
+    Scripname: NIP IND ETF NIFTY BEES
+    series: EQ
+    sip_sequence_number: NA
+    sipindicator: "N"
+    stat: Ok
+    Status: open
+    strikePrice: '0.00'
+    Sym: NIFTYBEES
+    SyomOrderId: '231213000000061'
+    ticksize: '1'
+    token: '10576'
+    Trantype: S
+    Trgprc: '0.00'
+    triggerid: ''
+    Trsym: NIFTYBEES-EQ
+    Unfilledsize: 1
+    UniqueKey: NIFTYBEES
+    usecs: '717715'
+    user: NARAYAN
+    Usercomments: NA
+    Validity: DAY
+    auctionNumber: "1697777647"
+  - accountId: PROTEST2-OTPUAT
+    AlgoCategory: ALGO_CAT4
+    AlgoID: '0123456789'
+    Avgprc: '228.00'
+    bqty: '1'
+    BrokerClient: "--"
+    Cancelqty: 0
+    COPercentage: 0
+    customText: NA
+    decprec: '2'
+    defmktproval: '3'
+    discQtyPerc: '10'
+    Qty: 1
+    Dscqty: 0
+    Exchange: NSE
+    exchangeuserinfo: '111111111111030'
+    ExchConfrmtime: 13-Dec-2023 12:29:38
+    ExchOrdID: '231213000000023'
+    ExpDate: NA
+    ExpSsbDate: NA
+    Exseg: nse_cm
+    Fillshares: 1
+    GeneralDenomenator: '1'
+    GeneralNumerator: '1'
+    guiOrderId: 74E97FB9-FF0C-4480-B8D3-59FC81515345-NARAYAN-TWS
+    InstName: ''
+    iSinceBOE: 1702450778
+    marketprotectionpercentage: "--"
+    Minqty: 0
+    Mktpro: '0'
+    modifiedBy: NARAYAN
+    mpro: '1'
+    multiplier: '1'
+    noMktPro: '0'
+    Nstordno: '231213000000061'
+    optionType: XX
+    orderAuthStatus: ''
+    orderCriteria: NA
+    OrderedTime: 13/12/2023 12:29:38
+    orderentrytime: Dec 13 2023 12:27:35
+    ordergenerationtype: "--"
+    orderInitialStatus: NA
+    ordersource: TWS
+    OrderUserMessage: ''
+    Ordvaldate: 04/06/2024 00:00:00
+    OriginalPrctype: L
+    panNo: AAAAA1234A
+    Pcode: BO
+    Prc: '229.00'
+    Prctype: L
+    PriceDenomenator: '1'
+    PriceNumerator: '1'
+    RefLmtPrice: 0
+    RejReason: "--"
+    remarks: "--"
+    reporttype: fill
+    RequestID: '4'
+    Scripname: NIP IND ETF NIFTY BEES
+    series: EQ
+    sip_sequence_number: NA
+    sipindicator: "N"
+    stat: Ok
+    Status: complete
+    strikePrice: '0.00'
+    Sym: NIFTYBEES
+    SyomOrderId: ''
+    ticksize: '1'
+    token: '10576'
+    Trantype: B
+    Trgprc: '0.00'
+    triggerid: ''
+    Trsym: NIFTYBEES-EQ
+    Unfilledsize: 0
+    UniqueKey: NIFTYBEES
+    usecs: '713855'
+    user: NARAYAN
+    Usercomments: NA
+    Validity: DAY
+    auctionNumber: "1697777647"
+  - accountId: PROTEST2-OTPUAT
+    AlgoCategory: ALGO_CAT4
+    AlgoID: '0123456789'
+    Avgprc: '0.00'
+    bqty: '1'
+    BrokerClient: "--"
+    Cancelqty: 0
+    COPercentage: 0
+    customText: NA
+    decprec: '2'
+    defmktproval: '3'
+    discQtyPerc: '10'
+    Dscqty: 0
+    Exchange: NSE
+    exchangeuserinfo: '111111111111030'
+    ExchConfrmtime: 13-Dec-2023 12:29:38
+    ExchOrdID: '231213000000027'
+    ExpDate: NA
+    ExpSsbDate: NA
+    Exseg: nse_cm
+    Fillshares: 0
+    GeneralDenomenator: '1'
+    GeneralNumerator: '1'
+    guiOrderId: 1702450778-715937-NARAYAN-BO
+    InstName: ''
+    iSinceBOE: 1702450778
+    marketprotectionpercentage: "--"
+    Minqty: 0
+    Mktpro: NA
+    modifiedBy: "--"
+    mpro: '1'
+    multiplier: '1'
+    noMktPro: '0'
+    Nstordno: '231213000000065'
+    optionType: XX
+    orderAuthStatus: ''
+    orderCriteria: NA
+    OrderedTime: 13/12/2023 12:29:38
+    orderentrytime: Dec 13 2023 12:29:38
+    ordergenerationtype: "--"
+    orderInitialStatus: NA
+    ordersource: "--"
+    OrderUserMessage: '1'
+    Ordvaldate: 04/06/2024 00:00:00
+    OriginalPrctype: SL
+    panNo: AAAAA1234A
+    Pcode: BO
+    Prc: '211.46'
+    Prctype: SL
+    PriceDenomenator: '1'
+    PriceNumerator: '1'
+    Qty: 1
+    RefLmtPrice: 0
+    RejReason: "--"
+    remarks: "--"
+    reporttype: sl status
+    RequestID: '1'
+    Scripname: NIP IND ETF NIFTY BEES
+    series: EQ
+    sip_sequence_number: NA
+    sipindicator: "N"
+    stat: Ok
+    Status: trigger pending
+    strikePrice: '0.00'
+    Sym: NIFTYBEES
+    SyomOrderId: '231213000000061'
+    ticksize: '1'
+    token: '10576'
+    Trantype: S
+    Trgprc: '218.00'
+    triggerid: ''
+    Trsym: NIFTYBEES-EQ
+    Unfilledsize: 1
+    UniqueKey: NIFTYBEES
+    usecs: '729544'
+    user: NARAYAN
+    Usercomments: NA
+    Validity: DAY
+    auctionNumber: "1697777647"
+  encryptionNeeded: false
+CheckTansactionPassword:
+  mockResponse:
+    stat: Ok
+    Result: ''
+  encryptionNeeded: false
+ValidateSLMPrice:
+  mockResponse:
+    stat: Ok
+    Result: success
+  encryptionNeeded: false
+LoadRetentionType:
+  mockResponse:
+    stat: Ok
+    Ret:
+    - DAY
+    - IOC
+  encryptionNeeded: false  
+user/spread/cancel:
+  mockResponse:
+    stat: Ok
+    nestOrderNumber : '160714700000001'
+  encryptionNeeded: false
+user/bo/exitorder:
+  mockResponse:
+    stat: Ok
+  encryptionNeeded: false
+user/account/details:
+  mockResponse:
+    bankdetails:
+    - bankName: ICICI BANK LTD
+      bankBranchName: Mlore
+      bankAddres: Mlore
+      bankAccountNo: gish1@okicici
+    - bankName: AXIS BANK
+      bankBranchName: Mlore
+      bankAddres: Mlore
+      bankAccountNo: '5663345'
+    - bankName: BANK OF BARODA
+      bankBranchName: Blore
+      bankAddres: Blore
+      bankAccountNo: '000501039180'
+    - bankName: DENA BANK
+      bankBranchName: Blore
+      bankAddres: Mysore
+      bankAccountNo: '50100001147766'
+    - bankName: HDFC BANK LTD.
+      bankBranchName: Coorg
+      bankAddres: Coorg
+      bankAccountNo: '45456464566'
+    accountId: GIRISH6-OTPUAT
+    accountName: Girish Shenoy
+    accountShortcodeBseIpo: NII
+    accountStatus: Activated
+    accountType: NRI
+    address: abc
+    bankAccountNo: '5663345'
+    bankAccountNo2: '5663345'
+    bankAccountNo3: '000501039180'
+    bankAccountNo4: '50100001147766'
+    bankAccountNo5: '45456464566'
+    bankAddres: Mlore
+    bankAddress2: Mlore
+    bankAddress3: Blore
+    bankAddress4: Mysore
+    bankAddress5: Coorg
+    bankBranchName: Mlore
+    bankBranchName2: Mlore
+    bankBranchName3: Blore
+    bankBranchName4: Blore
+    bankBranchName5: Coorg
+    bankName: ICICI BANK LTD
+    bankName2: AXIS BANK
+    bankName3: BANK OF BARODA
+    bankName4: DENA BANK
+    bankName5: HDFC BANK LTD.
+    branchId: BLORE
+    bseipoPcode: IND
+    cellAddr: '9966332211'
+    customerId: '4634532'
+    dobAccount: '01/01/2000'
+    dpAccountNumber: '2334997829021348'
+    dpAccountNumber2: '2334997829021347'
+    dpAccountNumber3: '2334997829021346'
+    dpAccountNumber4: '2334997829021344'
+    dpAccountNumber5: '2334997829021343'
+    dpAccountNumber6: '2334997829021340'
+    dpId: 'DP123'
+    dpName: My DP
+    depository: NSDL
+    emailAddr: girish.shenoy@refinitiv.com
+    exchEnabled: nse_ipo|bse_ipo|bse_mf|bcs_fo|bse_fo|mcx_fo|ncx_fo|cde_fo|nse_fo|bse_cm|nse_cm|nse_mf|
+    officeAddress: xyz
+    officephone: '45433'
+    panNo: BTYPS1487E
+    product:
+      - BO
+      - CNC
+      - CO
+      - MIS
+      - NRMLMTF
+    residencePhone: '76634434'
+    sBrokerName: OTPUAT
+    sorEnabled: Y
+    stat: Ok
+    upi:
+      - gish1@okicici
+    user: GIRISH6-OTPUAT
+  encryptionNeeded: false
+user/spread/modify:
+  mockResponse:
+    stat: Ok
+    nestOrderNumber: '123456789'
+    nestOrderReqid: '2'
+  encryptionNeeded: false
+user/bo/placeorder:
+  mockResponse:
+    nestOrderNumber: '160808000000028'
+    stat: Ok
+  encryptionNeeded: false
+ValidateGTD:
+  mockResponse:
+    stat: Ok
+    Date: '27-11-2023'
+  encryptionNeeded: false
+OrderHistory:
+  mockResponse:
+    stat: Ok
+    data:
+      - Prc: '46406.45'
+        Action: B
+        productcode: NRML
+        reporttype: failure
+        triggerprice: '0.00'
+        filledShares: 5
+        disclosedqty: '0'
+        exchangetimestamp: '26-Oct-2023 16:46:59'
+        ExchTimeStamp: '26/10/2023 16:56:15'
+        symbolname: BANKNIFTY
+        nestordernumber: '231026000000023'
+        duration: DAY
+        OrderUserMessage: ''
+        averageprice: '46000.00'
+        Qty: 15
+        ordergenerationtype: '--'
+        modifiedBy: '--'
+        filldateandtime: '-- --'
+        orderInitialStatus: NA
+        Status: open
+        rejectionreason: '--'
+        PriceDenomenator: '1'
+        exchangeorderid: '111111111111130'
+        PriceNumerator: '1'
+        legorderindicator: ''
+        customerfirm: C
+        ordersource: TWS
+        GeneralDenomenator: '1'
+        nestreqid: '1'
+        Ordtype: L
+        unfilledSize: 0
+        scripname: ''
+        GeneralNumerator: '1'
+        bqty: 15
+        exchange: NFO
+        guiOrderId: 18FF6165-B9AA-4ABE-BF26-E57D78D96019-CODITAS-TWS
+        Trsym: BANKNIFTY23OCTFUT
+        Mktpro: '1'
+      - Prc: '46406.45'
+        Action: B
+        productcode: NRML
+        reporttype: NA
+        triggerprice: '0.00'
+        filledShares: 5
+        disclosedqty: '0'
+        exchangetimestamp: '--'
+        ExchTimeStamp: '26/10/2023 16:56:15'
+        symbolname: BANKNIFTY
+        nestordernumber: '231026000000023'
+        duration: DAY
+        OrderUserMessage: ''
+        averageprice: '46000.00'
+        Qty: 15
+        ordergenerationtype: '--'
+        modifiedBy: '--'
+        filldateandtime: '-- --'
+        orderInitialStatus: NA
+        Status: put order req received
+        rejectionreason: '--'
+        PriceDenomenator: '1'
+        exchangeorderid: '111111111111130'
+        PriceNumerator: '1'
+        legorderindicator: ''
+        customerfirm: C
+        ordersource: TWS
+        GeneralDenomenator: '1'
+        nestreqid: '1'
+        Ordtype: L
+        unfilledSize: 1
+        scripname: ''
+        GeneralNumerator: '1'
+        bqty: 15
+        exchange: NFO
+        guiOrderId: 18FF6165-B9AA-4ABE-BF26-E57D78D96019-CODITAS-TWS
+        Trsym: BANKNIFTY23OCTFUT
+        Mktpro: '1'
+  encryptionNeeded: false
+ExecuteExitOrder:
+  mockResponse:
+    stat: Ok
+  encryptionNeeded: false
+GTCGTD/OrderHistory:
+  mockResponse:
+    stat: Ok
+    data:
+      - accountId: CH1-OTPUAT
+        cancelledSize: '0.0000'
+        comments: GTD
+        date: '09/07/2019 16:11:18'
+        exchSeg: nse_cm
+        filledShares: '0.0000'
+        exchange: NSE
+        nestOrderNumber: '190709000015365'
+        numOfDays: ''
+        orderReceiptDate: '09/07/2019 16:11:18'
+        orderSource: 'MOB'
+        orderValidityDate: '17-07-2019'
+        priceToFill: '160.00'
+        quanToFill: '500.0000'
+        rejectedSize: '0.0000'
+        text: ''
+        tradingSymbol: VEDL-EQ
+        transactionType: B
+        triggerId: '1907096'
+        symbolName: 'ABB'
+  encryptionNeeded: false
+user/spread/orderhistory:
+  mockResponse:
+    stat: Ok
+    values:
+      - secondsSinceBoe: '1700027088'
+        symbol: '57919'
+        orderGenerationType: "--"
+        nestOrderReqid: '1'
+        text: "--"
+        orderInitialStatus: NA
+        avgPrice: '0.00'
+        avgPriceLeg2: '0.00'
+        avgPriceLeg3: '0.00'
+        avgPriceLeg4: '0'
+        customerFirm: C
+        rmsPrice: '11'
+        rmsPriceLeg2: '10'
+        rmsPriceLeg3: '0'
+        rmsPriceLeg4: ''
+        expiryDateLeg1: 30 Nov, 2023
+        expiryDateLeg2: 28 Dec, 2023
+        expiryDateLeg3: '0'
+        expiryDateLeg4: '0'
+        accountId: SUMESH-OTPUAT
+        transactionType: B
+        transactionTypeLeg2: S
+        transactionTypeLeg3: ''
+        transactionTypeLeg4: ''
+        exchangeSymbol: ''
+        exchange: NFO
+        guiOrderId: 1A44C2C5-9FBA-4A88-8AF0-1A0742CB54ED-SUMESH-TWS
+        confirmedDate: ''
+        status: validation pending
+        filledShares: '0'
+        filledSharesLeg2: '0'
+        filledSharesLeg3: ''
+        filledSharesLeg4: ''
+        orderStatus: validation pending
+        quanToFill: '30'
+        quanToFillLeg2: '30'
+        quanToFillLeg3: '0'
+        quanToFillLeg4: ''
+        orderDuration: 'DAY'
+        locationId: '111111111111130'
+        exchUser: '12345'
+        priceToFill: '300.00'
+        priceToFillLeg2: '0.00'
+        priceToFillLeg3: '0.00'
+        priceToFillLeg4: '0'
+        unfilledSize: '30'
+        unfilledSizeLeg2: '30'
+        unfilledSizeLeg3: ''
+        unfilledSizeLeg4: ''
+        product: NRML
+        orderSource: TWS
+        exchSeg: nse_fo
+        lotSize: '15'
+        priceType: SP
+        tradingSymbol: BANKNIFTY23NOVFUT
+        tradingSymbolLeg2: BANKNIFTY23DECFUT
+        tradingSymbolLeg3: ''
+        tradingSymbolLeg4: ''
+        exchOrdId: "--"
+        exchOrderIdLeg2: "--"
+        exchOrderIdLeg3: ''
+        exchOrderIdLeg4: ''
+        user: SUMESH
+        exchOrderUpdateTime: "--"
+        nestOrderNumber: '231115000000009'
+        combinedSymbol: '35020^35165'
+        symbolName: 'BANKNIFTY'
+        symbolName2: 'BANKNIFTY'
+        symbolName3: 'BANKNIFTY'
+        symbolName4: 'BANKNIFTY'
+      - secondsSinceBoe: '1700027088'
+        symbol: '57919'
+        orderGenerationType: "--"
+        nestOrderReqid: '1'
+        text: "--"
+        orderInitialStatus: NA
+        avgPrice: '0'
+        avgPriceLeg2: '0.00'
+        avgPriceLeg3: '0.00'
+        avgPriceLeg4: '0'
+        customerFirm: C
+        rmsPrice: '0'
+        rmsPriceLeg2: '0'
+        rmsPriceLeg3: '0'
+        rmsPriceLeg4: ''
+        expiryDateLeg1: 30 Nov, 2023
+        expiryDateLeg2: 28 Dec, 2023
+        expiryDateLeg3: '0'
+        expiryDateLeg4: '0'
+        accountId: SUMESH-OTPUAT
+        transactionType: B
+        transactionTypeLeg2: S
+        transactionTypeLeg3: ''
+        transactionTypeLeg4: ''
+        exchangeSymbol: ''
+        exchange: NFO
+        guiOrderId: 1A44C2C5-9FBA-4A88-8AF0-1A0742CB54ED-SUMESH-TWS
+        confirmedDate: ''
+        status: put order req received
+        filledShares: ''
+        filledSharesLeg2: '0'
+        filledSharesLeg3: ''
+        filledSharesLeg4: ''
+        orderStatus: ''
+        quanToFill: '30'
+        quanToFillLeg2: '30'
+        quanToFillLeg3: '0'
+        quanToFillLeg4: ''
+        orderDuration: 'DAY'
+        locationId: ''
+        exchUser: ''
+        priceToFill: '300.00'
+        priceToFillLeg2: '0.00'
+        priceToFillLeg3: '0.00'
+        priceToFillLeg4: '0'
+        unfilledSize: ''
+        unfilledSizeLeg2: '0'
+        unfilledSizeLeg3: ''
+        unfilledSizeLeg4: ''
+        product: NRML
+        orderSource: TWS
+        exchSeg: nse_fo
+        lotSize: ''
+        priceType: SP
+        tradingSymbol: BANKNIFTY23NOVFUT
+        tradingSymbolLeg2: BANKNIFTY23DECFUT
+        tradingSymbolLeg3: ''
+        tradingSymbolLeg4: ''
+        exchOrdId: "--"
+        exchOrderIdLeg2: "--"
+        exchOrderIdLeg3: ''
+        exchOrderIdLeg4: ''
+        user: SUMESH
+        exchOrderUpdateTime: "--"
+        nestOrderNumber: '231115000000009'
+        combinedSymbol: '1018754 1067651'
+        symbolName: 'BANKNIFTY'
+        symbolName2: 'BANKNIFTY'
+        symbolName3: 'BANKNIFTY'
+        symbolName4: 'BANKNIFTY'
+  encryptionNeeded: false
+user/equitysip/cancel:
+  mockResponse:
+    stat: Ok
+    sipSequenceNum: 'SIP202002121'
+  encryptionNeeded: false
+user/equitysip/placeorder:
+  mockResponse:
+    stat: Ok
+    text: 'Sip Order Added for SIP id SIP202002101'
+  encryptionNeeded: false
+OrderCriteria/set:
+  mockResponse:
+    stat: Ok
+  encryptionNeeded: false
+user/equitysip/sipsequencenumber/history:
+  mockResponse:
+    stat: Ok
+    data:
+      - Prc: "00.00"
+        RequestID: "1"
+        discQtyPerc: "10"
+        Mktpro: "1"
+        defmktproval: "3"
+        usecs: "528549"
+        Qty: "150.00"
+        ordergenerationtype: ""
+        tradingsymbol: "ADANIGAS-EQ"
+        Unfilledsize: "00.00"
+        orderAuthStatus: null
+        Usercomments: ""
+        Prctype: "MKT"
+        Minqty: ""
+        Sym: ""
+        multiplier: "1"
+        ExchOrdID: ""
+        ExchConfrmtime: ""
+        Pcode: "CNC"
+        Dscqty: "00.00"
+        FillDate: ""
+        Exchange: "nse_cm"
+        accountId: "GIRI04"
+        exchangeuserinfo: ""
+        OriginalPrctype: "MKT"
+        Avgprc: "00.00"
+        guiOrderId: "1582101813-566843-GIRI04-EQUITY_SIP"
+        bqty: "1"
+        Fillshares: "00.00"
+        AlgoCategory: ""
+        status: "rejected"
+        reporttype: "failure"
+        stat: Ok
+        AlgoID: ""
+        noMktPro: "0"
+        transactiontype: "SIP"
+        BrokerClient: ""
+        OrderUserMessage: ""
+        decprec: "2"
+        FillQty: ""
+        Nstordno: "200219020000162"
+        OrderedTime: "19/02/2020 14:32:05"
+        Exch: "NSE"
+        RejReason: "validation reject by GUI"
+        modifiedBy: ""
+        orderSource: "TWS"
+        orderentrytime: "Feb 19 2020 14:32:05"
+        panNo: ""
+        sip_sequence_number: "SIP2020021859"
+        token: "6066"
+        Validity: "DAY"
+        FillId: ""
+        UniqueKey: ""
+        FillTime: ""
+        series: ""
+        FillPrice: "0"
+        user: "SACHIN1"
+        remarks: "SIP"
+        iSinceBOE: "1582102925"
+      - Prc: "105.00"
+        RequestID: "1"
+        discQtyPerc: "10"
+        Mktpro: "1"
+        defmktproval: "3"
+        usecs: "565385"
+        Qty: "150.00"
+        ordergenerationtype: ""
+        tradingsymbol: "ADANIGAS-EQ"
+        Unfilledsize: "150.00"
+        orderAuthStatus: null
+        Usercomments: ""
+        Prctype: "L"
+        Minqty: ""
+        Sym: "ADANIGAS"
+        multiplier: "1"
+        ExchOrdID: "200219000000150"
+        ExchConfrmtime: "19-Feb-2020 15:19:17"
+        Pcode: "CNC"
+        Dscqty: "00.00"
+        FillDate: ""
+        Exchange: "nse_cm"
+        accountId: "GIRI04"
+        exchangeuserinfo: "111111111111130"
+        OriginalPrctype: "MKT"
+        Avgprc: "00.00"
+        guiOrderId: "1582105735-277569-GIRI04-EQUITY_SIP"
+        bqty: "1"
+        Fillshares: "00.00"
+        AlgoCategory: ""
+        status: "open"
+        reporttype: "market response"
+        AlgoID: ""
+        stat: Ok
+        noMktPro: "0"
+        transactiontype: "SIP"
+        BrokerClient: ""
+        OrderUserMessage: ""
+        decprec: "2"
+        FillQty: ""
+        Nstordno: "200219000000286"
+        OrderedTime: "19/02/2020 15:19:17"
+        Exch: "NSE"
+        RejReason: ""
+        modifiedBy: ""
+        orderSource: "TWS"
+        orderentrytime: "Feb 19 2020 15:19:17"
+        panNo: ""
+        sip_sequence_number: "SIP2020021859"
+        token: "6066"
+        Validity: "DAY"
+        FillId: ""
+        UniqueKey: "ADANIGAS"
+        FillTime: ""
+        series: "EQ"
+        FillPrice: "0"
+        user: "ROHAN-OMNE"
+        remarks: "SIP"
+        iSinceBOE: "1582105757"
+  encryptionNeeded: false
+user/equitysip/orders:
+  mockResponse:
+    stat: Ok
+    data: 
+    - accountId: 'NAYAN-OTPUAT'
+      branchId: 'BLORE'
+      broker: 'broker_name'
+      customerFirm: 'C'
+      date: '10-Nov-2023'
+      effectiveDate: '09-Nov-2023'
+      exchSeg: 'nse_cm'
+      exchange: 'NSE'
+      retentionType: 'DAY'
+      orderSource: 'RESTAPI-TPMOB'
+      priceType: 'MKT'
+      product: 'NRML'
+      sipCreationDate: '02-Nov-2023'
+      sipEndDate: '05-Jan-2024'
+      sipSequenceNum: 'SIP202311021'
+      startDate: 03-Nov-2023
+      status: trigger pending
+      symbol: '1621'
+      tenureCount: '10'
+      tmExecFrequency: weekly
+      traceDate: '08-Nov-2023'
+      tradingSymbol: TATAINVEST-EQ
+      transactionType: SIP
+      typeOfQuantity: Amount
+      user: NAYAN
+      exchOrdId: ''
+      guiOrderId: ''
+      value: '100.21'
+  encryptionNeeded: false
+user/spread/orders:
+  mockResponse:
+    stat: Ok
+    data:
+    - accountId: SUMAN-OTPUAT
+      user: CODITAS
+      exchOrdId: "--"
+      exchSeg: nse_fo
+      priceType: 3L
+      quanToFill: '45'
+      quanToFillLeg2: '45'
+      quanToFillLeg3: '45'
+      quanToFillLeg4: '45'
+      orderDuration: 'DAY'
+      priceToFill: '598.00'
+      priceToFillLeg2: '600.00'
+      priceToFillLeg3: '606.00'
+      priceToFillLeg4: '603.00'
+      transactionType: B
+      transactionTypeLeg2: S
+      transactionTypeLeg3: B
+      transactionTypeLeg4: S
+      product: NRML
+      secondsSinceBoe: '1709102044'
+      nestOrderReqid: '1'
+      filledShares: '45'
+      filledSharesLeg2: '45'
+      filledSharesLeg3: '45'
+      filledSharesLeg4: '45'
+      orderGenerationType: "--"
+      status: complete
+      nestOrderNumber: '240228000000137'
+      tradingSymbol: BANKNIFTY24FEBFUT
+      tradingSymbolLeg2: BANKNIFTY24MARFUT
+      tradingSymbolLeg3: BANKNIFTY24APRFUT
+      tradingSymbolLeg4: BANKNIFTY24MAYFUT
+      customerFirm: C
+      symbol: '71440'
+      unfilledSize: '0'
+      unfilledSizeLeg2: '0'
+      unfilledSizeLeg3: '0'
+      unfilledSizeLeg4: '0'
+      text: 'No reference price for the spread symbol'
+      exchOrderUpdateTime: '20-Feb-2024 12:03:31'
+      confirmedDate: ''
+      orderInitialStatus: NA
+      exchOrderIdLeg2: "--"
+      exchOrderIdLeg3: ''
+      exchOrderIdLeg4: ''
+      avgPrice: '598.00'
+      avgPriceLeg2: '600.00'
+      avgPriceLeg3: '606.00'
+      avgPriceLeg4: '603.00'
+      exchangeSymbol: ''
+      expiryDateLeg1: 29 Feb, 2024
+      expiryDateLeg2: 28 Mar, 2024
+      expiryDateLeg3: 28 Apr, 2024
+      expiryDateLeg4: 28 May, 2024
+      locationId: '111111111111130'
+      orderSource: TWS
+      exchange: NFO
+      guiOrderId: 73CBD23B-9F22-46D5-BB58-B56CA3A78C9E-CODITAS-TWS
+      rmsPrice: '598.00'
+      rmsPriceLeg2: '600.00'
+      rmsPriceLeg3: '606.00'
+      nestSpreadSymbol: '7849 3456'
+      mul1: 1
+      mul2: 1
+      mul3: 1
+      mul4: 1
+      dp1: 2
+      dp2: 2
+      dp3: 2
+      dp4: 2
+      nestSpreadTradingSymbol: 'BANKNIFTY31JUL2428AUG24FUT'
+      symbolName: 'BANKNIFTY'
+      symbolName2: 'BANKNIFTY'
+      symbolName3: 'BANKNIFTY'
+      symbolName4: 'BANKNIFTY'
+    - accountId: SUMAN-OTPUAT
+      user: CODITAS
+      exchOrdId: '240228000000025'
+      exchSeg: nse_fo
+      priceType: SP
+      quanToFill: '30'
+      quanToFillLeg2: '30'
+      quanToFillLeg3: '0'
+      quanToFillLeg4: '0'
+      orderDuration: 'DAY'
+      priceToFill: '700.00'
+      priceToFillLeg2: '0.00'
+      priceToFillLeg3: '0.00'
+      priceToFillLeg4: '0'
+      transactionType: B
+      transactionTypeLeg2: S
+      transactionTypeLeg3: ''
+      transactionTypeLeg4: ''
+      product: NRML
+      secondsSinceBoe: '1709102011'
+      nestOrderReqid: '1'
+      filledShares: '0'
+      filledSharesLeg2: '0'
+      filledSharesLeg3: '0'
+      filledSharesLeg4: '0'
+      orderGenerationType: "--"
+      status: open
+      nestOrderNumber: '240228000000136'
+      tradingSymbol: BANKNIFTY24FEBFUT
+      tradingSymbolLeg2: BANKNIFTY24MARFUT
+      tradingSymbolLeg3: ''
+      tradingSymbolLeg4: ''
+      customerFirm: C
+      symbol: '71440'
+      unfilledSize: '30'
+      unfilledSizeLeg2: '30'
+      unfilledSizeLeg3: '0'
+      unfilledSizeLeg4: '0'
+      text: ''
+      exchOrderUpdateTime: 28-Feb-2024 12:03:31
+      confirmedDate: 28-Feb-2024
+      orderInitialStatus: NA
+      exchOrderIdLeg2: "--"
+      exchOrderIdLeg3: ''
+      exchOrderIdLeg4: ''
+      avgPrice: '0.00'
+      avgPriceLeg2: '0.00'
+      avgPriceLeg3: '0.00'
+      avgPriceLeg4: '0'
+      exchangeSymbol: ''
+      expiryDateLeg1: 29 Feb, 2024
+      expiryDateLeg2: 28 Mar, 2024
+      expiryDateLeg3: '0'
+      expiryDateLeg4: '0'
+      locationId: '111111111111130'
+      orderSource: TWS
+      exchange: NFO
+      guiOrderId: DB39639D-7964-4683-9409-9BA8D3C40C1D-CODITAS-TWS
+      rmsPrice: '46133.65'
+      rmsPriceLeg2: '46480.65'
+      rmsPriceLeg3: '0'
+      mul1: 1
+      mul2: 1
+      mul3: 1
+      mul4: 1
+      dp1: 2
+      dp2: 2
+      dp3: 2
+      dp4: 2
+      symbolName: 'BANKNIFTY'
+      symbolName2: 'BANKNIFTY'
+      symbolName3: 'BANKNIFTY'
+      symbolName4: 'BANKNIFTY'
+      nestSpreadTradingSymbol: 'BANKNIFTY31JUL2428AUG24FUT'
+  encryptionNeeded: false
+CancelAlert:
+  mockResponse:
+    stat: Ok
+    Result: Alert with Alert ID has been cancelled
+  encryptionNeeded: false
+ModifySecAlert:
+  mockResponse:
+    stat: Ok
+    Result: 'Alert ID is :110900002'
+  encryptionNeeded: false
+AlertHistory:
+  mockResponse:
+  - stat: Ok
+    ATMNumbr: '110900008'
+    Tsym: ABB-EQ
+    Field: Security Last trade Price
+    Operation: '='
+    Target: '8000.00'
+    Exchange: NSE
+    Symbol: '13'
+    Senton: '4'
+    Source: '6'
+    Comment: ''
+    Nordno: ''
+    ExchSeg: nse_cm
+    symbolname: ABB
+    companyname: ABB INDIA LIMITED
+    alertcomparatortype: A
+    Instrument: OPTSTK
+    date: 22-May-24 16:24:54
+  - stat: Ok
+    ATMNumbr: '110900002'
+    Tsym: ZOMATO-EQ
+    Field: Security Last trade Price
+    Operation: '='
+    Target: '350.00'
+    Exchange: NSE
+    Symbol: '5097'
+    Senton: EMAIL
+    Source: '6'
+    Comment: ''
+    Nordno: ''
+    ExchSeg: nse_cm
+    symbolname: ZOMATO
+    companyname: ZOMATO LIMITED
+    alertcomparatortype: A
+    Instrument: OPTSTK
+    date: 22-May-24 16:24:54
+  encryptionNeeded: false
+SecTradeAlert:
+  mockResponse:
+    stat: Ok
+    Result: ' Alert ID is :191000008'
+  encryptionNeeded: false
+interop/clearingOrg:
+  mockResponse:
+    stat: Ok
+    ClearingOrg:
+    - exchArray:
+      - CDS
+      - BCD
+      segment: CUR
+    - exchArray:
+      - NSE
+      - BSE
+      - MCXSXCM
+      segment: CASH
+    - exchArray:
+      - NFO
+      - BFO
+      segment: FO
+  encryptionNeeded: false
+PositionBook/interop:
+  mockResponse:
+    - stat: Ok
+      Fillsellamt: '3162000.000000'
+      s_NetQtyPosConv: Y
+      Sqty: '10.000000'
+      cjLtp:
+      - '316985'
+      - '317000'
+      actid: GAURAVI
+      posflag: 'false'
+      cjPrevClose:
+      - '316130'
+      - '291720'
+      Token: RELIANCE
+      Pcode: BO
+      Bqty: '10.000000'
+      Fillbuyamt: '3166000.000000'
+      Exchange: CASH
+      Fillsellqty: '10.000000'
+      Type: DAY1
+      cjMultiplier:
+      - '1'
+      - '1'
+      cjSymbol:
+      - '2885'
+      - '500325'
+      Fillbuyqty: '10.000000'
+      sSqrflg: Y
+      cjExchSeg:
+      - nse_cm
+      - bse_cm
+      cjDP:
+      - '2'
+      - '2'
+  encryptionNeeded: false
+user/singleattributes:
+  mockResponse:
+    stat: Ok
+    attributes:
+      - GTT
+      - NT
+      - OC_Cancel
+      - OC_Modify
+      - OC_Put
+    actions:
+      - "Order Entry Modes: Bracket Order"
+      - "NT: Enable Physical option for Mutual Fund"
+      - "NT: EquitySIP"
+      - "NT: EquitySIP: Custom"
+  encryptionNeeded: false
+ShowMrktPicture:
+  mockResponse:
+    stat: Ok
+    Symbol: NYKAA-EQ
+    Ltp: '170.50'
+    PerChange: "-01.19"
+    Bqty1: '38'
+    Bqty2: '11812'
+    Bqty3: '13942'
+    Bqty4: '18328'
+    Bqty5: '1637'
+    Bqty6: ''
+    Bqty7: ''
+    Bqty8: ''
+    Bqty9: ''
+    Bqty10: ''
+    Bprice1: '170.45'
+    Bprice2: '170.4'
+    Bprice3: '170.35'
+    Bprice4: '170.3'
+    Bprice5: '170.25'
+    Bprice6: ''
+    Bprice7: ''
+    Bprice8: ''
+    Bprice9: ''
+    Bprice10: ''
+    Sqty1: '1460'
+    Sqty2: '338'
+    Sqty3: '1218'
+    Sqty4: '1410'
+    Sqty5: '1278'
+    Sqty6: ''
+    Sqty7: ''
+    Sqty8: ''
+    Sqty9: ''
+    Sqty10: ''
+    Sprice1: '170.5'
+    Sprice2: '170.55'
+    Sprice3: '170.6'
+    Sprice4: '170.65'
+    Sprice5: '170.7'
+    Sprice6: ''
+    Sprice7: ''
+    Sprice8: ''
+    Sprice9: ''
+    Sprice10: ''
+    Borders1: '3'
+    Borders2: '20'
+    Borders3: '17'
+    Borders4: '34'
+    Borders5: '17'
+    Borders6: ''
+    Borders7: ''
+    Borders8: ''
+    Borders9: ''
+    Borders10: ''
+    Sorders1: '4'
+    Sorders2: '3'
+    Sorders3: '11'
+    Sorders4: '11'
+    Sorders5: '9'
+    Sorders6: ''
+    Sorders7: ''
+    Sorders8: ''
+    Sorders9: ''
+    Sorders10: ''
+    Exchg: NSE
+    theoreticalPrice: ''
+    marketorderBuySize: ''
+    marketorderSellSize: ''
+    lasttradedqty: '1'
+    Lasttradedtime: 21/11/2023 15:14:21
+    percentagechange: ''
+    abschange: "-2.05"
+    series: EQ
+    weightedavg: '171.06'
+    openrate: '173.5'
+    triggerpercent: '3'
+    previouscloserate: '172.55'
+    highrate: '173.55'
+    lowrate: '169.3'
+    trend: '0'
+    volume: '11567318'
+    totalbuyqty: '467466'
+    totalsellqty: '1338885'
+    lowercircuitlimit: '138.05'
+    highercircuitlimit: '207.05'
+    openinterest: '0'
+    value: 197.87054 (Crs)
+    yearlyhighprice: '191.9'
+    yearlylowprice: '114.25'
+    TradingSymbol: NYKAA-EQ
+    companyname: FSN E COMMERCE VENTURES
+    spotprice: ''
+    SymbolName: NYKAA
+  encryptionNeeded: false
+GetOMSessionToken:
+  mockResponse:
+    SessionToken: 017c32bb-e598-4732-8597-c1a342889941
+    stat: Ok
+  encryptionNeeded: false
+LoadOption:
+  mockResponse:
+    stat: Ok
+    Loadopt:
+      - "CE"
+      - "PE"
+  encryptionNeeded: false
+LoadInstrument:
+  mockResponse:
+    stat: Ok
+    Loadinst:
+      - "FUTIDX"
+      - "FUTSTK"
+      - "OPTIDX"
+      - "OPTSTK"
+      - "SP-FUTIDX"
+      - "SP-FUTSTK"
+      - "UNDIRC"
+  encryptionNeeded: false
+LoadScrips:
+  mockResponse:
+    stat: Ok
+    Loadscrips:
+      - BANKNIFTY
+      - NIFTY
+      - NIFTYIT
+  encryptionNeeded: false
+LoadStrikePrice:
+  mockResponse:
+    stat: Ok
+    StrikePrice:
+      - display: "11000.00"
+        value: 1100000
+      - display: "11050.00"
+        value: 1105000
+      - display: "11100.00"
+        value: 1110000
+      - display: "11950.00"
+        value: 1195000
+      - display: "12000.00"
+        value: 1200000
+      - display: "12050.00"
+        value: 1205000
+      - display: "12100.00"
+        value: 1210000
+      - display: "12150.00"
+        value: 1215000
+      - display: "12200.00"
+        value: 1220000
+      - display: "12250.00"
+        value: 1225000
+      - display: "12300.00"
+        value: 1230000
+      - display: "12350.00"
+        value: 1235000
+      - display: "12400.00"
+        value: 1240000
+      - display: "12450.00"
+        value: 1245000
+      - display: "12500.00"
+        value: 1250000
+      - display: "12750.00"
+        value: 1275000
+      - display: "12800.00"
+        value: 1280000
+  encryptionNeeded: false
+SecurityInfo:
+  mockResponse:
+    stat: Ok
+    openinterest: 0
+    elmSellMargin: NA
+    IntPayDate: 1 Jan, 1980
+    DeliveryLastDate: NA
+    TenderPeriodStart: NA
+    Token: '6545'
+    ValueTradedToday: 3.21006 (Crs)
+    LocalUpdateTime: 21 Nov, 2023
+    MaxOrderSize: '581998'
+    TickSize: '5'
+    multiplier: 1
+    decPrecision: 2
+    exDate: '1352505600'
+    ExpulsionDate: 1 Jan, 1980
+    pivot: NA
+    BuyVarMargin: NA
+    CreditRating: 136.90-205.30
+    RecordDate: 11 Nov, 2022
+    Spotprc: NA
+    LastTradePrice: '140.80'
+    Exchange: NSE
+    deliveryLot: NA
+    deliveryReqd: NA
+    Margin: NA
+    HCircuitLimit: '205.30'
+    Warning: 0
+    Blq: 1
+    NoDelEndTime: 1 Jan, 1980
+    bloombergCode: NA
+    dividend: '0'
+    additionalBuyMargin: NA
+    dividendPayDate: NA
+    Freeze: 581998
+    CA: NA
+    CouponRate: '0'
+    settlementType: T+1
+    PriceDenomenator: '1'
+    SedolCode: NA
+    ReuterCode: NA
+    IsuStartDate: 10 Nov, 2021
+    GeneralDenomenator: '1'
+    ReAdminDate: 1 Jan, 1980
+    DeliveryUnits: NA
+    information: NA
+    SpecialBuyMargin: NA
+    preExpirySellMargin: NA
+    ISINCode: INE388Y01029
+    eligibilityToRepay: NA
+    ListingDate: 10 Nov, 2021 - 0:0:0
+    DPR1: '136.90'
+    DPR2: '205.30'
+    OtherSellMargin: NA
+    TenderPeriodEnd: NA
+    preExpiryBuyMargin: NA
+    Remarks: NA
+    Exposuremargin: NA
+    SellCryCost: 0
+    support3: NA
+    Issuerate: 0
+    eligibilityToRecall: NA
+    support2: NA
+    support1: NA
+    TenderPeriod: NA
+    BuyCryCost: 0
+    ELMMargin: '0'
+    SellVarMargin: NA
+    NoDelStartDate: 1 Jan, 1980
+    CoverOrderTrigger%: '0.0'
+    MaxOrderLimit: NA
+    Totalopeninterest: 0
+    maxOrderQty: NA
+    LCircuitLimit: '136.90'
+    ContractType: NA
+    SpecialSellMargin: NA
+    ScripMargin: '0'
+    LastTradingDate: NA
+    DeliveryStartDate: NA
+    IMSpreadBenefit: 'ON'
+    IsuMaturityDate: NA
+    BookClsStartTime: 1 Jan, 1980
+    Symbol: NYKAA-EQ
+    Perchgopeninterest: 0
+    resistance3: NA
+    ExchSeg: nse_cm
+    resistance2: NA
+    resistance1: NA
+    PriceUnits: NA
+    LTT: 01\/11\/2023 09:59:44
+    MarketType: NA
+    varMargin: '20'
+    adhocScripMargin: '0'
+    BookClsEndTime: 1 Jan, 1980 - 0:0:0
+    additionalSellMargin: NA
+    PermitedtoTrade: 0
+    ExpiryDte: "26 Jun, 2024 - 14:30:0"
+    Comments: BONUS 5:1
+    elmBuyMargin: "-1"
+    PriceNumerator: '1'
+    DeliveryEndDate: NA
+    PriceQuatation: NA
+    ContractName: FSN E COMMERCE VENTURES
+    Series: EQ
+    UniqueKey: NYKAA
+    faceValue: '01.00'
+    trument: ''
+    assetName: NA
+    IssedCapital: 285.29319 (Crs)
+    GeneralNumerator: '1'
+    QuantityUnit: NA
+    OtherBuyMargin: NA
+    combinedSymbol: '1010 1012'
+    symbolName: NYKAA
+  encryptionNeeded: false
+Scripsearch:
+  mockResponse:
+    - Exchange: nse_cm
+      Scripname: TATA CHEMICALS LTD
+      stat: Ok
+      Tsym: TATACHEM-EQ
+      BodLotQty: 1
+      TickSize: '0.05'
+      Symbol: '3405'
+      Exch: NSE
+      isin: INE092A01019
+      UniqueKey: TATACHEM
+      multiplier: 1 
+      decPrecision: 2
+      expiryDate: 30 Apr, 2024 
+    - Exchange: nse_cm
+      Scripname: TATA COFFEE LIMITED
+      stat: Ok
+      Tsym: TATACOFFEE-EQ
+      BodLotQty: 1
+      TickSize: '0.05'
+      Symbol: '724'
+      Exch: NSE
+      isin: INE493A01027
+      UniqueKey: TATACOFFEE
+      multiplier: 1 
+      decPrecision: 2
+      expiryDate: 25 Apr, 2024
+  encryptionNeeded: false
+LoadGroupCash:
+  mockResponse:
+    stat: Ok
+    Groupcash:
+    - AA
+    - AB
+    - AC
+    - AD
+    - AG
+    - AH
+    - AI
+    - AJ
+    - AK
+    - AL
+    - AM
+    - AN
+  encryptionNeeded: false
+ShowQuote:
+  mockResponse:
+    stat: Ok
+    TSymbl: BANKNIFTY23DECFUT
+    Ltp: '43893.35'
+    PerChange: '-00.38'
+    Series: XX
+    Exp: '28 Dec, 2023'
+    BQty: 1
+    SQty: 54
+    BRate: '43885.20'
+    SRate: '43900.00'
+    LTQ: '1'
+    LTT: '22/11/2023 15:29:59'
+    PrvClose: '44060.80'
+    Change: '-167.45'
+    High: '44052.80'
+    Low: '43650.15'
+    TotalBuy: '996'
+    TotalSell: '1345'
+    Multiplier: 1
+    TickSize: '5'
+    BodLotQty: '15'
+    DecimalPrecision: 2
+    TradeVolume: '32349'
+    yearlyHighPrice: '0'
+    yearlyLowPrice: '0'
+    vwapAveragePrice: '43817.86'
+    openPrice: '44052.80'
+    exchFeedTime: '22-Nov-2023 15:29:59'
+    theoreticalPrice: null
+    marketorderBuySize: null
+    marketorderSellSize: null
+    defmktproval: '3'
+    noMktPro: '0'
+    mktpro: '1'
+    UniqueKey: BANKNIFTY23DECFUT
+    optionType: CE
+    strikeprice: '100.00'
+    companyname: ''
+    LTD: null
+    symbolname: BANKNIFTY
+    rmsMarketProtection: null
+  encryptionNeeded: false
+CheckMargin:
+  mockResponse:
+    Order Margin: "10.00"
+    Available Cash: "8500005400.00"
+    Margin Used: "10.00"
+    Insufficient Fund: "10.00"
+    stat: "Ok"
+  encryptionNeeded: false
+user/gcmkey/publish:
+  mockResponse:
+    stat: Ok
+    emsg: Published
+  encryptionNeeded: false
+OptionChain:
+  mockResponse:
+    stat: Ok
+    scripCalls:
+      scripscallData:
+        - callsopenprice: "-0.01"
+          callsbestbuyprice: "0.00"
+          callsstrikeprice: "10800.00"
+          callstradevolume: "0"
+          callslasttradeprice: "0.00"
+          callsbestsellsize: "0"
+          callsbestbuysize: "0"
+          callsnetchange: "-2354.01"
+          callsbestsellprice: "0.00"
+          callsATP: "795.42"
+          callsOpenInterest: "180"
+          callsdp: "2"
+          callsmul: "1"
+          callsstrikepriceV: "10800.00"
+    scripsPuts:
+      scripsputsData:
+        - putstradevolume: "0"
+          putsbestbuyprice: "0.00"
+          putsbestsellprice: "0.00"
+          putsopenprice: "-0.01"
+          putsnetchange: "-1179.01"
+          putslasttradeprice: "0.00"
+          putstrikeprice: "10800.00"
+          putsbestsellsize: "0"
+          putsbestbuysize: "0"
+          putsATP: "11.31"
+          putsOpenInterest: "66180"
+          putsmul : "1"
+          putsdp : "2"
+          putstrikepriceV : "10800.00"
+  encryptionNeeded: false
+GetExchtokens:
+  mockResponse:
+    stat: Ok
+    ExchData:
+    - exchseg: bse_cm
+      token: '543384'
+      exch: BSE
+      tradingSymbol: NYKAA
+      BLQty: 1
+      multiplier: 1
+      PriceNumerator: '1'
+      GeneralNumerator: '1'
+      PriceDenomenator: '1'
+      GeneralDenomenator: '1'
+      decimalPrecision: 2
+      instrumentName: OPTIDX
+    - exchseg: nse_cm
+      token: '6545'
+      exch: NSE
+      tradingSymbol: NYKAA-EQ
+      BLQty: 1
+      multiplier: 1
+      PriceNumerator: '1'
+      GeneralNumerator: '1'
+      PriceDenomenator: '1'
+      GeneralDenomenator: '1'
+      decimalPrecision: 2
+      instrumentName: OPTIDX
+    - exchseg: mcx_cm
+      token: '1111'
+      exch: MCXSXCM
+      tradingSymbol: NYKAA-LTD
+      BLQty: 1
+      multiplier: 1
+      PriceNumerator: '1'
+      GeneralNumerator: '1'
+      PriceDenomenator: '1'
+      GeneralDenomenator: '1'
+      decimalPrecision: 2
+      instrumentName: OPTIDX
+    - exchseg: bse_cm
+      PriceDenomenator: '1'
+      multiplier: 1
+      PriceNumerator: '1'
+      BLQty: 1
+      decimalPrecision: 2
+      token: '500325'
+      sScripRef: RELIANCE
+      GeneralDenomenator: '1'
+      exch: BSE
+      GeneralNumerator: '1'
+      symbolName: RELIANCE
+      tradingSymbol: RELIANCE
+      instrumentName: EQ
+  encryptionNeeded: false
+LoadLotSize:
+  mockResponse:
+    stat: Ok
+    token: "58164"
+    tradingSymbol: "BANKNIFTY23NOV36500CE"
+    bodlotqty: "15"
+    expiryDate: "27 Jun, 2024"
+    symbolName: "BANKNIFTY"
+    tickSize: "0.05"
+    multiplier: "1"
+    decimalPrecision: "2"
+    strikePrice: "36500"
+    CombinedSymbol: "NA"
+    UniqueKey: "BANKNIFTY23NOV36500CE"
+  encryptionNeeded: false
+LoadDate:
+  mockResponse:
+    stat: Ok
+    LoadExp:
+    - display: "23 Nov, 2023"
+      value: "1385217000"
+    - display: "30 Nov, 2023"
+      value: "1385821800"
+    - display: "7 Dec, 2023"
+      value: "1386426600"
+    - display: "14 Dec, 2023"
+      value: "1387031400"
+    - display: "21 Dec, 2023"
+      value: "1387636200"
+    - display: "28 Dec, 2023"
+      value: "1388241000"
+    - display: "25 Jan, 2024"
+      value: "1390660200"
+    - display: "28 Mar, 2024"
+      value: "1396103400"
+    - display: "27 Jun, 2024"
+      value: "1403965800"
+    - display: "26 Sep, 2024"
+      value: "1411828200"
+    - display: "26 Dec, 2024"
+      value: "1419690600"
+    - display: "26 Jun, 2025"
+      value: "1435415400"
+    - display: "24 Dec, 2025"
+      value: "1451053800"
+    - display: "25 Jun, 2026"
+      value: "1466865000"
+    - display: "31 Dec, 2026"
+      value: "1483194600"
+    - display: "24 Jun, 2027"
+      value: "1498314600"
+    - display: "30 Dec, 2027"
+      value: "1514644200"
+    - display: "29 Jun, 2028"
+      value: "1530369000"
+  encryptionNeeded: false
+user/equitysip/mode:
+  mockResponse:
+    stat: "Ok"
+    lowLimit:
+      - "10"
+      - "10"
+    mode: "1"
+    tmExecFrequency:
+      - "daily"
+      - "weekly"
+  encryptionNeeded: false
+user/gcmkey:
+  mockResponse:
+    stat: "Ok"
+    emsg: "Device is not registered"
+  encryptionNeeded: false
+SquareOffPosition:
+  mockResponse:
+    stat: "Ok"
+    Result: "Ok"
+  encryptionNeeded: false
+GetChartData:
+  mockResponse:
+    stat: Ok
+    Emsg:
+    Result:
+    - date: '12:01:00'
+      ltrate: '2212.00'
+      volumeChange: '422'
+      CumulativeVolume: '1311955'
+      high: '2212.75'
+      low: '2211.00'
+      open: '2212.40'
+      close: '2212.00'
+    - date: '12:00:00'
+      ltrate: '2212.00'
+      volumeChange: '422'
+      CumulativeVolume: '1311955'
+      high: '2212.75'
+      low: '2211.00'
+      open: '2212.40'
+      close: '2212.00'
+    - date: '11:59:00'
+      ltrate: '2212.00'
+      volumeChange: '422'
+      CumulativeVolume: '1311955'
+      high: '2212.75'
+      low: '2211.00'
+      open: '2212.40'
+      close: '2212.00'
+    - date: '11:58:00'
+      ltrate: '2212.40'
+      volumeChange: '1525'
+      CumulativeVolume: '1311533'
+      high: '2214.45'
+      low: '2211.50'
+      open: '2212.85'
+      close: '2212.40'
+    - date: '11:57:00'
+      ltrate: '2212.85'
+      volumeChange: '342'
+      CumulativeVolume: '1310008'
+      high: '2212.95'
+      low: '2211.15'
+      open: '2212.00'
+      close: '2212.85'
+    - date: '11:56:00'
+      ltrate: '2212.00'
+      volumeChange: '991'
+      CumulativeVolume: '1309666'
+      high: '2213.15'
+      low: '2210.55'
+      open: '2211.00'
+      close: '2212.00'
+    - date: '11:55:00'
+      ltrate: '2211.00'
+      volumeChange: '2823'
+      CumulativeVolume: '1308675'
+      high: '2211.90'
+      low: '2210.50'
+      open: '2211.65'
+      close: '2211.00'
+  encryptionNeeded: false
+GetIndicesChart:
+  mockResponse:
+    stat: Ok
+    Emsg:
+    high: '2201105'
+    decimalprecision: '2'
+    last: '0'
+    low: '1903260'
+    multiplier: '1'
+    close: '1907960'
+    first: '2200965'
+    indicesscripinfo:
+    - highprice: '2174635'
+      ltqty: 0
+      openprice: '2174415'
+      lowprice: '2174000'
+      ltrate: 2174317
+      time: '4:8:0'
+      cumtrade: 0
+      closeprice: '2174070'
+  encryptionNeeded: false
+HistoricalChart:
+  mockResponse:
+    stat: Ok
+    Emsg:
+    data:
+    - date: 13/11/2020 15:56:00
+      high: '1190.45'
+      volumeChange: '3'
+      low: '1100.45'
+      CumulativeVolume: '226750'
+      ltrate: '1100.45'
+      close: '1200.45'
+      open: '1100.45'
+    - date: 13/11/2020 15:55:00
+      high: '2190.45'
+      volumeChange: '2'
+      low: '1100.45'
+      CumulativeVolume: '326750'
+      ltrate: '2100.45'
+      close: '2200.45'
+      open: '2100.45'
+    - date: 13/11/2020 15:54:00
+      high: '1190.45'
+      volumeChange: '2'
+      low: '1100.45'
+      CumulativeVolume: '226750'
+      ltrate: '1100.45'
+      close: '1200.45'
+      open: '1100.45'
+    - date: 13/11/2020 15:53:00
+      high: '1100.45'
+      volumeChange: '1'
+      low: '1100.45'
+      CumulativeVolume: '226750'
+      ltrate: '1100.45'
+      close: '1100.45'
+      open: '1100.45'
+    - date: 13/11/2020 15:52:00
+      high: '1100.45'
+      volumeChange: '5'
+      low: '1100.45'
+      CumulativeVolume: '226749'
+      ltrate: '1100.45'
+      close: '1100.45'
+      open: '1100.45'
+    - date: 13/11/2020 15:50:00
+      high: '1099.30'
+      volumeChange: '1067'
+      low: '1098.00'
+      CumulativeVolume: '226744'
+      ltrate: '1099.30'
+      close: '1099.30'
+      open: '1098.05'
+  encryptionNeeded: false
+AlertIndex:
+  mockResponse:
+    stat: Ok
+    IndexDetail:
+    - name: "BSE AUTO"
+      ExchName: "BSE"
+      token: "BSE AUTO"
+      decimalPrecision: 2
+      symbolName: "BSE"
+    - name: "Nifty 200"
+      ExchName: "NSE"
+      token: "Nifty 200"
+      decimalPrecision: 2
+      symbolName: "NIFTY"
+  encryptionNeeded: false
+PresonalTradeAlert:
+  mockResponse:
+    stat: Ok
+    Result: Alert ID is :112400027
+  encryptionNeeded: false
+DRSmarketWatch:
+  mockResponse:
+    stat: Ok
+    mwScripList: nse|1594|nse|8075
+  encryptionNeeded: false
+ADGMultiMW:
+  mockResponse:
+    stat: Ok
+    mwScripList: MasterWatchList100
+  encryptionNeeded: false
+user/equitysip/rejectedorder/replace:
+  mockResponse:
+    stat: Ok
+  encryptionNeeded: false
+user/statistics:
+  mockResponse:
+    itmKey:
+      - Day_Position
+    value:
+      - "2"
+    investedValue: "0"
+    currentValue: "0"
+    overallGain: "1232078"
+    overallGainPercentage: "12321"
+    GainingToday: "2"
+    LosingToday: "2"
+    OneDayReturns: "-1319"
+    OneDayReturnsPerc: "-0.11"
+    stat: Ok
+  encryptionNeeded: false
+researchCall:
+  mockResponse:
+    stat: Ok
+    data:
+    - boardLotQuantity: "1"
+      decimnalPrecision: "2"
+      defaultDateValidity: "15/11/2017"
+      dirCompanyName: "ACC LIMITED"
+      exchSeg: "nse_cm"
+      exchange: "NSE"
+      expiryDate: "--"
+      fillPrice: "1.00"
+      group: "EQ"
+      instrumentName: "OPTSTK"
+      messageId: "trading calls"
+      multiplier: "1"
+      newsHeadline: "NSE -ACC-EQ"
+      optionType: "NA"
+      reportSubject: "Technical call ACC-EQ BUY Initiation 1.00Rs, SL 20.00Rs, Target 25.00Rs, Price at Call 22.00Rs."
+      researchDesc: "Trade test for ACC"
+      strikePrice: "0.00"
+      symbol: "22"
+      symbolName: "ACC"
+      tickSize: "0.05"
+      time: "09:51:16:AM"
+      tradingSymbol: "ACC-EQ"
+      transactionType: "B"
+      uniqueKey: "ACC"
+  encryptionNeeded: false
+RMS/Sublimits:
+  mockResponse:
+    - adhocMargin: "7500.00"
+      adhocscripmargin: "0.00"
+      branchAdhoc: "0"
+      brokeragePrsnt: "0"
+      cashmarginavailable: "85000000000.00"
+      category: "GROSS_EXPO"
+      cdsSpreadBenefit: "100"
+      cncBrokeragePrsnt: "0"
+      cncMarginUsed: "0"
+      cncRealizedMtomPrsnt: "0"
+      cncSellCrditPrsnt: "0"
+      cncUnrealizedMtomPrsnt: "0"
+      collateralvalue: "0.00"
+      coverOrderMarginPrsnt: "0"
+      credits: "85000018750.00"
+      debits: "18136.63"
+      directcollateralvalue: "3750.00"
+      elm: "0.00"
+      exchange: "ALL"
+      exposuremargin: "0.00"
+      grossexposurevalue: "0.00"
+      mfamount: "0.00"
+      mfssAmountUsed: "0.00"
+      multiplier: "1.00"
+      net: "85000000613.37"
+      nfoSpreadBenefit: "150"
+      notionalCash: "7500.00"
+      payoutamount: "0.00"
+      premiumPrsnt: "0"
+      product: "ALL"
+      realizedMtomPrsnt: "0.00"
+      rmsIpoAmnt: "0"
+      rmsPayInAmnt: "0"
+      scripbasketmargin: "0.00"
+      segment: "ALL"
+      spanmargin: "0.00"
+      stat: "Ok"
+      subtotal: "18136.63"
+      symbol: "ALL"
+      turnover: "0.00"
+      unrealizedMtomPrsnt: "0.00"
+      valueindelivery: "0"
+      varmargin: "0.00"
+    - adhocMargin: "7500.00"
+      adhocscripmargin: "0.00"
+      branchAdhoc: "0"
+      brokeragePrsnt: "0"
+      cashmarginavailable: "85000000000.00"
+      category: "GROSS_EXPO"
+      cdsSpreadBenefit: "0"
+      cncBrokeragePrsnt: "0"
+      cncMarginUsed: "0"
+      cncRealizedMtomPrsnt: "0"
+      cncSellCrditPrsnt: "0"
+      cncUnrealizedMtomPrsnt: "0"
+      collateralvalue: "0.00"
+      coverOrderMarginPrsnt: "0"
+      credits: "85000018750.00"
+      debits: "18136.63"
+      directcollateralvalue: "3750.00"
+      elm: "0.00"
+      exchange: "ALL"
+      exposuremargin: "0.00"
+      grossexposurevalue: "0.00"
+      mfamount: "0.00"
+      mfssAmountUsed: "0.00"
+      multiplier: "1.00"
+      net: "85000000613.37"
+      nfoSpreadBenefit: "0"
+      notionalCash: "7500.00"
+      payoutamount: "0.00"
+      premiumPrsnt: "0"
+      product: "MTF"
+      realizedMtomPrsnt: "0.00"
+      rmsIpoAmnt: "0"
+      rmsPayInAmnt: "0"
+      scripbasketmargin: "0.00"
+      segment: "ALL"
+      spanmargin: "0.00"
+      stat: "Ok"
+      subtotal: "18136.63"
+      symbol: "ALL"
+      turnover: "0.00"
+      unrealizedMtomPrsnt: "0.00"
+      valueindelivery: "0"
+      varmargin: "0.00"
+    - adhocMargin: "7500.00"
+      adhocscripmargin: "0.00"
+      branchAdhoc: "0"
+      brokeragePrsnt: "0"
+      cashmarginavailable: "85000000000.00"
+      category: "GROSS_EXPO"
+      cdsSpreadBenefit: "0"
+      cncBrokeragePrsnt: "0"
+      cncMarginUsed: "0"
+      cncRealizedMtomPrsnt: "0"
+      cncSellCrditPrsnt: "0"
+      cncUnrealizedMtomPrsnt: "0"
+      collateralvalue: "0.00"
+      coverOrderMarginPrsnt: "0"
+      credits: "85000018750.00"
+      debits: "18136.63"
+      directcollateralvalue: "3750.00"
+      elm: "0.00"
+      exchange: "ALL"
+      exposuremargin: "0.00"
+      grossexposurevalue: "0.00"
+      mfamount: "0.00"
+      mfssAmountUsed: "0.00"
+      multiplier: "1.00"
+      net: "85000000613.37"
+      nfoSpreadBenefit: "0"
+      notionalCash: "7500.00"
+      payoutamount: "0.00"
+      premiumPrsnt: "0"
+      product: "ALL"
+      realizedMtomPrsnt: "0.00"
+      rmsIpoAmnt: "0"
+      rmsPayInAmnt: "0"
+      scripbasketmargin: "0.00"
+      segment: "CASH"
+      spanmargin: "0.00"
+      stat: "Ok"
+      subtotal: "18136.63"
+      symbol: "ALL"
+      turnover: "0.00"
+      unrealizedMtomPrsnt: "0.00"
+      valueindelivery: "0"
+      varmargin: "0.00"
+    - adhocMargin: "7500.00"
+      adhocscripmargin: "0.00"
+      branchAdhoc: "0"
+      brokeragePrsnt: "0"
+      cashmarginavailable: "85000000000.00"
+      category: "GROSS_EXPO"
+      cdsSpreadBenefit: "0"
+      cncBrokeragePrsnt: "0"
+      cncMarginUsed: "0"
+      cncRealizedMtomPrsnt: "0"
+      cncSellCrditPrsnt: "0"
+      cncUnrealizedMtomPrsnt: "0"
+      collateralvalue: "0.00"
+      coverOrderMarginPrsnt: "0"
+      credits: "85000018750.00"
+      debits: "18136.63"
+      directcollateralvalue: "3750.00"
+      elm: "0.00"
+      exchange: ""
+      exposuremargin: "0.00"
+      grossexposurevalue: "0.00"
+      mfamount: "0.00"
+      mfssAmountUsed: "0.00"
+      multiplier: "1.00"
+      net: "85000000613.37"
+      nfoSpreadBenefit: "0"
+      notionalCash: "7500.00"
+      payoutamount: "0.00"
+      premiumPrsnt: "0"
+      product: "MTF"
+      realizedMtomPrsnt: "0.00"
+      rmsIpoAmnt: "0"
+      rmsPayInAmnt: "0"
+      scripbasketmargin: "0.00"
+      segment: "ALL"
+      spanmargin: "0.00"
+      stat: "Ok"
+      subtotal: "18136.63"
+      symbol: "ALL"
+      turnover: "0.00"
+      unrealizedMtomPrsnt: "0.00"
+      valueindelivery: "0"
+      varmargin: "0.00"
+    - adhocMargin: "7500.00"
+      adhocscripmargin: "0.00"
+      branchAdhoc: "0"
+      brokeragePrsnt: "0"
+      cashmarginavailable: "85000000000.00"
+      category: "GROSS_EXPO"
+      cdsSpreadBenefit: "0"
+      cncBrokeragePrsnt: "0"
+      cncMarginUsed: "0"
+      cncRealizedMtomPrsnt: "0"
+      cncSellCrditPrsnt: "0"
+      cncUnrealizedMtomPrsnt: "0"
+      collateralvalue: "0.00"
+      coverOrderMarginPrsnt: "0"
+      credits: "85000018750.00"
+      debits: "18136.63"
+      directcollateralvalue: "3750.00"
+      elm: "0.00"
+      exchange: "ALL"
+      exposuremargin: "0.00"
+      grossexposurevalue: "0.00"
+      mfamount: "0.00"
+      mfssAmountUsed: "0.00"
+      multiplier: "1.00"
+      net: "85000000613.37"
+      nfoSpreadBenefit: "100"
+      notionalCash: "7500.00"
+      payoutamount: "0.00"
+      premiumPrsnt: "0"
+      product: "ALL"
+      realizedMtomPrsnt: "0.00"
+      rmsIpoAmnt: "0"
+      rmsPayInAmnt: "0"
+      scripbasketmargin: "0.00"
+      segment: "FO"
+      spanmargin: "0.00"
+      stat: "Ok"
+      subtotal: "18136.63"
+      symbol: "ALL"
+      turnover: "0.00"
+      unrealizedMtomPrsnt: "0.00"
+      valueindelivery: "0"
+      varmargin: "0.00"
+    - adhocMargin: "7500.00"
+      adhocscripmargin: "0.00"
+      branchAdhoc: "0"
+      brokeragePrsnt: "0"
+      cashmarginavailable: "85000000000.00"
+      category: "GROSS_EXPO"
+      cdsSpreadBenefit: "150"
+      cncBrokeragePrsnt: "0"
+      cncMarginUsed: "0"
+      cncRealizedMtomPrsnt: "0"
+      cncSellCrditPrsnt: "0"
+      cncUnrealizedMtomPrsnt: "0"
+      collateralvalue: "0.00"
+      coverOrderMarginPrsnt: "0"
+      credits: "85000018750.00"
+      debits: "18136.63"
+      directcollateralvalue: "3750.00"
+      elm: "0.00"
+      exchange: "ALL"
+      exposuremargin: "0.00"
+      grossexposurevalue: "0.00"
+      mfamount: "0.00"
+      mfssAmountUsed: "0.00"
+      multiplier: "1.00"
+      net: "85000000613.37"
+      nfoSpreadBenefit: "0"
+      notionalCash: "7500.00"
+      payoutamount: "0.00"
+      premiumPrsnt: "0"
+      product: "ALL"
+      realizedMtomPrsnt: "0.00"
+      rmsIpoAmnt: "0"
+      rmsPayInAmnt: "0"
+      scripbasketmargin: "0.00"
+      segment: "CUR"
+      spanmargin: "0.00"
+      stat: "Ok"
+      subtotal: "18136.63"
+      symbol: "ALL"
+      turnover: "0.00"
+      unrealizedMtomPrsnt: "0.00"
+      valueindelivery: "0"
+      varmargin: "0.00"
+  encryptionNeeded: false
+GTCGTD/replace:
+  mockResponse:
+    stat: Ok
+    triggerId: "2312088"
+  encryptionNeeded: false
+GTCGTD/GTCLatestStatus:
+  mockResponse:
+    stat: Ok
+    data:
+    - accountId: "MUGDHA"
+      cancelledSize: ""
+      comments: ""
+      date: "04/12/2023 12:04:16"
+      exchSeg: "nse_cm"
+      exchange: "NSE"
+      filledShares: "0"
+      nestOrderNumber: ""
+      numOfDays: "45"
+      orderSource: "RESTAPI-TPMOB"
+      orderValidityDate: "29-01-2024"
+      priceToFill: "4100.00"
+      quanToFill: "20"
+      text: ""
+      tradingSymbol: "ITC-EQ"
+      transactionType: "B"
+      triggerId: "2312046"
+      tmOrderNumber: ""
+      reportType: ""
+      fillSize: "0"
+      status: ""
+      triggerPrice: "0"
+      orderDuration: "GTD"
+      symbol: "1660"
+      symbolName: "ABB"
+      operation: "="
+      fieldType: "P"
+      continueFlag: "Y"
+      orderInitialStatus: "untriggered"
+    - accountId: "MUGDHA"
+      cancelledSize: ""
+      comments: "GTD"
+      date: "04/12/2023 12:04:17"
+      exchSeg: "nse_cm"
+      exchange: "NSE"
+      filledShares: "10"
+      nestOrderNumber: "231204000000046"
+      numOfDays: "45"
+      orderSource: "RESTAPI-TPMOB"
+      orderValidityDate: "29-01-2024"
+      priceToFill: "4100.00"
+      quanToFill: "30"
+      text: "RMS:Rule: Check circuit limit including square off order exceeds for entity account-MUGDHA across exchange across segment across product"
+      tradingSymbol: "ITC-EQ"
+      transactionType: "B"
+      triggerId: "2312046"
+      tmOrderNumber: ""
+      reportType: "failure"
+      fillSize: "0"
+      status: "rejected"
+      triggerPrice: "0"
+      orderDuration: "DAY"
+      symbol: "1660" 
+      symbolName: 'ABB'
+    - accountId: "MUGDHA"
+      cancelledSize: ""
+      comments: "GTD"
+      date: "04/12/2023 12:04:17"
+      exchSeg: "nse_cm"
+      exchange: "NSE"
+      filledShares: "10"
+      nestOrderNumber: "231204000000077"
+      numOfDays: "45"
+      orderSource: "RESTAPI-TPMOB"
+      orderValidityDate: "29-01-2024"
+      priceToFill: "4100.00"
+      quanToFill: "30"
+      text: "RMS:Rule: Check circuit limit including square off order exceeds for entity account-MUGDHA across exchange across segment across product"
+      tradingSymbol: ""
+      transactionType: "B"
+      triggerId: "2312047"
+      tmOrderNumber: ""
+      reportType: "failure"
+      fillSize: "0"
+      status: "trigger pending"
+      triggerPrice: "0"
+      orderDuration: "DAY"
+      symbol: "1660"
+      symbolName: 'ABB'
+    - accountId: "MUGDHA"
+      cancelledSize: ""
+      comments: "GTT"
+      date: "10/09/2024 11:56:33"
+      exchSeg: "nse_cm"
+      exchange: "NSE"
+      filledShares: "0"
+      nestOrderNumber: "240910000000070"
+      numOfDays: "45"
+      orderSource: "RESTAPI-NVNTGMOB"
+      orderValidityDate: "11/11/2024 00:00:00"
+      priceToFill: "4100.00"
+      quanToFill: "30"
+      text: "exchg not enabled for this acct"
+      tradingSymbol: "ABB-EQ"
+      transactionType: "Buy"
+      triggerId: "2409107"
+      tmOrderNumber: ""
+      reportType: "failure"
+      fillSize: "0"
+      status: "rejected"
+      triggerPrice: "0"
+      orderDuration: "GTT"
+      symbol: "1660"
+      symbolName: 'ABB'
+      operation: "="
+      fieldType: "P"
+      continueFlag: "Y"
+      orderInitialStatus: "untriggered"
+      itemid: "1"
+      namedItem: "Last Traded Price"
+  encryptionNeeded: false   
+GTCGTD/postmarket/cancel:
+  mockResponse:
+    stat: Ok
+    triggerId: "2312088"
+  encryptionNeeded: false
+search:
+  mockResponse:
+    stat: Ok
+    count: '1'
+    data:
+      - id: 14765
+        symbolName: ACC
+        symbolNameAlias: ACC
+        scripDeleteFlag: N
+        scripUpdateTime: '1702596030'
+        exchSeg: nse_fo
+        tickSize: '5'
+        issueDate: '1380412800'
+        group: XX
+        symbol: '70023'
+        lotSize: '300'
+        tradingSymbol: ACC23DEC1240CE
+        scripRefKey: ACC23DEC1240CE
+        strikePrice: '124000'
+        maturityDate: '1388241000'
+        minLotSize: '300'
+        optionType: CE
+        assetToken: '22'
+        expiryDate: '1388241000'
+        instrumentName: OPTSTK
+        expiryDateLeg2: '1388241000'
+        secondsSinceBoe: '0'
+        decimalPrecision: '2'
+        multiplier: '1'
+        multipleFieldSearch: NFO ACC 70023 null ACC23DEC1240CE null 28 Dec 2023 1240 CE OPTSTK XX
+        expiryDateFormat: 28 Dec,2023
+        expiryDateLeg2Format: 28 Dec,2023
+        strikePriceWithoutLocale: '1240'
+        instrument: OPTSTK
+        stock_type: option
+        symbol_description: 28 Dec 2023 1240 CE
+        exchPriority: 4
+        segment: option
+  encryptionNeeded: false
+ModifyPersonalAlrt:
+  mockResponse:
+    stat: Ok
+    Result: ' Alert ID is :191000008'
+  encryptionNeeded: false
+GTCGTD/postmarket/modify:
+  mockResponse:
+    stat: Ok
+    triggerId: "23120812"
+  encryptionNeeded: false
+broker/mw/scrips:
+  mockResponse:
+    stat: Ok
+    values:
+      - tcksize: '25000'
+        openinterest: '0'
+        BestSellPrice: '00.0000'
+        optiontype: XX
+        ExchSeg: cde_fo
+        defmktproval: '3'
+        BestBuySize: ""
+        noMktPro: '0'
+        CombinedSymbol: NA
+        symbolname: EURINR
+        mktpro: '1'
+        high: '0'
+        lasttradedtime: ""
+        BestSellSize: ""
+        low: '0'
+        averageprice: '0'
+        lasttradedquantity: ""
+        strikeprice: '-0.01'
+        close: '0'
+        Expiry: '27 Sep, 2017'
+        TradSym: EURINR17SEPFUT
+        spotprice: '75.0005'
+        BestBuyPrice: '00.0000'
+        multiplier: '1000'
+        totalbuyqty: ""
+        totalsellqty: ""
+        ltp: '0.0000'
+        Change: '00.0000'
+        decimalPrecision: '4'
+        token: '1227'
+        Exchange: CDS
+        UniqueKey: ""
+        corporateaction: ""
+        companyname: EURINR
+        PerChange: '0.0'
+        Instrument: FUTCUR
+        TradeVolume: ""
+        bodlot: '1'
+        maxQty: '999999999'
+        open: '0'
+        minQty: '1'
+        discQty: '10'
+        expdate: '1190989800'
+      - tcksize: '25000'
+        openinterest: '0'
+        BestSellPrice: '00.0000'
+        optiontype: XX
+        ExchSeg: cde_fo
+        defmktproval: '3'
+        BestBuySize: ""
+        noMktPro: '0'
+        CombinedSymbol: NA
+        symbolname: EURINR
+        mktpro: '1'
+        high: '0'
+        lasttradedtime: ""
+        BestSellSize: ""
+        low: '0'
+        averageprice: '0'
+        lasttradedquantity: ""
+        strikeprice: '-0.01'
+        close: '0'
+        Expiry: '27 Sep, 2017'
+        TradSym: EURINR17SEPFUT
+        spotprice: '75.0005'
+        BestBuyPrice: '00.0000'
+        multiplier: '1000'
+        totalbuyqty: ""
+        totalsellqty: ""
+        ltp: '0.0000'
+        Change: '00.0000'
+        decimalPrecision: '4'
+        token: '1227'
+        Exchange: NCDEX
+        UniqueKey: ""
+        corporateaction: ""
+        companyname: EURINR
+        PerChange: '0.0'
+        Instrument: FUTCUR
+        TradeVolume: ""
+        bodlot: '1'
+        maxQty: '999999999'
+        open: '0'
+        minQty: '1'
+        discQty: '10'
+        expdate: '1190989800'
+  encryptionNeeded: false
+scanner/basics:
+  mockResponse:
+    stat: Ok
+    data:
+    - exch: BSE
+      token: '199032'
+      Tsym: KTKSENSINAV
+      openprice: '0'
+      highprice: '0'
+      lowprice: '0'
+      prevclose: '0'
+      tradeprice: '0'
+      yearlyhighprice: '0'
+      yearlylowprice: '0'
+      lowpricerange: '0'
+      highpricerange: '0'
+      netchange: '0'
+      tradevolume: '0'
+      multiplier: '1'
+      decimalPrecision: '2'
+      symbolName: KTKSENSINAV
+    - exch: BSE
+      token: '532775'
+      Tsym: GTLINFRA
+      openprice: '14500'
+      highprice: '14700'
+      lowprice: '14400'
+      prevclose: '14200'
+      tradeprice: '14800'
+      yearlyhighprice: '14900'
+      yearlylowprice: '6400'
+      lowpricerange: '13500'
+      highpricerange: '14900'
+      netchange: '54300'
+      tradevolume: '64754378'
+      symbolName: GTLINFRA
+      multiplier: '1'
+      decimalPrecision: '2'
+  encryptionNeeded: false
+MarketStatus:
+  mockResponse:
+    stat: Ok
+    Marketstaus:
+    - MktStatus: Normal Market Open
+      MarketMode: Normal Market Open
+      Exchange: NSE
+      text: 02-Nov-2023 09:15:00 The Normal market has opened.
+      exchfeedtime: 02-Nov-2023 09:15:00
+    - MktStatus: Normal Market Open
+      MarketMode: Normal Market Open
+      Exchange: BSE
+      text: 05-Jan-2024 12:30:00 The Normal market has opened.
+      exchfeedtime: 05-Jan-2024 12:30:00
+  encryptionNeeded: false
+PartialPositionconvertion:
+  mockResponse:
+    stat: Ok
+    Result: 'Position Conversion Successful'
+  encryptionNeeded: false
+user/ipo/orders/details:
+  mockResponse:
+    stat: Ok
+    address: www.w.com
+    auctionHighPriceRange: '0'
+    auctionLowPriceRange: '0'
+    buyLimit: '10000000'
+    buySecurityLimit: '20000000'
+    comments: welcome
+    componentMultiplier: '10'
+    expirationDate: '20:00:00'
+    faceValue: '1000'
+    group: eq
+    instrumentType: '1000'
+    issueDate:
+      - '11/09/2013'
+      - '30/09/2016'
+      - '29/09/2016'
+    issueId: amar-RS
+    issueType: BookBuilding
+    lotSize:
+      - '10'
+      - '2520000000.0000'
+    percent: '87'
+    premium:
+      - '10'
+      - '10'
+    releaseAmt: '100'
+    sequenceInfo: P
+    status: N
+    statusIndicator: SUCCESS
+    symbol: we
+    symbolName: wer
+    tickSize: '1'
+    IPOnoteASBA: 'Note: Please provide the ASBA details to the selected bank to block the funds'
+  encryptionNeeded: false
+user/ipo/banks:
+  mockResponse:
+    stat: Ok
+    data:      
+      - bankName: ICICI BANK LTD
+        bankBranchName:
+          - "MUMBAI"
+          - "CHENAI"
+          - "KOLKTA"
+          - "DELHI"
+          - "AHMDBD"
+          - "JAIPUR"
+          - "BNGLOR"
+          - "HYDRBD"
+          - "PUNE"
+          - "Mlore"
+  encryptionNeeded: false
+user/ipo/orders/cancel:
+  mockResponse:
+    stat: Ok
+    appNum1: '100'
+  encryptionNeeded: false
+auction/symbols:
+  mockResponse:
+    stat: Ok
+    data:
+    - exchSeg: bse_cm
+      symbol: '542772'
+      auctionNumber: '10'
+      auctionHighPriceRange: '5767.50'
+      auctionLowPriceRange: '3845.00'
+      prevTradeVolume: '607'
+    - auctionHighPriceRange: '912.10'
+      symbol: '3044'
+      auctionNumber: '6028'
+      exchSeg: nse_cm
+      prevTradeVolume: '12528399'
+      auctionLowPriceRange: '608.10'
+  encryptionNeeded: false
+user/ipo/orders:
+  mockResponse:
+    stat: Ok
+    data:
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "102"
+      appNum2: "47"
+      avmFlag: "Non-institutional"
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "2"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 16:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: amar-RS
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "222"
+      quanToFill: "22"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: reject
+      statusIndicator: SUCCESS
+      symbol: amar
+      symbolName: amar
+      text: "Invalid. UPI is not allowed for margin more than Rs.200000.00"
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "102"
+      appNum2: "47"
+      avmFlag: Retail
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "1"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 16:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: amar-RS
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "100"
+      quanToFill: "11"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: open
+      statusIndicator: SUCCESS
+      symbol: amar
+      symbolName: amar
+      text: ""
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "102"
+      appNum2: "47"
+      avmFlag: Retail
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "3"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 16:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: amar-RS
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "333"
+      quanToFill: "33"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: failure
+      statusIndicator: SUCCESS
+      symbol: amar
+      symbolName: amar
+      text: "Server Not Ready."
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "222"
+      appNum2: "47"
+      avmFlag: Retail
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "3"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 16:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: gs-RS
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "444"
+      quanToFill: "44"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: failure
+      statusIndicator: SUCCESS
+      symbol: gs
+      symbolName: gs
+      text: "Server Not Ready."
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "222"
+      appNum2: "47"
+      avmFlag: Retail
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "1"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 16:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: gs-RS
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "555"
+      quanToFill: "55"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: open
+      statusIndicator: SUCCESS
+      symbol: gs
+      symbolName: gs
+      text: ""
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "222"
+      appNum2: "47"
+      avmFlag: Retail
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "2"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 16:40:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: gs-RS
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "666"
+      quanToFill: "66"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: reject
+      statusIndicator: SUCCESS
+      symbol: gs
+      symbolName: gs
+      text: "Invalid. UPI is not allowed for margin more than Rs.200000.00"
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "502"
+      appNum2: "47"
+      avmFlag: "Non-institutional"
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "1"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 01:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: ABC
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "222"
+      quanToFill: "22"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: rejected
+      statusIndicator: SUCCESS
+      symbol: ABC
+      symbolName: ABC
+      text: ""
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "502"
+      appNum2: "47"
+      avmFlag: "Non-institutional"
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "2"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 01:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: ABC
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "222"
+      quanToFill: "22"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: open pending
+      statusIndicator: SUCCESS
+      symbol: ABC
+      symbolName: ABC
+      text: ""
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "502"
+      appNum2: "47"
+      avmFlag: "Non-institutional"
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "3"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 01:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: ABC
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "222"
+      quanToFill: "22"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: modify pending
+      statusIndicator: SUCCESS
+      symbol: ABC
+      symbolName: ABC
+      text: ""
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "503"
+      appNum2: "47"
+      avmFlag: "Non-institutional"
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "1"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 01:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: ROYAL
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "222"
+      quanToFill: "22"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: rejected
+      statusIndicator: SUCCESS
+      symbol: ROYAL
+      symbolName: ROYAL
+      text: ""
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "503"
+      appNum2: "47"
+      avmFlag: "Non-institutional"
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "2"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 01:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: ROYAL
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "222"
+      quanToFill: "22"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: open pending
+      statusIndicator: SUCCESS
+      symbol: ROYAL
+      symbolName: ROYAL
+      text: ""
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "503"
+      appNum2: "47"
+      avmFlag: "Non-institutional"
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "3"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 01:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: ROYAL
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "222"
+      quanToFill: "22"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: complete
+      statusIndicator: SUCCESS
+      symbol: ROYAL
+      symbolName: ROYAL
+      text: ""
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "504"
+      appNum2: "47"
+      avmFlag: "Non-institutional"
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "1"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 01:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: JDIAL
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "222"
+      quanToFill: "22"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: not valid
+      statusIndicator: SUCCESS
+      symbol: JDIAL
+      symbolName: JDIAL
+      text: ""
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "504"
+      appNum2: "47"
+      avmFlag: "Non-institutional"
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "2"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 01:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: JDIAL
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "222"
+      quanToFill: "22"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: failure
+      statusIndicator: SUCCESS
+      symbol: JDIAL
+      symbolName: JDIAL
+      text: "Server Not Ready."
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "504"
+      appNum2: "47"
+      avmFlag: "Non-institutional"
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "3"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2024 01:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: JDIAL
+      issueType: Book Building
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "222"
+      quanToFill: "22"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: failure
+      statusIndicator: SUCCESS
+      symbol: JDIAL
+      symbolName: JDIAL
+      text: "Server Not Ready."
+      transactionType: B
+      txnDate: "08-08-2016"
+    - accountId: SAR01
+      accountName: Sarvesh Mangodi
+      user: 'SARVESH'
+      appNum1: "505"
+      appNum2: "47"
+      avmFlag: "Non-institutional"
+      bankAccountNo: "1"
+      bankBranchName: MUMBAI
+      bankName: VIJAYA BANK
+      beneficiaryId: IN77889900112233
+      bidNo: "1"
+      broker: Omnesys
+      category: IND
+      componentMultiplier: "1"
+      customerFirm: C
+      cutOff: N
+      date: "24/07/2023 01:39:25"
+      dpAccountNumber: IN77889900112233
+      dpId: IN77889900112233
+      dpName: GHJ09
+      dpType: CDSL
+      exchOrdId: "201687155026783"
+      exchSeg: nse_ipo
+      exchUser: "13531"
+      fillDate: "08-Aug-2016"
+      fillTime: "14:16:55"
+      group: RS
+      highPriceRange: "100"
+      ipoPrice: "200"
+      issueDate: "14-06-2016 00:00:00"
+      issueId: ABB
+      issueType: Fixed Price
+      locationId: "111111111111130"
+      lotSize: "1"
+      lowPriceRange: "100"
+      marginRate: "0"
+      minAddAmt: "1"
+      misEndDate: "07-11-2018 00:00:00"
+      misStartDate: "03-02-2015 00:00:00"
+      nestOrderNumber: "160801900000002"
+      orderDuration: GTC
+      orderGenerationType: ""
+      priceToFill: "222"
+      quanToFill: "22"
+      refundType: ---
+      releaseAmt: "100"
+      reportLevel: ORDER
+      reportType: status
+      rmsValidated: OK
+      routeToRms: OK
+      status: open
+      statusIndicator: SUCCESS
+      symbol: ABB
+      symbolName: ABB
+      text: ""
+      transactionType: B
+      txnDate: "08-08-2016"
+  encryptionNeeded: false
+user/ofs/orders/place:
+  mockResponse:
+    - stat: Ok
+      Status: "put order req received"
+      nestOrderNumber: '123456789'
+  encryptionNeeded: false
+user/ipo/orders/place:
+  mockResponse:
+    stat: Ok
+    appNum1: '100'
+    nestOrderNumber: '160808000000028'
+    statusIndicator: 'Success'
+  encryptionNeeded: false
+user/ipo/orders/modify:
+  mockResponse:
+    stat: Ok
+    appNum1: '100'
+    Status: 'modify order req received'
+  encryptionNeeded: false
+user/ipo/subCategory:
+  mockResponse:
+    stat: Ok
+    data:
+      - exchSeg: nse_ipo
+        issueId: JDIAL
+        statusIndicator: SUCCESS
+        cliSubCatCode: FI
+        sequenceInfo: P
+        percent: '00.00'
+        buyLimit: '200000.00'
+        buySecurityLimit: '500000.00'
+        bidStartTime: '09:00:00'
+        bidEndTime: '23:23:23'
+      - exchSeg: nse_ipo
+        issueId: JDIAL
+        statusIndicator: SUCCESS
+        cliSubCatCode: EMP
+        sequenceInfo: V
+        percent: '10'
+        buyLimit: '200000.00'
+        buySecurityLimit: '500000.00'
+        bidStartTime: '09:00:00'
+        bidEndTime: '23:23:23'
+      - exchSeg: nse_ipo
+        issueId: JDIAL
+        statusIndicator: SUCCESS
+        cliSubCatCode: HNI
+        sequenceInfo: V
+        percent: '0.00'
+        buyLimit: '200000.00'
+        buySecurityLimit: '250000.00'
+        bidStartTime: '09:00:00'
+        bidEndTime: '23:23:23'
+      - exchSeg: nse_ipo
+        issueId: JDIAL
+        statusIndicator: SUCCESS
+        cliSubCatCode: SHA
+        sequenceInfo: V
+        percent: '11.00'
+        buyLimit: '150000.00'
+        buySecurityLimit: '500000.00'
+        bidStartTime: '09:00:00'
+        bidEndTime: '23:23:23'
+      - exchSeg: nse_ipo
+        issueId: JDIAL
+        statusIndicator: SUCCESS
+        cliSubCatCode:  IND
+        sequenceInfo: V
+        percent: '12.00'
+        buyLimit: '200000.00'
+        buySecurityLimit: '500000.00'
+        bidStartTime: '09:00:00'
+        bidEndTime: '23:23:23'
+      - exchSeg: nse_ipo
+        issueId: JDIAL
+        statusIndicator: SUCCESS
+        cliSubCatCode:  POL
+        sequenceInfo: P
+        percent: '00.00'
+        buyLimit: '200000.00'
+        buySecurityLimit: '500000.00'
+        bidStartTime: '09:00:00'
+        bidEndTime: '23:23:23'
+  encryptionNeeded: false
+user/ofs/orders/modify:
+  mockResponse:
+    stat: Ok
+    status: "modify order req received"
+    nestOrderNumber: '123456789'
+  encryptionNeeded: false
+user/ofs/orders/history:
+  mockResponse:
+    - stat: Ok
+      accountId: OSTAN5-OTPUAT
+      accountName: ostan
+      avmFlag: Retail
+      broker: OTPUAT
+      customerFirm: C
+      exchSeg: bse_ofs
+      exchUser: Omnesys
+      locationId: "1111111111111"
+      nestOrderNumber: "170530010000006"
+      orderDuration: OFS
+      priceToFill: "8000"
+      priceType: L
+      quanToFill: "50"
+      reportType: failure
+      status: rejected
+      symbol: "12345"
+      symbolName: RPOWER
+      text: bad input
+      tradingSymbol: RPOWER
+      transactionType: B
+      user: OSTAN5-OTPUAT
+      guiOrderId: 1582105735-277569-GIRI04-EQUITY_SIP
+      orderedTime: 01/05/2023 10:00:00
+      exchOrdId: "111111111111130"
+      orderSource: MOB
+  encryptionNeeded: false
+user/ofs/orders/cancel:
+  mockResponse:
+    stat: OK
+    nestOrderNumber: "160307900000044"
+  encryptionNeeded: false
+user/ofs/orders:
+  mockResponse:
+    - stat: Ok
+      accountId: OSTAN5-OTPUAT
+      accountName: ostan
+      avmFlag: "Non-Institutional"
+      broker: OTPUAT
+      customerFirm: C
+      exchOrdId: "111111111111130"
+      exchSeg: bse_ofs
+      exchUser: Omnesys
+      exchange_Date_Time: "-- May 30 2017 10:35:23"
+      OrderedTime: 27/08/2024 10:24:07
+      executingBroker: IND
+      fillDate: "--"
+      isCollateralInd: 'YES'
+      locationId: '1111111111111'
+      nestOrderNumber: '170530010000006'
+      orderDuration: OFS
+      orderMinimumQty: '50'
+      panNo: QQQQQ1111Q
+      priceToFill: '80.00'
+      priceType: L
+      quanToFill: '50'
+      reportType: failure
+      status: rejected
+      symbol: RPOWER
+      symbolName: RPOWER
+      text: bad input
+      transactionType: B
+      user: OSTAN5-OTPUAT
+  encryptionNeeded: false
+ipo/issue:
+  mockResponse:
+    stat: Ok
+    data:
+      - address: HeloOmne.com
+        comments: hel
+        companyId: HeloOmne
+        componentMultiplier: '1'
+        faceValue: '100'
+        group: qa
+        instrumentType: HeloOmne
+        issueDate:
+        - 12/01/2012
+        - 02/12/2024
+        - 02/12/2024
+        issueId: HeloOmne-qa
+        issueType: BookBuilding
+        lotSize:
+        - '1'
+        - '10000000'
+        percent: '0'
+        premium:
+        - '1'
+        - '1000'
+        releaseAmt: '1'
+        sequenceInfo: P
+        status: N
+        statusIndicator: SUCCESS
+        symbol: HeloOmne
+        symbolName: HeloOmne
+        tickSize: '1'
+        expirationDate: "10:11:15"
+        IPOSubType: "SME"
+        ipoDisplayItem : "Y"
+        ipoBidAllowed : "Y"
+      - address: JDIAL.com
+        comments: hel
+        companyId: JDIAL
+        componentMultiplier: '1'
+        faceValue: '100'
+        group: qa
+        instrumentType: JDIAL
+        issueDate:
+        - 12/01/2012
+        - 07/11/2024
+        - 07/11/2024
+        issueId: JDIAL
+        issueType: BookBuilding
+        lotSize:
+        - '1'
+        - '10000000'
+        percent: '0'
+        premium:
+        - '1'
+        - '1000'
+        releaseAmt: '1'
+        sequenceInfo: P
+        status: N
+        statusIndicator: SUCCESS
+        symbol: JDIAL
+        symbolName: JDIAL
+        tickSize: '1'
+        expirationDate: "10:11:15"
+        IPOSubType: "SME"
+        ipoDisplayItem : "Y"
+        ipoBidAllowed : "Y"
+  encryptionNeeded: false
+user/ofs:
+  mockResponse:
+    stat: Ok
+    data:
+      - address: Addrs
+        buyLimit: "200000"
+        comments: Commnts
+        componentMultiplier: "3"
+        cutOff: N
+        expirationDate: 28/08/2020
+        faceValue: "5"
+        group: RS
+        isin: RPOWER
+        issueDate:
+          - 27/08/2020
+          - 27/08/2020
+          - 27/08/2020
+        issueId: RPOWER
+        issueType: "0"
+        lotSize:
+          - "55"
+          - "1234567"
+        ofshnilimit: "200000"
+        percent: "5"
+        premium:
+          - "50"
+          - "5000"
+        releaseAmt: "765432"
+        sequenceInfo: P
+        statusIndicator: SUCCESS
+        symbol: RPOWER
+        symbolName: RPOWER
+        tickSize: "1"
+        startDate: 27/08/2020
+        closeDate: 27/08/2020
+      - address: Addrs
+        buyLimit: "200000"
+        comments: Commnts
+        componentMultiplier: "3"
+        cutOff: N
+        expirationDate: 28/08/2020
+        faceValue: "5"
+        group: RS
+        isin: WIPRO
+        issueDate:
+          - 27/08/2020
+          - 27/08/2020
+          - 27/08/2020
+        issueId: wipro-RS
+        issueType: "0"
+        lotSize:
+          - "55"
+          - "1234567"
+        ofshnilimit: "200000"
+        percent: "5"
+        premium:
+          - "50"
+          - "5000"
+        releaseAmt: "765432"
+        sequenceInfo: P
+        statusIndicator: SUCCESS
+        symbol: wipro
+        symbolName: wipro
+        tickSize: "1"
+        startDate: 27/08/2020
+        closeDate: 27/08/2020
+  encryptionNeeded: false
+user/ipo/bidhistory:
+  mockResponse:
+      stat: Ok
+      data:
+      - accountId: SAR01
+        accountName: Sarvesh Mangodi
+        appNum1: "102"
+        appNum2: "1"
+        avmFlag: Retail
+        bankAccountNo: "215465"
+        bankBranchName: MUMBAI
+        bankName: ASIAN BANK
+        beneficiaryId: IN77889900112233
+        bidNo: "2"
+        broker: Omnesys
+        category: IND
+        componentMultiplier: "1"
+        customerFirm: C
+        cutOff: N
+        date: "19/04/2016 11:20:20"
+        dpId: IN77889900112233
+        dpName: GHJ09
+        dpType: CDSL
+        exchSeg: nse_ipo
+        exchUser: "13531"
+        group: RS
+        highPriceRange: "1000"
+        ipoPrice: "40"
+        issueId: IPOKARVY-RS
+        locationId: "111111111111130"
+        lowPriceRange: "10"
+        marginRate: "0"
+        minAddAmt: "1"
+        nestOrderNumber: "160418900000007"
+        orderDuration: GTC
+        priceToFill: "20"
+        quanToFill: "2"
+        refundType: ---
+        reportLevel: ""
+        reportType: ""
+        rmsValidated: ""
+        routeToRms: OK
+        status: put order req received
+        statusIndicator: SUCCESS
+        symbol: IPOKARVY
+        symbolName: IPOKARVY
+        text: ""
+        transactionType: B
+        txnDate: 19-04-2016
+        user: SAR01
+      - accountId: SAR01
+        accountName: Sarvesh Mangodi
+        appNum1: "102"
+        appNum2: "2"
+        avmFlag: Retail
+        bankAccountNo: "215465"
+        bankBranchName: MUMBAI
+        bankName: ASIAN BANK
+        beneficiaryId: IN77889900112233
+        bidNo: "2"
+        broker: Omnesys
+        category: IND
+        componentMultiplier: "1"
+        customerFirm: C
+        cutOff: N
+        date: "19/04/2016 11:22:20"
+        dpId: IN77889900112233
+        dpName: GHJ09
+        dpType: CDSL
+        exchSeg: nse_ipo
+        exchUser: "13531"
+        group: RS
+        highPriceRange: "1000"
+        ipoPrice: "40"
+        issueId: IPOKARVY-RS
+        locationId: "111111111111130"
+        lowPriceRange: "10"
+        marginRate: "0"
+        minAddAmt: "1"
+        nestOrderNumber: "160418900000005"
+        orderDuration: GTC
+        priceToFill: "20"
+        quanToFill: "2"
+        refundType: ---
+        reportLevel: ""
+        reportType: ""
+        rmsValidated: ""
+        routeToRms: OK
+        status: reject
+        statusIndicator: SUCCESS
+        symbol: IPOKARVY
+        symbolName: IPOKARVY
+        text: "Invalid category for UPI bid"
+        transactionType: B
+        txnDate: 19-04-2016
+        user: SAR01
+      - accountId: SAR01
+        accountName: Sarvesh Mangodi
+        appNum1: "102"
+        appNum2: "1"
+        avmFlag: Retail
+        bankAccountNo: "215465"
+        bankBranchName: MUMBAI
+        bankName: ASIAN BANK
+        beneficiaryId: IN77889900112233
+        bidNo: "1"
+        broker: Omnesys
+        category: IND
+        componentMultiplier: "1"
+        customerFirm: C
+        cutOff: N
+        date: "19/04/2016 11:16:20"
+        dpId: IN77889900112233
+        dpName: GHJ09
+        dpType: CDSL
+        exchSeg: nse_ipo
+        exchUser: "13531"
+        group: RS
+        highPriceRange: "1000"
+        ipoPrice: "40"
+        issueId: IPOKARVY-RS
+        locationId: "111111111111130"
+        lowPriceRange: "10"
+        marginRate: "0"
+        minAddAmt: "1"
+        nestOrderNumber: "160418900000007"
+        orderDuration: GTC
+        priceToFill: "20"
+        quanToFill: "2"
+        refundType: ---
+        reportLevel: ""
+        reportType: ""
+        rmsValidated: ""
+        routeToRms: OK
+        status: put order req received
+        statusIndicator: SUCCESS
+        symbol: IPOKARVY
+        symbolName: IPOKARVY
+        text: ""
+        transactionType: B
+        txnDate: 19-04-2016
+        user: SAR01
+      - accountId: SAR01
+        accountName: Sarvesh Mangodi
+        appNum1: "102"
+        appNum2: "2"
+        avmFlag: Retail
+        bankAccountNo: "215465"
+        bankBranchName: MUMBAI
+        bankName: ASIAN BANK
+        beneficiaryId: IN77889900112233
+        bidNo: "1"
+        broker: Omnesys
+        category: IND
+        componentMultiplier: "1"
+        customerFirm: C
+        cutOff: N
+        date: "19/04/2016 11:18:20"
+        dpId: IN77889900112233
+        dpName: GHJ09
+        dpType: CDSL
+        exchSeg: nse_ipo
+        exchUser: "13531"
+        group: RS
+        highPriceRange: "1000"
+        ipoPrice: "40"
+        issueId: IPOKARVY-RS
+        locationId: "111111111111130"
+        lowPriceRange: "10"
+        marginRate: "0"
+        minAddAmt: "1"
+        nestOrderNumber: "160418900000005"
+        orderDuration: GTC
+        priceToFill: "20"
+        quanToFill: "2"
+        refundType: ---
+        reportLevel: ""
+        reportType: ""
+        rmsValidated: ""
+        routeToRms: OK
+        status: validation pending
+        statusIndicator: SUCCESS
+        symbol: IPOKARVY
+        symbolName: IPOKARVY
+        text: ""
+        transactionType: B
+        txnDate: 19-04-2016
+        user: SAR01
+  encryptionNeeded: false
+user/mf/addscrips:
+  mockResponse:
+    stat: Ok
+    statusIndicator: "Task successful"
+  encryptionNeeded: false
+user/mf/holdings:
+  mockResponse:
+    stat: Ok
+    data:
+    - symbol: "7258"
+      nav: "120.0"
+      product: CNC
+      exchSeg: bse_mf
+      holdingQty: "100.0"
+      hairCut: "50.0"
+      cncUsedQty: "10.0"
+      folioNumber: "12345"
+      accountId: GIRISH6-OTPUAT
+      broker_Margin: "3.0"
+      series: GR
+      tradingSymbol: ILGT-GR
+      desc: HDFC FLOATING RATE INCOME FUND - LONG TERM PLAN - DIRECT PLAN - GROWTH OPTION
+  encryptionNeeded: false
+user/mf/cancelorder:
+  mockResponse:
+    stat: Ok
+    nestOrderNumber : '160206000000001'
+  encryptionNeeded: false
+user/mf/deletemw:
+  mockResponse:
+    stat: Ok
+    statusIndicator: Task successful
+  encryptionNeeded: false
+user/mf/mwlist:
+  mockResponse:
+    stat: Ok
+    mwName:
+    - MW1
+  encryptionNeeded: false
+user/mf/modifyorder:
+  mockResponse:
+    stat: Ok
+    nestOrderNumber: "160208010000000"
+  encryptionNeeded: false
+user/mf/securityinfo:
+  mockResponse:
+    stat: Ok
+    amcCode: 'UTI'
+    amcName: 'UTI ASSET MANAGMENT CO LT'
+    desc: 'UTI-EQUITY FUND (FORMERLY UTI-MASTERGAIN UNIT SCHEME) - DIVIDEND PLAN'
+    group: 'DR'
+    isin: 'INF789F01505'
+    maxMarketQuan: '1.32300000000000E+03'
+    minAddValue: '1000.000000'
+    minFreshValue: '5000.000000'
+    minRedemptionAmt: '0.010000'
+    minRedemptionQty: '0.010000'
+    rtCode: 'KARVY'
+    sipMDate: '1|7|15|25'
+    sipMFreqMultiple: '1'
+    sipMFreqEligibility: 'Y'
+    sipMMaxAmount: '9.99999000000000E+07'
+    sipMMinAmount: '50000'
+    sipMMinTotalAmount: '3.00000000000000E+05'
+    sipMMultiple: '1'
+    sipMPeriod: '6|7|8|9|10'
+    sipQDate: '1|7|15|25'
+    sipQFreqEligibility: 'Y'
+    sipQFreqMultiple: '3'
+    sipQMaxAmount: '9.99999000000000E+07'
+    sipQMinAmount: '150000'
+    sipQMinTotalAmount: '6.00000000000000E+05'
+    sipQMonths: 'J-A-J-O|F-M-A-N|M-J-S-D'
+    sipQMultiple: '1'
+    sipQPeriod: '12|15|18|21|24|27|30|33'
+    sipSecurity: 'Y'
+    subgroup: 'EQITY'
+    symbolName: 'UTIEQUITY'
+    totalProposedLimitValue: '100000.000000'
+  encryptionNeeded: false
+user/mf/orderhistory:
+  mockResponse:
+    stat: Ok
+    data:
+    - nestOrderNumber: '160208010000000'
+      exchOrdId: '1'
+      quanToFill: '2.0000'
+      status: put order req received
+      tradingSymbol: AISHYDRDB-DR
+      transactionType: B
+      value: '132300'
+  encryptionNeeded: false
+user/mf/mandateregistration:
+  mockResponse:
+    stat: Ok
+    accountId: OSTAN5-OTPUAT
+    isipMandate: BSE000000084264|BSE000000084265|BSE000000084266|BSE000000084267|BSE000000084268|BSE000000084270
+    mandateId: "234532456"
+  encryptionNeeded: false
+user/mf/mwinfo:
+  mockResponse:
+    stat: "Ok"
+    data:
+      - amcCode: "HDFCMutualFund_MF"
+        desc: "DEBT"
+        exchSeg: "bse_mf"
+        group: "L1"
+        isin: "INF179K01731"
+        minRedemptionQty: "0.010"
+        nav: "10"
+        schemePlan: "NORMAL"
+        segment: "MF"
+        sipSecurity: "0.001"
+        subgroup: "10000000000.000"
+        symbol: "14209"
+        symbolName: "HDISWD-DP-L1"
+        tradingSymbol: "HDISWD-DP-L1"
+  encryptionNeeded: false
+user/ipo/logs:
+  mockResponse:
+    stat: Ok
+    data:
+      - accountId: SAR01
+        appNum1: '2000000003'
+        appNum2: '1'
+        bidNo: '2'
+        date: '19-Apr-2016 11:11:56'
+        exchOrdId: ''
+        issueId: HeloOmne-qa
+        nestOrderNumber: '160418900000004'
+        priceToFill: '1'
+        quanToFill: '1'
+        refundType: '---'
+        status: put order req received
+        statusIndicator: SUCCESS
+        text: ''
+        transactionType: B
+        user: SAR01
+      - accountId: SAR01
+        appNum1: '2000000003'
+        appNum2: '2'
+        bidNo: '1'
+        date: '19-Apr-2016 11:11:57'
+        exchOrdId: ''
+        issueId: HeloOmne-qa
+        nestOrderNumber: '160418900000004'
+        priceToFill: '1'
+        quanToFill: '1'
+        refundType: '---'
+        status: validation pending
+        statusIndicator: SUCCESS
+        text: ''
+        transactionType: B
+        user: SAR01
+      - accountId: SAR01
+        appNum1: '2000000003'
+        appNum2: '3'
+        bidNo: '3'
+        date: '19-Apr-2016 11:11:57'
+        exchOrdId: ''
+        issueId: HeloOmne-qa
+        nestOrderNumber: '160418900000004'
+        priceToFill: '1'
+        quanToFill: '1'
+        refundType: '---'
+        status: validation complete
+        statusIndicator: SUCCESS
+        text: ''
+        transactionType: B
+        user: SAR01
+      - accountId: SAR01
+        appNum1: '2000000004'
+        appNum2: '4'
+        bidNo: '1'
+        date: '19-Apr-2016 11:11:57'
+        exchOrdId: ''
+        issueId: HeloOmne-qa
+        nestOrderNumber: '160418900000004'
+        priceToFill: '1'
+        quanToFill: '1'
+        refundType: '---'
+        status: open pending
+        statusIndicator: SUCCESS
+        text: ''
+        transactionType: B
+        user: SAR01
+      - accountId: SAR01
+        appNum1: '2000000004'
+        appNum2: '5'
+        bidNo: '2'
+        date: '19-Apr-2016 11:11:57'
+        exchOrdId: ''
+        issueId: HeloOmne-qa
+        nestOrderNumber: '160418900000004'
+        priceToFill: '1'
+        quanToFill: '1'
+        refundType: '---'
+        status: failure
+        statusIndicator: SUCCESS
+        text: Server Not Ready.
+        transactionType: B
+        user: 'SAR01 '
+  encryptionNeeded: false
+user/ofs/log:
+  mockResponse:
+    - accountId: SAR01
+      date: "11-Mar-2016 14:47:01"
+      fillDate: "11-Mar-2016"
+      fillTime: "14:47:01"
+      exchOrdId: '160307900000088'
+      issueId: htddfg33-is
+      nestOrderNumber: '160307900000011'
+      priceToFill: '5.0000'
+      quanToFill: '50.0000'
+      status: put order req received
+      statusIndicator: SUCCESS
+      text: ''
+      transactionType: B
+      user: SAR01
+      stat: Ok
+    - accountId: SAR01
+      date: "11-Mar-2016 14:47:01"
+      exchOrdId: '160307900000083'
+      issueId: htddfg33-is
+      nestOrderNumber: '160307900000012'
+      priceToFill: '5.0000'
+      quanToFill: '50.0000'
+      status: put order req received
+      statusIndicator: SUCCESS
+      text: ''
+      transactionType: B
+      user: SAR01
+      stat: Ok
+  encryptionNeeded: false
+SLBM/summary/report:
+  mockResponse:
+    stat: Ok
+    data:
+    - transactionType: B
+      accountId: GIRISH6-OTPUAT
+      symbol: '195723'
+      exchSeg: nse_slb
+      fillId: '1'
+      user: GIRISH6-OTPUAT
+      fillPrice: '1450.00'
+      fillSize: '50'
+    - transactionType: L
+      accountId: GIRISH6-OTPUAT
+      symbol: '195723'
+      exchSeg: nse_slb
+      fillId: '1'
+      user: GIRISH6-OTPUAT
+      fillPrice: '1450.00'
+      fillSize: '50'
+  encryptionNeeded: false
+Changepwd:
+  mockResponse:
+    stat: Ok
+    Pstatus: Success
+    Result: Password changed successfully.Password will expire in 14 days
+  encryptionNeeded: false
+LTPCoverpercentage:
+  mockResponse:
+    stat: "Ok"
+    Ltp: "2525"
+    Coverprc: "3"
+    Decprc: 2
+    TriggerPriceRange: "2449.25 - 2525"
+  encryptionNeeded: false
+user/equitysip/nontradingdates:
+  mockResponse:
+    stat: Ok
+    data:
+      - date: 6-Jan-2024
+        dayIndicator: r
+      - date: 7-Jan-2024
+        dayIndicator: r
+      - date: 13-Jan-2024
+        dayIndicator: y
+      - date: 14-Jan-2024
+        dayIndicator: y
+      - date: 20-Jan-2024
+        dayIndicator: y
+      - date: 21-Jan-2024
+        dayIndicator: y
+      - date: 27-Jan-2024
+        dayIndicator: y
+      - date: 28-Jan-2024
+        dayIndicator: y
+      - date: 3-Feb-2024
+        dayIndicator: y
+      - date: 4-Feb-2024
+        dayIndicator: y
+      - date: 10-Feb-2024
+        dayIndicator: y
+  encryptionNeeded: false
+UnblockUserOTP:
+  mockResponse:
+    stat: Ok
+    msg: SUCCESS
+  encryptionNeeded: false
+TmGetTriggerTypes:
+  mockResponse:
+    stat: Ok
+    itemname: ["% Change in LTP from PrevClose","Last Traded Price","Volume Traded Today","Open Interest","LTR IV ch"]
+    itemid: ["13","1","9","19","21"]
+    contentType: ["ALL","ALL","ALL","DER","OPT"]
+    field_types: ["R","P","Q","Q","R"]
+  encryptionNeeded: false
+ReplaceGTTOrder:
+  mockResponse:
+    stat: Ok
+    triggerId: "2312088"
+  encryptionNeeded: false
+CancelGTTOrder:
+  mockResponse:
+    stat: Ok
+    triggerId: "2312088"
+  encryptionNeeded: false
+Show20Mkt:
+  mockResponse:
+    stat: Ok
+    tradePrice: "195.75"
+    bestBuySize1: "500"
+    bestBuySize2: "800"
+    bestBuySize3: "1200"
+    bestBuySize4: "1500"
+    bestBuySize5: "2000"
+    bestBuySize6: "2500"
+    bestBuySize7: "3000"
+    bestBuySize8: "3500"
+    bestBuySize9: "4000"
+    bestBuySize10: "4500"
+    bestBuySize11: "5000"
+    bestBuySize12: "5500"
+    bestBuySize13: "6000"
+    bestBuySize14: "6500"
+    bestBuySize15: "7000"
+    bestBuySize16: "7500"
+    bestBuySize17: "8000"
+    bestBuySize18: "8500"
+    bestBuySize19: "9000"
+    bestBuySize20: "9500"
+    bestSellSize1: "600"
+    bestSellSize2: "800"
+    bestSellSize3: "1000"
+    bestSellSize4: "1300"
+    bestSellSize5: "1600"
+    bestSellSize6: "1900"
+    bestSellSize7: "2200"
+    bestSellSize8: "2500"
+    bestSellSize9: "2800"
+    bestSellSize10: "3100"
+    bestSellSize11: "3400"
+    bestSellSize12: "3700"
+    bestSellSize13: "4000"
+    bestSellSize14: "4300"
+    bestSellSize15: "4600"
+    bestSellSize16: "4900"
+    bestSellSize17: "5200"
+    bestSellSize18: "5500"
+    bestSellSize19: "5800"
+    bestSellSize20: "6100"
+    bestBuyPrice1: "195.50"
+    bestBuyPrice2: "195.25"
+    bestBuyPrice3: "195.00"
+    bestBuyPrice4: "194.75"
+    bestBuyPrice5: "194.50"
+    bestBuyPrice6: "194.25"
+    bestBuyPrice7: "194.00"
+    bestBuyPrice8: "193.75"
+    bestBuyPrice9: "193.50"
+    bestBuyPrice10: "193.25"
+    bestBuyPrice11: "193.00"
+    bestBuyPrice12: "192.75"
+    bestBuyPrice13: "192.50"
+    bestBuyPrice14: "192.25"
+    bestBuyPrice15: "192.00"
+    bestBuyPrice16: "191.75"
+    bestBuyPrice17: "191.50"
+    bestBuyPrice18: "191.25"
+    bestBuyPrice19: "191.00"
+    bestBuyPrice20: "190.75"
+    bestSellPrice1: "195.80"
+    bestSellPrice2: "195.85"
+    bestSellPrice3: "195.90"
+    bestSellPrice4: "196.00"
+    bestSellPrice5: "196.10"
+    bestSellPrice6: "196.20"
+    bestSellPrice7: "196.30"
+    bestSellPrice8: "196.40"
+    bestSellPrice9: "196.50"
+    bestSellPrice10: "196.60"
+    bestSellPrice11: "196.70"
+    bestSellPrice12: "196.80"
+    bestSellPrice13: "196.90"
+    bestSellPrice14: "197.00"
+    bestSellPrice15: "197.10"
+    bestSellPrice16: "197.20"
+    bestSellPrice17: "197.30"
+    bestSellPrice18: "197.40"
+    bestSellPrice19: "197.50"
+    bestSellPrice20: "197.60"
+    bestBuyNoOfOrders1: "10"
+    bestBuyNoOfOrders2: "8"
+    bestBuyNoOfOrders3: "7"
+    bestBuyNoOfOrders4: "6"
+    bestBuyNoOfOrders5: "5"
+    bestBuyNoOfOrders6: "4"
+    bestBuyNoOfOrders7: "3"
+    bestBuyNoOfOrders8: "3"
+    bestBuyNoOfOrders9: "2"
+    bestBuyNoOfOrders10: "2"
+    bestBuyNoOfOrders11: "1"
+    bestBuyNoOfOrders12: "1"
+    bestBuyNoOfOrders13: "1"
+    bestBuyNoOfOrders14: "1"
+    bestBuyNoOfOrders15: "1"
+    bestBuyNoOfOrders16: "1"
+    bestBuyNoOfOrders17: "1"
+    bestBuyNoOfOrders18: "1"
+    bestBuyNoOfOrders19: "1"
+    bestBuyNoOfOrders20: "1"
+    bestSellNoOfOrders1: "12"
+    bestSellNoOfOrders2: "10"
+    bestSellNoOfOrders3: "9"
+    bestSellNoOfOrders4: "8"
+    bestSellNoOfOrders5: "7"
+    bestSellNoOfOrders6: "6"
+    bestSellNoOfOrders7: "5"
+    bestSellNoOfOrders8: "5"
+    bestSellNoOfOrders9: "4"
+    bestSellNoOfOrders10: "4"
+    bestSellNoOfOrders11: "3"
+    bestSellNoOfOrders12: "3"
+    bestSellNoOfOrders13: "2"
+    bestSellNoOfOrders14: "2"
+    bestSellNoOfOrders15: "2"
+    bestSellNoOfOrders16: "1"
+    bestSellNoOfOrders17: "1"
+    bestSellNoOfOrders18: "1"
+    bestSellNoOfOrders19: "1"
+    bestSellNoOfOrders20: "1"
+    exchFeedTime: 12-Jul-2024 09:45:00
+    tradingSymbol: "TEST-XYZ"
+    marketDepthAskSize: "1500000"
+    marketDepthBidSize: "500000"
+    exchSeg: nse_cm
+    symbol: "123456"
+    tradeSize: "5"
+  encryptionNeeded: false
+ExchangeMessage:
+  mockResponse:
+    stat: Ok
+    Exchmsg: >-
+      29/05/2019,10:04:32 ::NSE ::29-May-2019 10:05:00 Block deal market has opened
+      for 29 MAY 2019/n29/05/2019,10:29:32 ::NSE ::29-May-2019 10:30:00 Block deal
+      market has closed/n29/05/2019,11:13:06 ::NSE ::Auction 1 Market has
+      opened/n29/05/2019,11:59:49 ::NSE ::29-May-2019 12:00:17 NIRAJISPAT EQ For CA2
+      Market Preopen Ended/n
+  encryptionNeeded: false
+SetGTTOrder:
+  mockResponse:
+    stat: Ok
+    triggerId: "231215010"
+  encryptionNeeded: false
+ModifyGTTOrder:
+  mockResponse:
+    stat: "Ok"
+    triggerId: "2312190251"
+  encryptionNeeded: false
+SearchMF:
+  mockResponse:
+    stat: Ok
+    data:
+      - id: 200124
+        symbolName: AXIS-GR-DP
+        symbolNameAlias: AXIS-GR
+        scripDeleteFlag: N
+        scripUpdateTime: '1702596030'
+        exchSeg: bse_mf
+        tickSize: '2'
+        issueDate: '1380412800' 
+        group: DP
+        symbol: '38293'
+        lotSize: '1'
+        tradingSymbol: AXISBLUCHIP-GR-DP
+        scripRefKey: ABC12345
+        strikePrice: '0' 
+        maturityDate: '0' 
+        minLotSize: '1'
+        optionType: NA 
+        assetToken: '22'
+        expiryDate: '0' 
+        instrumentName: MF
+        expiryDateLeg2: '0' 
+        secondsSinceBoe: '0'
+        decimalPrecision: '2'
+        multiplier: '1'
+        multipleFieldSearch: AXIS AXIS BLUE CHIP FUND GROWTH INF846K01131 BSEMF
+        expiryDateFormat: ''
+        expiryDateLeg2Format: ''
+        strikePriceWithoutLocale: '0' 
+        instrument: MF
+        stock_type: option
+        symbol_description: AXIS BLUE CHIP FUND - GROWTH
+        exchPriority: 4
+        segment: MF
+        exchange: BSEMF
+  encryptionNeeded: false
+user/mf/orderbook: 
+  mockResponse:
+    stat: Ok
+    data:
+    - secondsSinceBoe: '1602054818'
+      symbol: '20347'
+      swithInTradingSymbol: ''
+      sipSecurity: ''
+      swithInSymbol: ''
+      exchTimeStamp: ''
+      quanToFill: '0.0000'
+      specificTransactionType: '1'
+      folioNumber: ''
+      orderGenerationType: ''
+      orderDuration: DAY
+      sipRegistrationNum: ''
+      nestOrderReqid: '1'
+      priceToFill: '0'
+      OrderedTime: 07/10/2020 12:43:38
+      sipDay: ''
+      sipTrancheNum: ''
+      text: invalid dp acct no
+      tradingSymbol: 61QD-DP
+      value: '10'
+      group: DP
+      orderDisclosedQty: '0'
+      sipPeriod: ''
+      orderSource: RESTAPI-TPMOB
+      exchSeg: nse_mf
+      sipMonth: ''
+      priceType: L
+      accountOperatingMode: ''
+      sipFreqNo: ''
+      transactionType: B
+      accountId: GIRISH6-OTPUAT
+      exchOrdId: ''
+      guiOrderId: 7821193520890139904-GIRISH6-OTPUAT-RESTAPI-TPMOB
+      dpAccountNumber: '2334977729021348'
+      dpSettlement: Y
+      status: rejected
+      nestOrderNumber: '201007950000000'   
+  encryptionNeeded: false
+user/mf/loadCategory:
+  mockResponse:
+    stat: Ok
+    data:
+    - statusIndicator: Y
+      mfCategory: Equity
+    - statusIndicator: Y
+      mfCategory: Solution Oriented Schemes
+      mfSubCategory: Gilt Fund with 10 year constant duration
+  encryptionNeeded: false
+user/mf/drsmw:
+  mockResponse:
+    stat: "Ok"
+  encryptionNeeded: false
+user/mf/deletescrip:
+  mockResponse:
+    stat: Ok
+    statusIndicator: Task successful
+  encryptionNeeded: false
+user/mf/adgmultimw:
+  mockResponse:
+    stat: Ok
+    mwScripList: MasterWatchList100
+    text: ""
+  encryptionNeeded: false
+OptionCalculator:
+  mockResponse:
+    opt_Delta: "1.000000"
+    opt_Gamma: "0.000000"
+    opt_Rho: "0.0"
+    opt_Theta: "0.0"
+    opt_Vega: "0.0"
+    opt_theortheticprice: "01.00"
+    stat: Ok
+  encryptionNeeded: false    
+user/mf/defaultmw:
+  mockResponse:
+    defaultMw: "MW3"
+    stat: "Ok"
+  encryptionNeeded: false
+user/ipo/annoucement:
+  mockResponse:
+    stat: Ok
+    data:
+      - desc: Testing IPO
+        purpose:
+          - SUCCESS
+          - Record 2 of 2.
+        fdIssRegr: Y
+        ipoSubType: IPO
+        symbolName: TESTIPO
+      - desc: Dheeraj Comforts Resorts for South Kanara citizens
+        purpose:
+          - SUCCESS
+          - Record 1 of 2.
+        fdIssRegr: Y
+        ipoSubType: IPO
+        symbolName: Dheeru Comforts Ltd.
+  encryptionNeeded: false
+ipo/cumuldemand:
+  mockResponse:
+    stat: 'Ok'
+    data:
+      - statusIndicator: 'SUCCESS'
+        exchSeg: 'BSE_IPO'
+        issueId: 'JDIAL01'
+        dtTime: '10/02/2025 16:52:40'
+        ipoCode: '808808'
+        totalEquity: '1000'
+        subCatNos:
+          - '100'
+          - '200'
+          - '500'
+          - '700'
+        subCatNosBidFor:
+          - '50'
+          - '100'
+          - '1000'
+          - '2100'
+        subCatTon:
+          - '0.5'
+          - '0.5'
+          - '2'
+          - '3'
+        totalNos: '1500'
+        totalNosBidFor: '3250'
+        grandTotal: '3250'
+        ipoDispalyItem: 'Y'
+  encryptionNeeded: false
+user/mf/loadamcscrips:
+  mockResponse:
+    stat: "Ok"
+    data:
+    - scripName: "360 ONE ELSS TAX SAVER NIFTY 50 INDEX FUND - DIRECT PLAN - IDCW PAYOUT"
+      symbol: "42722"
+      mfSubCategory: ELSS
+      exchSeg: bse_mf
+      sipSecurity: "Y"
+      schemePlan: null
+      symbolName: IIITDDP-DP
+      amcCode: "360 ONE Mutual Fund"
+      category: Equity
+      tradingSymbol: IIITDDP-DP
+      isin: INF579M01AO0
+      group: DP
+    - scripName: "360 ONE ELSS TAX SAVER NIFTY 50 INDEX FUND - DIRECT PLAN - GROWTH"
+      symbol: "42721"
+      mfSubCategory: ELSS
+      exchSeg: bse_mf
+      sipSecurity: "Y"
+      schemePlan: null
+      symbolName: IIITDG-GR
+      amcCode: "360 ONE Mutual Fund"
+      category: Equity
+      tradingSymbol: IIITDG-GR
+      isin: INF579M01AN2
+      group: GR
+  encryptionNeeded: false

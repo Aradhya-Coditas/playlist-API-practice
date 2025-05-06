@@ -1,0 +1,1035 @@
+basePath: /v1
+definitions:
+  models.BFFExpiryDateValues:
+    properties:
+      display:
+        example: 23 Nov, 2023
+        type: string
+      value:
+        example: "1385217000"
+        type: string
+    type: object
+  models.BFFGetDerivativesExpiryDateRequest:
+    properties:
+      exchange:
+        example: NFO
+        type: string
+      instrumentName:
+        example: OPTIDX
+        type: string
+      symbolName:
+        example: BANKNIFTY
+        type: string
+    required:
+    - exchange
+    - instrumentName
+    - symbolName
+    type: object
+  models.BFFGetDerivativesExpiryDateResponse:
+    properties:
+      expiryDate:
+        items:
+          $ref: '#/definitions/models.BFFExpiryDateValues'
+        type: array
+    type: object
+  models.BFFGetDerivativesInstrumentRequest:
+    properties:
+      contractType:
+        allOf:
+        - $ref: '#/definitions/models.contractType'
+        example: Option
+      exchange:
+        example: NFO
+        type: string
+    required:
+    - exchange
+    type: object
+  models.BFFGetDerivativesInstrumentResponse:
+    properties:
+      instrumentList:
+        $ref: '#/definitions/models.GetDerivativesInstrument'
+    type: object
+  models.BFFGetDerivativesOptionTypesRequest:
+    properties:
+      exchange:
+        example: NFO
+        type: string
+      expiryDate:
+        example: "1419690600"
+        type: string
+      instrumentName:
+        example: OPTIDX
+        type: string
+      symbolName:
+        example: BANKNIFTY
+        type: string
+    required:
+    - exchange
+    - expiryDate
+    - instrumentName
+    - symbolName
+    type: object
+  models.BFFGetDerivativesOptionTypesResponse:
+    properties:
+      optionTypes:
+        example:
+        - CE
+        - PE
+        items:
+          type: string
+        type: array
+    type: object
+  models.BFFGetDerivativesScripInformationRequest:
+    properties:
+      exchange:
+        example: NFO
+        type: string
+      expiryDate:
+        example: "1419690600"
+        type: string
+      instrumentName:
+        example: OPTSTK
+        type: string
+      optionType:
+        example: PE
+        type: string
+      strikePrice:
+        example: 152000
+        type: number
+      symbolName:
+        example: ADANIPORTS
+        type: string
+    required:
+    - exchange
+    - expiryDate
+    - instrumentName
+    - symbolName
+    type: object
+  models.BFFGetDerivativesScripInformationResponse:
+    properties:
+      boardLotQuantity:
+        example: 15
+        type: integer
+      combinedScripToken:
+        example: NA
+        type: string
+      decimalPrecision:
+        example: 2
+        type: integer
+      exchange:
+        example: NFO
+        type: string
+      exchangeSegment:
+        example: nse_fo
+        type: string
+      expiryDate:
+        example: "1419690600"
+        type: string
+      instrumentName:
+        example: OPTIDX
+        type: string
+      multiplier:
+        example: 1
+        type: integer
+      optionType:
+        example: CE
+        type: string
+      scripId:
+        example: NSE_345654
+        type: string
+      scripToken:
+        example: "58164"
+        type: string
+      segmentIndicator:
+        example: EQUITY
+        type: string
+      strikePrice:
+        example: 36500
+        type: number
+      symbolName:
+        example: BANKNIFTY
+        type: string
+      tickSize:
+        example: 5
+        type: number
+      tradingSymbol:
+        example: BANKNIFTY23NOV36500CE
+        type: string
+      uniqueKey:
+        example: BANKNIFTY23NOV36500CE
+        type: string
+    type: object
+  models.BFFGetDerivativesScripRequest:
+    properties:
+      exchange:
+        example: NFO
+        type: string
+      instrumentName:
+        example: OPTIDX
+        type: string
+    required:
+    - exchange
+    - instrumentName
+    type: object
+  models.BFFGetDerivativesScripResponse:
+    properties:
+      scrips:
+        example:
+        - BANKNIFTY
+        - NIFTY
+        - NIFTYIT
+        items:
+          type: string
+        type: array
+    type: object
+  models.BFFGetDerivativesStrikePriceRequest:
+    properties:
+      exchange:
+        example: NFO
+        type: string
+      expiryDate:
+        example: "1425047400"
+        type: string
+      instrumentName:
+        example: OPTIDX
+        type: string
+      optionType:
+        example: CE
+        type: string
+      symbolName:
+        example: BANKNIFTY
+        type: string
+    required:
+    - exchange
+    - expiryDate
+    - instrumentName
+    - optionType
+    - symbolName
+    type: object
+  models.BFFGetDerivativesStrikePriceResponse:
+    properties:
+      strikePrice:
+        items:
+          $ref: '#/definitions/models.BFFStrikePriceList'
+        type: array
+    type: object
+  models.BFFSearchEquityGroupRequest:
+    properties:
+      exchange:
+        example: NSE
+        type: string
+    required:
+    - exchange
+    type: object
+  models.BFFSearchEquityGroupResponse:
+    properties:
+      groups:
+        example:
+        - AA
+        - AB
+        - AC
+        - AD
+        - AG
+        - AH
+        - AI
+        - AJ
+        - AK
+        - AL
+        - AM
+        - AN
+        - EQ
+        items:
+          type: string
+        type: array
+    type: object
+  models.BFFSearchEquityScrip:
+    properties:
+      boardLotQuantity:
+        example: 1
+        type: integer
+      decimalPrecision:
+        example: 2
+        type: integer
+      exchange:
+        example: NSE
+        type: string
+      exchangeSegment:
+        example: nse_cm
+        type: string
+      id:
+        example: NSE_4567654
+        type: string
+      isinValue:
+        example: INE092A01019
+        type: string
+      multiplier:
+        example: 1
+        type: integer
+      scripName:
+        example: TATA CHEMICALS LTD
+        type: string
+      scripToken:
+        example: "3405"
+        type: string
+      tickSize:
+        example: 5
+        type: number
+      tradingSymbol:
+        example: TATACHEM-EQ
+        type: string
+      uniqueKey:
+        example: TATACHEM
+        type: string
+    type: object
+  models.BFFSearchEquityScripRequest:
+    properties:
+      exchange:
+        example: NSE
+        type: string
+      group:
+        example: EQ
+        type: string
+      searchText:
+        example: ABB
+        minLength: 3
+        type: string
+    required:
+    - exchange
+    - group
+    - searchText
+    type: object
+  models.BFFSearchEquityScripResponse:
+    properties:
+      scrips:
+        items:
+          $ref: '#/definitions/models.BFFSearchEquityScrip'
+        type: array
+    type: object
+  models.BFFStrikePriceList:
+    properties:
+      displayStrikePrice:
+        example: 9800
+        type: number
+      strikePriceValue:
+        example: 980000
+        type: number
+    type: object
+  models.ErrorAPIResponse:
+    properties:
+      error:
+        type: string
+      errors:
+        items:
+          $ref: '#/definitions/models.ErrorMessage'
+        type: array
+    type: object
+  models.ErrorMessage:
+    properties:
+      errorMessage:
+        type: string
+      key:
+        type: string
+    type: object
+  models.GetDerivativesInstrument:
+    properties:
+      future:
+        example:
+        - FUTIDX
+        - FUTSTK
+        items:
+          type: string
+        type: array
+      option:
+        example:
+        - OPTIDX
+        - OPTSTK
+        items:
+          type: string
+        type: array
+      spreadFuture:
+        example:
+        - SP-FUTIDX
+        - SP-FUTSTK
+        items:
+          type: string
+        type: array
+    type: object
+  models.contractType:
+    enum:
+    - FUTURE
+    - OPTION
+    - SP-FUTURE
+    type: string
+    x-enum-varnames:
+    - Future
+    - Option
+    - SpreadFuture
+info:
+  contact: {}
+  description: Omnenest backend for WebSocket Search micro-service (Middleware layer).
+  title: omnenest-backend
+  version: "1.0"
+paths:
+  /api/search/derivatives/expiry-date:
+    post:
+      consumes:
+      - application/json
+      description: This api is used to get the expiry date for selected exchange,instrument
+        and symbol name i.e applicable only for derivatives.
+      parameters:
+      - default: "123456789"
+        description: Unique request identifier
+        in: header
+        name: xRequestId
+        required: true
+        type: string
+      - default: PKQ1.180904.001
+        description: Unique device identifier
+        in: header
+        name: deviceId
+        required: true
+        type: string
+      - default: 1.0.0
+        description: Current app version
+        in: header
+        name: appVersion
+        required: true
+        type: string
+      - default: MOB
+        description: Source (MOB or WEB)
+        in: header
+        name: source
+        required: true
+        type: string
+      - description: Bypass (AUTOMATION or CHART)
+        in: header
+        name: bypass
+        type: string
+      - default: ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c
+        description: Unique appInstall identifier
+        in: header
+        name: appInstallId
+        required: true
+        type: string
+      - default: BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30
+        description: userAgent
+        in: header
+        name: userAgent
+        required: true
+        type: string
+      - default: "1701063550000"
+        description: device current day epoch milliseconds timestamp
+        in: header
+        name: timestamp
+        required: true
+        type: string
+      - description: GetDerivativesExpiryDateRequest request JSON
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.BFFGetDerivativesExpiryDateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: '#/definitions/models.BFFGetDerivativesExpiryDateResponse'
+        "204":
+          description: No Content for the request
+        "400":
+          description: 'Bad Request: Invalid input data or validation error'
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+        "500":
+          description: The server encountered an unexplained problem which has prevented
+            it from executing the given request
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: This api is used to get the expiry date for selected exchange,instrument
+        and symbol name.
+      tags:
+      - Derivatives
+  /api/search/derivatives/instrument:
+    post:
+      consumes:
+      - application/json
+      description: This API is used to give list of instrument applicable only for
+        future and options scrips.
+      parameters:
+      - default: "123456789"
+        description: Unique request identifier
+        in: header
+        name: xRequestId
+        required: true
+        type: string
+      - default: PKQ1.180904.001
+        description: Unique device identifier
+        in: header
+        name: deviceId
+        required: true
+        type: string
+      - default: 1.0.0
+        description: Current app version
+        in: header
+        name: appVersion
+        required: true
+        type: string
+      - default: MOB
+        description: Source (MOB or WEB)
+        in: header
+        name: source
+        required: true
+        type: string
+      - description: Bypass (AUTOMATION or CHART)
+        in: header
+        name: bypass
+        type: string
+      - default: ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c
+        description: Unique appInstall identifier
+        in: header
+        name: appInstallId
+        required: true
+        type: string
+      - default: BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30
+        description: userAgent
+        in: header
+        name: userAgent
+        required: true
+        type: string
+      - default: "1701063550000"
+        description: device current day epoch milliseconds timestamp
+        in: header
+        name: timestamp
+        required: true
+        type: string
+      - description: Get Derivatives Instrument request JSON
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.BFFGetDerivativesInstrumentRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: '#/definitions/models.BFFGetDerivativesInstrumentResponse'
+        "204":
+          description: No Content for the request
+        "400":
+          description: 'Bad Request: Invalid input data or validation error'
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+        "500":
+          description: The server encountered an unexplained problem which has prevented
+            it from executing the given request
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: This API is used to give list of instrument.
+      tags:
+      - Derivatives
+  /api/search/derivatives/option-types:
+    post:
+      consumes:
+      - application/json
+      description: This API is used to get option types for selected exchange, instrument,
+        symbol name and expiry date.
+      parameters:
+      - default: "123456789"
+        description: Unique request identifier
+        in: header
+        name: xRequestId
+        required: true
+        type: string
+      - default: PKQ1.180904.001
+        description: Unique device identifier
+        in: header
+        name: deviceId
+        required: true
+        type: string
+      - default: 1.0.0
+        description: Current app version
+        in: header
+        name: appVersion
+        required: true
+        type: string
+      - default: MOB
+        description: Source (MOB or WEB)
+        in: header
+        name: source
+        required: true
+        type: string
+      - description: Bypass (AUTOMATION or CHART)
+        in: header
+        name: bypass
+        type: string
+      - default: ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c
+        description: Unique appInstall identifier
+        in: header
+        name: appInstallId
+        required: true
+        type: string
+      - default: BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30
+        description: userAgent
+        in: header
+        name: userAgent
+        required: true
+        type: string
+      - default: "1701063550000"
+        description: device current day epoch milliseconds timestamp
+        in: header
+        name: timestamp
+        required: true
+        type: string
+      - description: Get Derivatives Option Types request JSON
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.BFFGetDerivativesOptionTypesRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: '#/definitions/models.BFFGetDerivativesOptionTypesResponse'
+        "204":
+          description: No Content for the request
+        "400":
+          description: 'Bad Request: Invalid input data or validation error'
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+        "500":
+          description: The server encountered an unexplained problem which has prevented
+            it from executing the given request
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: This API is used to get option types for selected exchange, instrument,
+        symbol name and expiry date.
+      tags:
+      - Derivatives
+  /api/search/derivatives/scrip:
+    post:
+      consumes:
+      - application/json
+      description: This API is used to get scrip for selected exchange, instrument.
+      parameters:
+      - default: "123456789"
+        description: Unique request identifier
+        in: header
+        name: xRequestId
+        required: true
+        type: string
+      - default: PKQ1.180904.001
+        description: Unique device identifier
+        in: header
+        name: deviceId
+        required: true
+        type: string
+      - default: 1.0.0
+        description: Current app version
+        in: header
+        name: appVersion
+        required: true
+        type: string
+      - default: MOB
+        description: Source (MOB or WEB)
+        in: header
+        name: source
+        required: true
+        type: string
+      - description: Bypass (AUTOMATION or CHART)
+        in: header
+        name: bypass
+        type: string
+      - default: ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c
+        description: Unique appInstall identifier
+        in: header
+        name: appInstallId
+        required: true
+        type: string
+      - default: BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30
+        description: userAgent
+        in: header
+        name: userAgent
+        required: true
+        type: string
+      - default: "1701063550000"
+        description: device current day epoch milliseconds timestamp
+        in: header
+        name: timestamp
+        required: true
+        type: string
+      - description: Get Derivatives Scrip request JSON
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.BFFGetDerivativesScripRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: '#/definitions/models.BFFGetDerivativesScripResponse'
+        "204":
+          description: No Content for the request
+        "400":
+          description: 'Bad Request: Invalid input data or validation error'
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+        "500":
+          description: The server encountered an unexplained problem which has prevented
+            it from executing the given request
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: This API is used to get scrip for selected exchange, instrument.
+      tags:
+      - Derivatives
+  /api/search/derivatives/scrip-information:
+    post:
+      consumes:
+      - application/json
+      description: This API is used to give the scrip information for a scrip of selected
+        exchange that is only for future and options, instrument, symbol name, expiry
+        date, option type and strike price.
+      parameters:
+      - default: "123456789"
+        description: Unique request identifier
+        in: header
+        name: xRequestId
+        required: true
+        type: string
+      - default: PKQ1.180904.001
+        description: Unique device identifier
+        in: header
+        name: deviceId
+        required: true
+        type: string
+      - default: 1.0.0
+        description: Current app version
+        in: header
+        name: appVersion
+        required: true
+        type: string
+      - default: MOB
+        description: Source (MOB or WEB)
+        in: header
+        name: source
+        required: true
+        type: string
+      - description: Bypass (AUTOMATION or CHART)
+        in: header
+        name: bypass
+        type: string
+      - default: ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c
+        description: Unique appInstall identifier
+        in: header
+        name: appInstallId
+        required: true
+        type: string
+      - default: BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30
+        description: userAgent
+        in: header
+        name: userAgent
+        required: true
+        type: string
+      - default: "1701063550000"
+        description: device current day epoch milliseconds timestamp
+        in: header
+        name: timestamp
+        required: true
+        type: string
+      - description: Get Derivatives Scrip Information request JSON
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.BFFGetDerivativesScripInformationRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: '#/definitions/models.BFFGetDerivativesScripInformationResponse'
+        "204":
+          description: No Content for the request
+        "400":
+          description: 'Bad Request: Invalid input data or validation error'
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+        "500":
+          description: The server encountered an unexplained problem which has prevented
+            it from executing the given request
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: This API is used to give the scrip information for a scrip of selected
+        exchange.
+      tags:
+      - Derivatives
+  /api/search/derivatives/strike-price:
+    post:
+      consumes:
+      - application/json
+      description: This API is used to get strike price for selected exchange, instrument.
+      parameters:
+      - default: "123456789"
+        description: Unique request identifier
+        in: header
+        name: xRequestId
+        required: true
+        type: string
+      - default: PKQ1.180904.001
+        description: Unique device identifier
+        in: header
+        name: deviceId
+        required: true
+        type: string
+      - default: 1.0.0
+        description: Current app version
+        in: header
+        name: appVersion
+        required: true
+        type: string
+      - default: MOB
+        description: Source (MOB or WEB)
+        in: header
+        name: source
+        required: true
+        type: string
+      - description: Bypass (AUTOMATION or CHART)
+        in: header
+        name: bypass
+        type: string
+      - default: ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c
+        description: Unique appInstall identifier
+        in: header
+        name: appInstallId
+        required: true
+        type: string
+      - default: BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30
+        description: userAgent
+        in: header
+        name: userAgent
+        required: true
+        type: string
+      - default: "1701063550000"
+        description: device current day epoch milliseconds timestamp
+        in: header
+        name: timestamp
+        required: true
+        type: string
+      - description: Get Derivatives StrikePrice request JSON
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.BFFGetDerivativesStrikePriceRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: '#/definitions/models.BFFGetDerivativesStrikePriceResponse'
+        "204":
+          description: No Content for the request
+        "400":
+          description: 'Bad Request: Invalid input data or validation error'
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+        "500":
+          description: The server encountered an unexplained problem which has prevented
+            it from executing the given request
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: This API is used to get strike price for selected exchange, instrument.
+      tags:
+      - Derivatives
+  /api/search/equity/group:
+    post:
+      consumes:
+      - application/json
+      description: This API is used to get equity group by exchange name.
+      parameters:
+      - default: "123456789"
+        description: Unique request identifier
+        in: header
+        name: xRequestId
+        required: true
+        type: string
+      - default: PKQ1.180904.001
+        description: Unique device identifier
+        in: header
+        name: deviceId
+        required: true
+        type: string
+      - default: 1.0.0
+        description: Current app version
+        in: header
+        name: appVersion
+        required: true
+        type: string
+      - default: MOB
+        description: Source (MOB or WEB)
+        in: header
+        name: source
+        required: true
+        type: string
+      - description: Bypass (AUTOMATION or CHART)
+        in: header
+        name: bypass
+        type: string
+      - default: ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c
+        description: Unique appInstall identifier
+        in: header
+        name: appInstallId
+        required: true
+        type: string
+      - default: BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30
+        description: userAgent
+        in: header
+        name: userAgent
+        required: true
+        type: string
+      - default: "1701063550000"
+        description: device current day epoch milliseconds timestamp
+        in: header
+        name: timestamp
+        required: true
+        type: string
+      - description: Search equity group request JSON
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.BFFSearchEquityGroupRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: '#/definitions/models.BFFSearchEquityGroupResponse'
+        "204":
+          description: No Content for the request
+        "400":
+          description: 'Bad Request: Invalid input data or validation error'
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+        "500":
+          description: The server encountered an unexplained problem which has prevented
+            it from executing the given request
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: This API is used to get equity group by exchange name.
+      tags:
+      - Equity
+  /api/search/equity/scrip:
+    post:
+      consumes:
+      - application/json
+      description: This API is used to search equity scrips using search text.
+      parameters:
+      - default: "123456789"
+        description: Unique request identifier
+        in: header
+        name: xRequestId
+        required: true
+        type: string
+      - default: PKQ1.180904.001
+        description: Unique device identifier
+        in: header
+        name: deviceId
+        required: true
+        type: string
+      - default: 1.0.0
+        description: Current app version
+        in: header
+        name: appVersion
+        required: true
+        type: string
+      - default: MOB
+        description: Source (MOB or WEB)
+        in: header
+        name: source
+        required: true
+        type: string
+      - description: Bypass (AUTOMATION or CHART)
+        in: header
+        name: bypass
+        type: string
+      - default: ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c
+        description: Unique appInstall identifier
+        in: header
+        name: appInstallId
+        required: true
+        type: string
+      - default: BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30
+        description: userAgent
+        in: header
+        name: userAgent
+        required: true
+        type: string
+      - default: "1701063550000"
+        description: device current day epoch milliseconds timestamp
+        in: header
+        name: timestamp
+        required: true
+        type: string
+      - description: Search equity scrip request JSON
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.BFFSearchEquityScripRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: '#/definitions/models.BFFSearchEquityScripResponse'
+        "204":
+          description: No Content for the request
+        "400":
+          description: 'Bad Request: Invalid input data or validation error'
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+        "500":
+          description: The server encountered an unexplained problem which has prevented
+            it from executing the given request
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: This API is used to search equity scrips.
+      tags:
+      - Equity
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+    x-extension-openapi: '{"example": "value on a json format"}'
+swagger: "2.0"

@@ -1,0 +1,41 @@
+alerts:
+  dropDownValues:
+    stockSource:
+    - APIValue: SLTP
+      DisplayValue: Security Last traded price
+    - APIValue: TTVOLFD
+      DisplayValue: Total Traded Volume for the day
+    genericExchange:
+    - APIValue: BSE
+      DisplayValue: BSE
+    - APIValue: NSE
+      DisplayValue: NSE
+orders:
+  dropDownValues:
+    stockSource:
+    - APIValue: SLTP
+      DisplayValue: Security Last traded price
+    - APIValue: TTVOLFD
+      DisplayValue: Total Traded Volume for the day
+portfolio:
+  dropDownValues:
+    positionsExchange:
+    - APIValue: BSE
+      DisplayValue: BSE
+    - APIValue: NSE
+      DisplayValue: NSE
+    - APIValue: NFO
+      DisplayValue: NFO
+    - APIValue: MCX
+      DisplayValue: MCX
+    positionsProductCode:
+    - APIValue: NRML
+      DisplayValue: NRML
+    - APIValue: CNC
+      DisplayValue: CNC
+    - APIValue: MIS
+      DisplayValue: MIS
+    - APIValue: CO
+      DisplayValue: CO
+    - APIValue: BO
+      DisplayValue: BO

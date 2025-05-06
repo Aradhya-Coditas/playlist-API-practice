@@ -1,0 +1,759 @@
+PlaceEquitySIPOrder:
+  mockResponse: "SIP789012"
+GetOrders:
+  mockResponse: 
+  - ScripId: "NSE_10191"
+    TransactionType: "Buy"
+    ExchangeSegment: "nse_cm"
+    TradingSymbol: "ASIANPAINT-EQ"
+    NestOrderNumber: "241225000000001"
+    TriggerId: "0"
+    Price: 240000.0
+    PriceType: ""
+    NestOrderStatus: ""
+    TotalQuantity: 1
+    RejectionReason: ""
+    FilledQuantity: 0
+    PendingQuantity: 1
+    ProductCode: "NRML"
+    AveragePrice: 0.0
+    ExchangeOrderId: "0"
+    SyomOrderId: ""
+    OrderAuthStatus: "after market order req received"
+    CustomText: ""
+    TriggerPrice: 0.0
+    ValidityDate: ""
+    AuctionNumber: ""
+    OrderedTime: "1735142884"
+    ScripToken: "236"
+    BoardLotQuantity: 1
+    ScripName: ""
+  - ScripId: "NSE_10192"
+    TransactionType: "Buy"
+    ExchangeSegment: "nse_cm"
+    TradingSymbol: "ASIANPAINT-EQ"
+    NestOrderNumber: "241225000000002"
+    TriggerId: "0"
+    Price: 240000.0
+    PriceType: ""
+    NestOrderStatus: ""
+    TotalQuantity: 1
+    RejectionReason: ""
+    FilledQuantity: 0
+    PendingQuantity: 1
+    ProductCode: "NRML"
+    AveragePrice: 0.0
+    ExchangeOrderId: "0"
+    SyomOrderId: ""
+    OrderAuthStatus: "after market order req received"
+    CustomText: ""
+    TriggerPrice: 0.0
+    ScripToken: "237"
+GetSpreadOrderDetails:
+  mockResponse: 
+    - OrderHistory:
+      User: "PROTEST3"
+      AccountId: "VIPINR-OTPUAT"
+      NestOrderNumber: "241231000000025"
+      NestOrderRequestId: "1"
+      ScripToken: "35117"
+      Leg2ScripToken: "58958"
+      SecondsSinceBoe: "1735630296"
+      OrderInitialStatus: "rejected"
+      OrderGenerationType: ""
+      ExchangeName: "NFO"
+      ExchangeSymbol: ""
+      GuiOrderId: "8672665667859754513-VIPINR-RESTAPI-NVNTGMOB"
+      Text: "RMS:Rule: Check Price range based on Spread Percentage ChangeCurrent:0.00  Low Price Range:51699.89 High Price Range:51854.71 LTP:51777.30 for entity account-VIPINR-OTPUAT across exchange across segment across product "
+      CustomerFirm: "C"
+      OrderDate: ""
+      NestOrderStatus: "rejected"
+      BffOrderStatus: "Rejected"
+      Leg1AveragePrice: 0
+      Leg2AveragePrice: 0
+      Leg3AveragePrice: -1
+      Leg1ExpiryDate: "26/02/2025 00:00:00"
+      Leg2ExpiryDate: "20/03/2025 00:00:00"
+      Leg1TransactionType: "Sell"
+      Leg2TransactionType: "Buy"
+      Leg1FilledQuantity: 0
+      Leg2FilledQuantity: 0
+      Leg1PendingQuantity: 0
+      Leg2PendingQuantity: 0
+      Leg1OrderPrice: 0
+      Leg2OrderPrice: 0
+      Leg3OrderPrice: -1
+      Leg1TotalQuantity: 30
+      Leg2TotalQuantity: 30
+      RetentionType: "DAY"
+      LocationId: "333333333333130"
+      ExchangeUser: ""
+      ProductCode: "NRML"
+      OrderSource: "RESTAPI-NVNTGMOB"
+      ExchangeSegment: "nse_fo"
+      LotSize: 30
+      OrderPriceType: "SP"
+      Leg1TradingSymbol: "BANKNIFTY25FEBFUT"
+      Leg2TradingSymbol: "BANKNIFTY25MARFUT"
+      ExchangeOrderUpdateTime: ""
+      Leg1CancelledQuantity: 0
+      Leg2CancelledQuantity: 0
+      LastUpdatedAt: "19/12/2024 18:16:20"
+      SegmentIndicator: "SPREAD"
+      BFFOrderStatusTab: "ALL"
+      SpreadCombinedToken: "35117 58958"
+      OrderType: "DELIVERY"
+      SymbolName: "35117"
+      SymbolName2: "BANKNIFTY25MARFUT"
+      SymbolName3: ""
+      IsModifiableOrCancellable: "false"
+      ExchangeOrderId: ""
+      Leg1ExecutingPrice: 0
+      Leg2ExecutingPrice: 0
+PlaceGTTOrder:
+  mockResponse:  "23112113"
+ReplaceGTTOrder:
+  mockResponse:
+    TriggerId: "2501020A4"
+    NestOrderStatus: "Success"
+PlaceMultiLegOrder:
+  mockResponse:
+    NestOrderNumber: "250106000000040"
+    WarningText: ""
+    OrderToken: "139968"
+PlaceOrder:
+  mockResponse:
+    NestOrderNumber: "241225000000001"
+    OrderToken: "VIPINR"
+    WarningText: ""
+CancelGTCGTDOrder:
+  mockResponse:
+    TriggerId: "2501020A4"
+ConfirmOrder:
+  mockResponse: "success"
+CheckMargin:
+  mockResponse:
+    AvailableCash: 0
+    MarginUsed: 196572
+    OrderMargin: 1000
+    InsufficientFund: 197572
+ChangePassword:
+  mockResponse: 1
+CancelGTTOrder:
+  mockResponse:
+    TriggerId: "2501020A4"
+    StatusText: "success"
+GetCoverOrderLimits:
+  mockResponse:
+    LowRange: 2012.4
+    HighRange: 2072.772
+    TriggerPercentage: 3    
+GetPredefinedWatchlistData:
+  mockResponse:
+    - PredefinedWatchlist: "NEWMW"
+      PredefinedWatchlistScrips: "nse_cm|236,nse_cm|16669,nse_cm|13986,nse_cm|1333,nse_cm|11915"
+    - PredefinedWatchlist: "PREMARKETWATCH"
+      PredefinedWatchlistScrips: "bse_cm|500410,nse_cm|22,nse_cm|13587,nse_cm|212,nse_cm|5900,bse_cm|532134,nse_cm|4745,bse_cm|500103,nse_cm|13658,bse_cm|541154,nse_cm|14366,bse_cm|542830,bse_cm|535648,nse_cm|10666,bse_cm|542649,nse_fo|71319,nse_cm|9552,bse_cm|543066,nse_cm|3045,bse_cm|500112,nse_cm|714,bse_cm|500770,bse_cm|500570,nse_cm|3456,nse_cm|11915"
+    - PredefinedWatchlist: "PREMW"
+      PredefinedWatchlistScrips: "bse_cm|500410,nse_cm|22,nse_cm|13587,nse_cm|212,nse_cm|5900,bse_cm|532134,nse_cm|4745,bse_cm|500103,nse_cm|13658,bse_cm|541154,nse_cm|14366,bse_cm|542830,bse_cm|535648,nse_cm|10666,bse_cm|542649,nse_fo|71319,nse_cm|9552,bse_cm|543066,nse_cm|3045,bse_cm|500112,nse_cm|714,bse_cm|500770,bse_cm|500570,nse_cm|3456,nse_cm|11915"
+CallBackInternalServerError:
+  mockResponse: "Bad Input"
+GetStockDetails:
+  mockResponse:
+    ScripToken: "6545"
+    ExchangeSegment: "nse_cm"
+    LowerCircuitLimit: 13690
+    UpperCircuitLimit: 20990
+    FreezeQuantity: 100
+    ExpiryDate: "22/05/2024 16:30:09"
+    SpreadCombinedToken: "35020 35089"
+GetTriggerOrders:
+  mockResponse:
+  - TriggerId: "2501022"
+    OrderType: "LIMIT"
+    CutOff: ""
+    ExchangeSegment: "nse_cm"
+    AccountId: ""
+    UserId: ""
+    OrderRetentionType: "DAY"
+    ValidityDate: "07/01/2025 08:59:46"
+    NumOfDays: "10"
+    SymbolName: "TCS"
+    TradingSymbol: "TCS-EQ"
+    TransactionType: "Buy"
+    Price: "4175"
+    TotalQuantity: "10"
+    CustomerFirm: ""
+    ProductCode: ""
+    PriceType: "Limit"
+    OrderSource: "TWS"
+    MessageId: ""
+    SecondsSinceBoe: "1735680986"
+    GTTUpdateTime: ""
+    TmOrderNumber: ""
+    ReportType: "failure"
+    FilledQuantity: "0"
+    Text: "error user/user_target not logged in"
+    OrderStatus: "trigger pending"
+    NestOrderNumber: "250107000000003"
+    TriggerPrice: "0"
+    Source: ""
+    Operation: ""
+    Target: "0"
+    OrderInitialStatus: ""
+    CurrentValue: ""
+    ThresholdValue: ""
+    UnfilledSize: "10"
+    NDFlag: ""
+    Comments: ""
+    ContinueFlag: ""
+    RetentionType: "GTD"
+    ScripToken: "11536"
+    FieldType: ""
+    CancelledSize: "0"
+    OrderDate: "07/01/2025 08:59:46"
+    ExchangeName: "NSE"
+    FillSize: "0"
+  - TriggerId: "2501023"
+    OrderType: "LIMIT"
+    CutOff: ""
+    ExchangeSegment: "bse_cm"
+    AccountId: ""
+    UserId: ""
+    OrderRetentionType: "GTT"
+    ValidityDate: "07/01/2025 08:59:46"
+    NumOfDays: "10"
+    SymbolName: "RELIANCE"
+    TradingSymbol: "RELIANCE-EQ"
+    TransactionType: "Buy"
+    Price: "4175"
+    TotalQuantity: "10"
+    CustomerFirm: ""
+    ProductCode: ""
+    PriceType: "Limit"
+    OrderSource: "TWS"
+    MessageId: ""
+    SecondsSinceBoe: "1735680986"
+    GTTUpdateTime: ""
+    TmOrderNumber: ""
+    ReportType: "failure"
+    FilledQuantity: "0"
+    Text: "error user/user_target not logged in"
+    OrderStatus: "rejected"
+    NestOrderNumber: "250107000000004"
+    TriggerPrice: "0"
+    Source: ""
+    Operation: ""
+    Target: "0"
+    OrderInitialStatus: ""
+    CurrentValue: ""
+    ThresholdValue: ""
+    UnfilledSize: "10"
+    NDFlag: ""
+    Comments: ""
+    ContinueFlag: ""
+    RetentionType: "GTT"
+    ScripToken: "11546"
+    FieldType: ""
+    CancelledSize: "0"
+    OrderDate: "07/01/2025 08:59:46"
+    ExchangeName: "BSE"
+    FillSize: "0"
+  - TriggerId: "2501023"
+    OrderType: "LIMIT"
+    CutOff: ""
+    ExchangeSegment: "bse_cm"
+    AccountId: ""
+    UserId: ""
+    OrderRetentionType: "GTT"
+    ValidityDate: "07/01/2025 08:59:46"
+    NumOfDays: "10"
+    SymbolName: "RELIANCE"
+    TradingSymbol: ""
+    TransactionType: "Buy"
+    Price: "4175"
+    TotalQuantity: "10"
+    CustomerFirm: ""
+    ProductCode: ""
+    PriceType: "Limit"
+    OrderSource: "TWS"
+    MessageId: ""
+    SecondsSinceBoe: "1735680986"
+    GTTUpdateTime: ""
+    TmOrderNumber: ""
+    ReportType: "failure"
+    FilledQuantity: "0"
+    Text: "trigger pending"
+    OrderStatus: "trigger pending"
+    NestOrderNumber: "0"
+    TriggerPrice: "0"
+    Source: ""
+    Operation: ""
+    Target: "0"
+    OrderInitialStatus: "untriggered"
+    CurrentValue: ""
+    ThresholdValue: ""
+    UnfilledSize: "10"
+    NDFlag: ""
+    Comments: ""
+    ContinueFlag: ""
+    RetentionType: "GTT"
+    ScripToken: "11546"
+    FieldType: "last traded price"
+    CancelledSize: "0"
+    OrderDate: "07/01/2025 08:59:46"
+    ExchangeName: "BSE"
+    FillSize: "0"
+  - TriggerId: "2501024"
+    OrderType: "LIMIT"
+    CutOff: ""
+    ExchangeSegment: "nse_cm"
+    AccountId: ""
+    UserId: ""
+    OrderRetentionType: "DAY"
+    ValidityDate: "07/01/2025 08:59:46"
+    NumOfDays: "10"
+    SymbolName: "ITC"
+    TradingSymbol: ""
+    TransactionType: "Buy"
+    Price: "4175"
+    TotalQuantity: "10"
+    CustomerFirm: ""
+    ProductCode: ""
+    PriceType: "Limit"
+    OrderSource: "TWS"
+    MessageId: ""
+    SecondsSinceBoe: "1735680986"
+    GTTUpdateTime: ""
+    TmOrderNumber: ""
+    ReportType: "failure"
+    FilledQuantity: "0"
+    Text: "error user/user_target not logged in"
+    OrderStatus: "trigger pending"
+    NestOrderNumber: "250107000000005"
+    TriggerPrice: "0"
+    Source: ""
+    Operation: ""
+    Target: "0"
+    OrderInitialStatus: ""
+    CurrentValue: ""
+    ThresholdValue: ""
+    UnfilledSize: "10"
+    NDFlag: ""
+    Comments: ""
+    ContinueFlag: ""
+    RetentionType: "GTD"
+    ScripToken: "11556"
+    FieldType: ""
+    CancelledSize: "0"
+    OrderDate: "07/01/2025 08:59:46"
+    ExchangeName: "NSE"
+    FillSize: "0"
+GetTrades:
+  mockResponse:
+  - ExchangeName: "NSE"
+    SymbolName: "HDFCBANK"
+    TradingSymbol: "HDFCBANK-EQ"
+    TransactionType: "Buy"
+    NestOrderNumber: "241225000000001"
+    ExchangeOrderNumber: "231027000000001"
+    NestOrderRequestId: "1"
+    Price: 2400.0
+    FilledQuantity: 1
+    Quantity: 1
+    FillTime: "1735142884"
+    ProductCode: "NRML"
+    FillDate: "27/10/2023"
+    ScripToken: "236"
+    PriceType: "Limit"
+    ExchangeSegment: "nse_cm"
+    TradeNumber: "3244"
+UnexpectedCPPResponse:
+  mockResponse: "Bad Input"
+TriggerIdNotFound:
+  mockResponse: 
+    TriggerId: ""
+    StatusText: "triggerId not found"
+NoDataFoundresponse:
+  mockResponse: "No Data Found"
+GetPredefinedWatchlistEmptyData:
+  mockResponse:
+    - PredefinedWatchlist: "NEWMW"
+      PredefinedWatchlistScrips: ""
+    - PredefinedWatchlist: "PREMARKETWATCH"
+      PredefinedWatchlistScrips: ""
+    - PredefinedWatchlist: "PREMW"
+      PredefinedWatchlistScrips: ""
+ModifyGTTOrder:
+  mockResponse:
+    TriggerId: "2501020A4"
+    Text: "success"
+ModifyGTTOrderRejectedError:
+  mockResponse:
+    TriggerId: "2501020A4"
+    Text: "rejected"
+ModifyOrder: 
+  mockResponse:
+    NestOrderNumber: "231102000000019"
+    NestOrderStatus: "Success"
+    TriggerId: "2501020A4"
+    ExchangeOrderId: "NSE_ORDER_123"
+    ExchangeOrderStatus: "COMPLETE"
+    GuiOrdId: "GUI_ORDER_123"
+    User: "testuser"
+    Token: "TEST_TOKEN"
+    OrderCriteria: "N"
+    OrderAuthStatus: "AUTHORIZED"
+    AcceptText: "Order Modified Successfully"
+CancelOrder:
+  mockResponse:
+    NestOrderNumber: "241225000000001"
+    GUIOrderID: "GUI_ORDER_123"
+    Username: "testuser"
+    OrderToken: "TEST_TOKEN"
+    OrderCriteria: "N"
+    OrderAuthStatus: "AUTHORIZED"
+    AcceptText: ""
+MultiCancelOrders:
+  mockResponse: 
+    - NestOrderNumber: "241225000000001"
+      Message: "success"
+      WarningText: ""
+    - NestOrderNumber: "241225000000002"
+      Message: "success"
+      WarningText: ""
+MultiCancelOrdersWithErrorText:
+  mockResponse: 
+    - NestOrderNumber: "241225000000001"
+      Message: "success"
+      WarningText: ""
+    - NestOrderNumber: "241225000000002"
+      Message: "success"
+      WarningText: ""
+    - NestOrderNumber: "241225000000003"
+      Message: "rejected"
+      WarningText: ""
+  errorText: "error while cancelling above nest order numbers: 241225000000003"
+ExitCoverOrder:
+  mockResponse: 
+    PClntData: 241225000000001
+    Comments: "success"
+ExitCoverOrderRejected:
+  mockResponse: 
+    PClntData: 241225000000001
+    Comments: "rejected"
+MultiExitCoverOrders:
+  mockResponse:
+    - Message: "success"
+    - Message: "success"
+MultiExitCoverOrdersWithErrorText:
+  mockResponse:
+    - Message: "success"
+    - Message: "success"
+    - Message: "rejected"
+  errorText: "error while exiting above nest cover order numbers: 241225000000003"
+ExitBracketOrder: 
+  mockResponse: 
+    PClntData: 241225000000001
+    Comments: "success"
+ExitBracketOrderRejected:
+  mockResponse: 
+    PClntData: 241225000000001
+    Comments: "rejected"
+MultiExitBracketOrders:
+  mockResponse:
+    - Message: "success"
+    - Message: "success"
+MultiExitBracketOrdersWithErrorText:
+  mockResponse:
+    - Message: "success"
+    - Message: "success"
+    - Message: "rejected"
+  errorText: "error while exiting above nest bracket order numbers: 241225000000003"
+GetMarketStatus:
+  mockResponse:
+  - MarketStatus: "Normal Market Open"
+    MarketMode: "Normal Market Open"
+    Exchange: "NSE"
+    Text: "02-Nov-2023 09:15:00 The Normal market has opened."
+    ExchangeFeedTime: "02-Nov-2023 09:15:00"
+    ExchangeSegment: "nse_cm"
+  - MarketStatus: "Normal Market Open"
+    MarketMode: "Normal Market Open"
+    Exchange: "NSE"
+    Text: "02-Nov-2023 09:15:00 The Normal market has opened."
+    ExchangeFeedTime: "02-Nov-2023 09:15:00"
+    ExchangeSegment: "nse_cm"
+GetMarketStatusWithWarning:
+  mockResponse:
+  - MarketStatus: "Normal Market Open"
+    MarketMode: "Normal Market Open"
+    Exchange: "NSE"
+    Text: "02-Nov-2023 09:15:00 The Normal market has opened."
+    ExchangeFeedTime: "02-Nov-2023 09:15:00"
+    ExchangeSegment: "nse_cm"
+  - MarketStatus: "Normal Market Open"
+    MarketMode: "Normal Market Open"
+    Exchange: "NSE"
+    Text: "02-Nov-2023 09:15:00 The Normal market has opened."
+    ExchangeFeedTime: "02-Nov-2023 09:15:00"
+    ExchangeSegment: "nse_cm"
+  errorText: "market status not found for exchnage: BSE"
+CancelBracketOrder:
+  mockResponse: "success"
+GetGTCGTDOrderDetails:
+  mockResponse:
+  - TriggerId: "23112113"
+    ExchangeSegment: "nse_cm"
+    AccountId: "VIPINR-OTPUAT"
+    ValidityDate: "30/12/2023"
+    NumOfDays: "45"
+    TradingSymbol: "ITC-EQ"
+    TransactionType: "B"
+    Price: "43040.0000"
+    TotalQuantity: "20.0000"
+    OrderSource: "RESTAPI-TPMOB"
+    FilledQuantity: "0.0000"
+    RejectionReason: ""
+    NestOrderNumber: "231121000000205"
+    SymbolName: "ITC"
+    OrderReceiptDate: "21/11/2023 15:14:18"
+    OrderDate: "21/11/2023 15:14:18"
+    RetentionType: "GTD"
+    RejectedQuantity: "0.0000"
+    CancelledQuantity: "0.0000"
+GetGTCGTDOrderDetailsEmptyResponse:
+  mockResponse: []
+GetSpreadOrders:
+  mockResponse:
+  - ScripId: ""
+    TransactionType: "S"
+    ExchangeSegment: "nse_fo"
+    TradingSymbol: "BANKNIFTY25JANFUT"
+    NestOrderNumber: "250128000000010"
+    TriggerId: ""
+    Price: 5000000
+    PriceType: "3L"
+    NestOrderStatus: "cancelled"
+    TotalQuantity: 30
+    RejectionReason: ""
+    FilledQuantity: 0
+    PendingQuantity: 0
+    ProductCode: "NRML"
+    AveragePrice: 0.0
+    ExchangeOrderId: "250128000000001"
+    SyomOrderId: ""
+    OrderAuthStatus: "cancelled"
+    CustomText: ""
+    TriggerPrice: 0.0
+    ValidityDate: ""
+    AuctionNumber: ""
+    OrderedTime: "1738047409"
+    ScripToken: "35012"
+    BoardLotQuantity: 30
+    ScripName: "BANKNIFTY30JAN25FUT"
+    NestOrderRequestId: "1"
+    RetentionType: "DAY"
+    OrderSource: "RESTAPI-NVNTGMOB"
+    ExchangeOrderUpdateTime: ""
+    ExchangeSymbol: ""
+    SecondSinceBoe: "1738047409"
+    Leg1TransactionType: "S"
+    Leg2TransactionType: "B"
+    Leg3TransactionType: "S"
+    Leg1TradingSymbol: "BANKNIFTY25JANFUT"
+    Leg2TradingSymbol: "BANKNIFTY25FEBFUT"
+    Leg3TradingSymbol: "BANKNIFTY25JANFUT"
+    Leg1Price: 5000000
+    Leg2Price: 4400000
+    Leg3Price: 3000000
+    Leg1AveragePrice: 0
+    Leg2AveragePrice: 0
+    Leg3AveragePrice: 0
+    Leg1Quantity: 30
+    Leg2Quantity: 30
+    Leg3Quantity: 30
+    Leg1FilledQuantity: 0
+    Leg2FilledQuantity: 0
+    Leg3FilledQuantity: 0
+    Leg1PendingQuantity: 0
+    Leg2PendingQuantity: 0
+    Leg3PendingQuantity: 0
+    Leg2ScripToken: "35117"
+    Leg3ScripToken: "35618"
+GetSpreadOrdersEmptyResponse:
+  mockResponse: []
+GetSpreadOrdersSP:
+  mockResponse:
+  - ScripId: ""
+    TransactionType: "S"
+    ExchangeSegment: "nse_fo"
+    TradingSymbol: "BANKNIFTY25JANFUT"
+    NestOrderNumber: "250128000000010"
+    TriggerId: ""
+    Price: 5000000
+    PriceType: "SP"
+    NestOrderStatus: "cancelled"
+    TotalQuantity: 30
+    RejectionReason: ""
+    FilledQuantity: 0
+    PendingQuantity: 0
+    ProductCode: "NRML"
+    AveragePrice: 0.0
+    ExchangeOrderId: "250128000000001"
+    SyomOrderId: ""
+    OrderAuthStatus: "cancelled"
+    CustomText: ""
+    TriggerPrice: 0.0
+    ValidityDate: ""
+    AuctionNumber: ""
+    OrderedTime: "1738047409"
+    ScripToken: "35012"
+    BoardLotQuantity: 30
+    ScripName: "BANKNIFTY30JAN25FUT"
+    NestOrderRequestId: "1"
+    RetentionType: "DAY"
+    OrderSource: "RESTAPI-NVNTGMOB"
+    ExchangeOrderUpdateTime: ""
+    ExchangeSymbol: ""
+    SecondSinceBoe: "1738047409"
+    Leg1TransactionType: "S"
+    Leg2TransactionType: "B"
+    Leg1TradingSymbol: "BANKNIFTY25JANFUT"
+    Leg2TradingSymbol: "BANKNIFTY25FEBFUT"
+    Leg1Price: 5000000
+    Leg2Price: 0
+    Leg1AveragePrice: 0
+    Leg2AveragePrice: -1
+    Leg3AveragePrice: -1
+    Leg1Quantity: 30
+    Leg2Quantity: 0
+    Leg1FilledQuantity: 0
+    Leg2FilledQuantity: 0
+    Leg3FilledQuantity: 0
+    Leg1PendingQuantity: 0
+    Leg2PendingQuantity: 0
+    Leg3PendingQuantity: 0
+    Leg2ScripToken: "35117"
+GetOrderDetails:
+  mockResponse:
+  - TradingSymbol: "HEROMOTOCO-EQ"
+    ExchangeName: "nse_cm" 
+    ProductCode: "NRML" 
+    TransactionType: "S" 
+    PriceType: "L" 
+    OrderPrice: 400000 
+    TriggerPrice: 0 
+    FilledPrice: 400000 
+    FilledQuantity: 10 
+    TotalQuantity: 10 
+    Validity: "DAY" 
+    ExchangeOrderNumber: "250129000000024" 
+    NestOrderStatus: "complete" 
+    PendingQuantity: 0 
+    LastUpdatedDate: "" 
+    MarketProtection: 100 
+    TradeNumber: "13266" 
+    SecondsSinceBoe: "1738131344" 
+    ScripToken: "1348" 
+    Leg2ScripToken: "" 
+    Leg3ScripToken: "" 
+    SymbolName: "1348" 
+    Leg1AveragePrice: 400000 
+    Leg2AveragePrice: -1 
+    Leg3AveragePrice: -1 
+    CustomerFirm: "C" 
+    AccountId: "VIPINR-OTPUAT" 
+    Leg1TransactionType: "S" 
+    GuiOrderId: "VIPINR1738131382-46581" 
+    Leg1FilledQuantity: 10 
+    Status: "complete" 
+    RetentionType: "DAY" 
+    LocationId: "111111111111130" 
+    OrderSource: "ADMINCPPAPI_MOB" 
+    NestOrderNumber: "250129000000029" 
+    OrderDate: "" 
+    DisclosedQuantity: 0 
+  - TradingSymbol: "HEROMOTOCO-EQ" 
+    ExchangeName: "nse_cm" 
+    ProductCode: "NRML" 
+    TransactionType: "S" 
+    PriceType: "L" 
+    OrderPrice: 400000 
+    TriggerPrice: 0 
+    FilledPrice: 0 
+    FilledQuantity: 0 
+    TotalQuantity: 10 
+    Validity: "DAY" 
+    ExchangeOrderNumber: "250129000000024" 
+    NestOrderStatus: "open" 
+    PendingQuantity: 10 
+    LastUpdatedDate: "" 
+    MarketProtection: 100 
+    TradeNumber: "" 
+    SecondsSinceBoe: "1738131344" 
+    ScripToken: "1348" 
+    Leg2ScripToken: "" 
+    Leg3ScripToken: "" 
+    SymbolName: "1348" 
+    SymbolName2: "" 
+    SymbolName3: "" 
+    OrderGenerationType: "" 
+    NestOrderRequestId: "1" 
+    Text: "" 
+    OrderInitialStatus: "open" 
+    Leg1AveragePrice: 0 
+    Leg2AveragePrice: -1 
+    Leg3AveragePrice: -1 
+    CustomerFirm: "C" 
+    AccountId: "VIPINR-OTPUAT" 
+    Leg1TransactionType: "S" 
+    Leg2TransactionType: "" 
+    Leg3TransactionType: "" 
+    GuiOrderId: "VIPINR1738131382-46581" 
+    Leg1FilledQuantity: 0 
+    Leg2FilledQuantity: 0 
+    Leg3FilledQuantity: 0 
+    Status: "open" 
+    Leg1PendingQuantity: 10 
+    Leg2PendingQuantity: 0 
+    Leg3PendingQuantity: 0 
+    RetentionType: "DAY" 
+    LocationId: "111111111111130" 
+    Leg1OrderPrice: 400000 
+    Leg2OrderPrice: -1 
+    Leg3OrderPrice: -1 
+    Leg1TradingSymbol: "HEROMOTOCO-EQ" 
+    Leg2TradingSymbol: "" 
+    Leg3TradingSymbol: "" 
+    Leg1TotalQuantity: 10 
+    Leg2TotalQuantity: 0 
+    Leg3TotalQuantity: 0 
+    ExchangeSegment: "nse_cm" 
+    OrderPriceType: "L" 
+    ExchangeOrderId: "250129000000024" 
+    User: "" 
+    ExchangeOrderUpdateTime: "" 
+    RejectionReason: "" 
+    ScripId: "" 
+    NestOrderNumber: "250129000000029" 
+    OrderSource: "ADMINCPPAPI_MOB" 
+    OrderDate: "" 
+    DisclosedQuantity: 0 
+    Leg1ExecutingPrice: 0 
+    Leg2ExecutingPrice: 0 
+    Leg3ExecutingPrice: 0
+ModifySpreadOrder:
+  mockResponse: 
+    NestOrderNumber: "250128000000026"
+    GuiOrdId: "1738236691-381195-CODITAS-ADMINAPI"
+    User: "testuser"
+    Token: "10000007"
+    OrderCriteria: "N"
+    OrderAuthStatus: "SUCCESS"
+    AcceptText: "Order Modified Successfully"
+PlaceGTCGTDOrder:
+  mockResponse:
+    PTriggerId: "2502114"
+    Text: "success"
+

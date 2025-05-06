@@ -1,0 +1,8 @@
+host: 
+user: 
+password: 
+port: 9200
+sslMode: "enabled"
+TimeZone: "Asia/Kolkata"
+isMockConnection: false
+caCertPath: "../../utils/openSearch/dev.crt"

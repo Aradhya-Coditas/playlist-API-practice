@@ -1,0 +1,51 @@
+swagger :
+  swaggerHost: ""
+  
+server :
+  serverPort: 8080
+
+filePath:
+  encryptionKeysPath : "../../../../src/encryptionKeys/"
+  middlewareEncryptionKeysPath : "../../../../src/middlewareEncryptionKeys/"
+
+token :
+  accessSecretKey : a%6\d^h#$7s6
+  refreshSecretKey: mcmvmkmsdnfsdmfdsjf
+  accessTokenExpiryInDays : 1
+  refreshTokenExpiryInDays: 5
+  secretKey : secret_key
+  
+appConfig: 
+  UseMocks: false
+  UseDBMocks: false
+  EnableUIBFFEncDec: false
+  EnableNestEncryption : true
+  UseFrontendErrorFormat: true
+  bannerURLPrefix: "https://testapisix.omnenest.com/api/v1/image/"
+  CMOTSToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Im9tbmVuZXN0Iiwicm9sZSI6IkFkbWluIiwibmJmIjoxNzIyODUzNTk3LCJleHAiOjE3MjU1MzE5OTcsImlhdCI6MTcyMjg1MzU5NywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDE5MSIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAxOTEifQ.ggAPlbTyvcLoiyEl8W2j75qUEDZmHuH89vgDWqWNf30"
+  ApplicationName: "admin-app"
+
+authentication:
+  OtpLength : 4
+  AllowedMaximumLoginCount : 3
+  PasswordValidationRegex: "^[A-Za-z][A-Za-z\\d@$!%*?&]*[\\d@$!%*?&]+[A-Za-z\\d@$!%*?&]*$"
+  OtpExpiryInMinutes: 5
+  ResendOtpTimeout: 1
+  AdminUserName: "CODITAS"
+  AdminPassword: "abc@12345"
+
+watchlist:
+  WatchlistLimit: 10
+  ScripLimitPerWatchlist: 10
+  WatchlistNameValidationRegex: "^[a-zA-Z][a-zA-Z0-9]*$"
+
+orders:
+  BasketLimit: 30
+  BasketNameValidationRegex: ^[a-zA-Z][a-zA-Z0-9]*$
+  MaximumBasketOrdersLimit : 2
+
+back-office-urls:
+  ClientLedger: "https://testapisix.omnenest.com/financial_ledger?clientCode=%s&cocdlist=%s&showMargin=%s&startYear=%s"
+  GlobalPL: "https://testapisix.omnenest.com/global_pl?cocd=%s&clientCode=%s&finYear=%s"
+  Holdings: "https://testapisix.omnenest.com/holdings_BO?clientCode=%s&startYear=%s"
+  ClientFASummary: "https://testapisix.omnenest.com/client_FA_summery?clientId=%s&finstart=%s"

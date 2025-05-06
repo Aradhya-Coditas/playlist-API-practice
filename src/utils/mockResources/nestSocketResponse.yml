@@ -1,0 +1,35 @@
+10:
+  mockResponse:
+    template_id: "11"
+    template_version: "5.27"
+    rp_code: 
+    - ""
+    - "0"
+    device: 
+    - "REQ"
+    - "TPLANT"
+    user_id: "CHIEF"
+    pwd_reset: "N"
+    user_session_id: "3253759729"
+    session_key: "CHIEF_nest_nps1_1721983566"
+    login_status: "USER LOGGED IN SUCCESSFULLY"
+    user_type: "SUPER_ADMIN"
+    login_time: "1721983202"
+    pwd_change_time: "1720579739"
+    tpin_reset_flag: "Y"
+    reply_text: "RISK DISCLOSURES ON DERIVATIVES \n\n  1. 9 out of 10 individual traders in equity Futures and Options Segment, incurred net losses.\n   2. On an average, loss makers registered net trading loss close to Rs. 50,000.\n   3. Over and above the net trading losses incurred, loss makers expended an additional 28% of net trading losses as transaction costs.\n   4. Those making net trading profits, incurred between 15% to 50% of such profits as transaction cost.\n\n Source:\n\n 1. SEBI study dated January 25, 2023 on Analysis of Profit and Loss of Individual Traders dealing in equity Futures and Options (F&O) Segment, wherein Aggregate Level findings are based on annual Profit/Loss incurred by individual traders in equity F&O during FY 2021-22\n\n\n \n https://www.sebi.gov.in/reports-and-statistics/research/jan-2023/study-analysis-of-profit-and-loss-of-individual-traders-dealing-in-equity-fando-segment_67525.html"
+    loggedin_device: "ORD"
+22:
+  mockResponse:
+    template_id: "23"
+    rp_code:
+    - "0"
+    user_id: "CHIEF"
+    login_status: "USER CONNECTION SUCCESSFULL"
+    loggedin_device: "TPLANT"
+42:
+  mockResponse:
+    template_id: "43"
+    rp_code:
+    - ""
+    - "0"

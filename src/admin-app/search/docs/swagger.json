@@ -1,0 +1,1461 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Omnenest backend for WebSocket Search micro-service (Middleware layer).",
+        "title": "omnenest-backend",
+        "contact": {},
+        "version": "1.0"
+    },
+    "basePath": "/v1",
+    "paths": {
+        "/api/search/derivatives/expiry-date": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "This api is used to get the expiry date for selected exchange,instrument and symbol name i.e applicable only for derivatives.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Derivatives"
+                ],
+                "summary": "This api is used to get the expiry date for selected exchange,instrument and symbol name.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "default": "123456789",
+                        "description": "Unique request identifier",
+                        "name": "xRequestId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "PKQ1.180904.001",
+                        "description": "Unique device identifier",
+                        "name": "deviceId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1.0.0",
+                        "description": "Current app version",
+                        "name": "appVersion",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "MOB",
+                        "description": "Source (MOB or WEB)",
+                        "name": "source",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Bypass (AUTOMATION or CHART)",
+                        "name": "bypass",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "default": "ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c",
+                        "description": "Unique appInstall identifier",
+                        "name": "appInstallId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30",
+                        "description": "userAgent",
+                        "name": "userAgent",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1701063550000",
+                        "description": "device current day epoch milliseconds timestamp",
+                        "name": "timestamp",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "GetDerivativesExpiryDateRequest request JSON",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesExpiryDateRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesExpiryDateResponse"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content for the request"
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid input data or validation error",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "The server encountered an unexplained problem which has prevented it from executing the given request",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/search/derivatives/instrument": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "This API is used to give list of instrument applicable only for future and options scrips.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Derivatives"
+                ],
+                "summary": "This API is used to give list of instrument.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "default": "123456789",
+                        "description": "Unique request identifier",
+                        "name": "xRequestId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "PKQ1.180904.001",
+                        "description": "Unique device identifier",
+                        "name": "deviceId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1.0.0",
+                        "description": "Current app version",
+                        "name": "appVersion",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "MOB",
+                        "description": "Source (MOB or WEB)",
+                        "name": "source",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Bypass (AUTOMATION or CHART)",
+                        "name": "bypass",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "default": "ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c",
+                        "description": "Unique appInstall identifier",
+                        "name": "appInstallId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30",
+                        "description": "userAgent",
+                        "name": "userAgent",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1701063550000",
+                        "description": "device current day epoch milliseconds timestamp",
+                        "name": "timestamp",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Get Derivatives Instrument request JSON",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesInstrumentRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesInstrumentResponse"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content for the request"
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid input data or validation error",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "The server encountered an unexplained problem which has prevented it from executing the given request",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/search/derivatives/option-types": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "This API is used to get option types for selected exchange, instrument, symbol name and expiry date.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Derivatives"
+                ],
+                "summary": "This API is used to get option types for selected exchange, instrument, symbol name and expiry date.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "default": "123456789",
+                        "description": "Unique request identifier",
+                        "name": "xRequestId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "PKQ1.180904.001",
+                        "description": "Unique device identifier",
+                        "name": "deviceId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1.0.0",
+                        "description": "Current app version",
+                        "name": "appVersion",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "MOB",
+                        "description": "Source (MOB or WEB)",
+                        "name": "source",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Bypass (AUTOMATION or CHART)",
+                        "name": "bypass",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "default": "ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c",
+                        "description": "Unique appInstall identifier",
+                        "name": "appInstallId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30",
+                        "description": "userAgent",
+                        "name": "userAgent",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1701063550000",
+                        "description": "device current day epoch milliseconds timestamp",
+                        "name": "timestamp",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Get Derivatives Option Types request JSON",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesOptionTypesRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesOptionTypesResponse"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content for the request"
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid input data or validation error",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "The server encountered an unexplained problem which has prevented it from executing the given request",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/search/derivatives/scrip": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "This API is used to get scrip for selected exchange, instrument.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Derivatives"
+                ],
+                "summary": "This API is used to get scrip for selected exchange, instrument.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "default": "123456789",
+                        "description": "Unique request identifier",
+                        "name": "xRequestId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "PKQ1.180904.001",
+                        "description": "Unique device identifier",
+                        "name": "deviceId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1.0.0",
+                        "description": "Current app version",
+                        "name": "appVersion",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "MOB",
+                        "description": "Source (MOB or WEB)",
+                        "name": "source",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Bypass (AUTOMATION or CHART)",
+                        "name": "bypass",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "default": "ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c",
+                        "description": "Unique appInstall identifier",
+                        "name": "appInstallId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30",
+                        "description": "userAgent",
+                        "name": "userAgent",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1701063550000",
+                        "description": "device current day epoch milliseconds timestamp",
+                        "name": "timestamp",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Get Derivatives Scrip request JSON",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesScripRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesScripResponse"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content for the request"
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid input data or validation error",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "The server encountered an unexplained problem which has prevented it from executing the given request",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/search/derivatives/scrip-information": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "This API is used to give the scrip information for a scrip of selected exchange that is only for future and options, instrument, symbol name, expiry date, option type and strike price.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Derivatives"
+                ],
+                "summary": "This API is used to give the scrip information for a scrip of selected exchange.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "default": "123456789",
+                        "description": "Unique request identifier",
+                        "name": "xRequestId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "PKQ1.180904.001",
+                        "description": "Unique device identifier",
+                        "name": "deviceId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1.0.0",
+                        "description": "Current app version",
+                        "name": "appVersion",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "MOB",
+                        "description": "Source (MOB or WEB)",
+                        "name": "source",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Bypass (AUTOMATION or CHART)",
+                        "name": "bypass",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "default": "ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c",
+                        "description": "Unique appInstall identifier",
+                        "name": "appInstallId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30",
+                        "description": "userAgent",
+                        "name": "userAgent",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1701063550000",
+                        "description": "device current day epoch milliseconds timestamp",
+                        "name": "timestamp",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Get Derivatives Scrip Information request JSON",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesScripInformationRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesScripInformationResponse"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content for the request"
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid input data or validation error",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "The server encountered an unexplained problem which has prevented it from executing the given request",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/search/derivatives/strike-price": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "This API is used to get strike price for selected exchange, instrument.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Derivatives"
+                ],
+                "summary": "This API is used to get strike price for selected exchange, instrument.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "default": "123456789",
+                        "description": "Unique request identifier",
+                        "name": "xRequestId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "PKQ1.180904.001",
+                        "description": "Unique device identifier",
+                        "name": "deviceId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1.0.0",
+                        "description": "Current app version",
+                        "name": "appVersion",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "MOB",
+                        "description": "Source (MOB or WEB)",
+                        "name": "source",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Bypass (AUTOMATION or CHART)",
+                        "name": "bypass",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "default": "ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c",
+                        "description": "Unique appInstall identifier",
+                        "name": "appInstallId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30",
+                        "description": "userAgent",
+                        "name": "userAgent",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1701063550000",
+                        "description": "device current day epoch milliseconds timestamp",
+                        "name": "timestamp",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Get Derivatives StrikePrice request JSON",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesStrikePriceRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFGetDerivativesStrikePriceResponse"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content for the request"
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid input data or validation error",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "The server encountered an unexplained problem which has prevented it from executing the given request",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/search/equity/group": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "This API is used to get equity group by exchange name.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Equity"
+                ],
+                "summary": "This API is used to get equity group by exchange name.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "default": "123456789",
+                        "description": "Unique request identifier",
+                        "name": "xRequestId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "PKQ1.180904.001",
+                        "description": "Unique device identifier",
+                        "name": "deviceId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1.0.0",
+                        "description": "Current app version",
+                        "name": "appVersion",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "MOB",
+                        "description": "Source (MOB or WEB)",
+                        "name": "source",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Bypass (AUTOMATION or CHART)",
+                        "name": "bypass",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "default": "ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c",
+                        "description": "Unique appInstall identifier",
+                        "name": "appInstallId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30",
+                        "description": "userAgent",
+                        "name": "userAgent",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1701063550000",
+                        "description": "device current day epoch milliseconds timestamp",
+                        "name": "timestamp",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Search equity group request JSON",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFSearchEquityGroupRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFSearchEquityGroupResponse"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content for the request"
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid input data or validation error",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "The server encountered an unexplained problem which has prevented it from executing the given request",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/search/equity/scrip": {
+            "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
+                "description": "This API is used to search equity scrips using search text.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Equity"
+                ],
+                "summary": "This API is used to search equity scrips.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "default": "123456789",
+                        "description": "Unique request identifier",
+                        "name": "xRequestId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "PKQ1.180904.001",
+                        "description": "Unique device identifier",
+                        "name": "deviceId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1.0.0",
+                        "description": "Current app version",
+                        "name": "appVersion",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "MOB",
+                        "description": "Source (MOB or WEB)",
+                        "name": "source",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Bypass (AUTOMATION or CHART)",
+                        "name": "bypass",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "default": "ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c",
+                        "description": "Unique appInstall identifier",
+                        "name": "appInstallId",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30",
+                        "description": "userAgent",
+                        "name": "userAgent",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "default": "1701063550000",
+                        "description": "device current day epoch milliseconds timestamp",
+                        "name": "timestamp",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "description": "Search equity scrip request JSON",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFSearchEquityScripRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "schema": {
+                            "$ref": "#/definitions/models.BFFSearchEquityScripResponse"
+                        }
+                    },
+                    "204": {
+                        "description": "No Content for the request"
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid input data or validation error",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "The server encountered an unexplained problem which has prevented it from executing the given request",
+                        "schema": {
+                            "$ref": "#/definitions/models.ErrorAPIResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "models.BFFExpiryDateValues": {
+            "type": "object",
+            "properties": {
+                "display": {
+                    "type": "string",
+                    "example": "23 Nov, 2023"
+                },
+                "value": {
+                    "type": "string",
+                    "example": "1385217000"
+                }
+            }
+        },
+        "models.BFFGetDerivativesExpiryDateRequest": {
+            "type": "object",
+            "required": [
+                "exchange",
+                "instrumentName",
+                "symbolName"
+            ],
+            "properties": {
+                "exchange": {
+                    "type": "string",
+                    "example": "NFO"
+                },
+                "instrumentName": {
+                    "type": "string",
+                    "example": "OPTIDX"
+                },
+                "symbolName": {
+                    "type": "string",
+                    "example": "BANKNIFTY"
+                }
+            }
+        },
+        "models.BFFGetDerivativesExpiryDateResponse": {
+            "type": "object",
+            "properties": {
+                "expiryDate": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.BFFExpiryDateValues"
+                    }
+                }
+            }
+        },
+        "models.BFFGetDerivativesInstrumentRequest": {
+            "type": "object",
+            "required": [
+                "exchange"
+            ],
+            "properties": {
+                "contractType": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/models.contractType"
+                        }
+                    ],
+                    "example": "Option"
+                },
+                "exchange": {
+                    "type": "string",
+                    "example": "NFO"
+                }
+            }
+        },
+        "models.BFFGetDerivativesInstrumentResponse": {
+            "type": "object",
+            "properties": {
+                "instrumentList": {
+                    "$ref": "#/definitions/models.GetDerivativesInstrument"
+                }
+            }
+        },
+        "models.BFFGetDerivativesOptionTypesRequest": {
+            "type": "object",
+            "required": [
+                "exchange",
+                "expiryDate",
+                "instrumentName",
+                "symbolName"
+            ],
+            "properties": {
+                "exchange": {
+                    "type": "string",
+                    "example": "NFO"
+                },
+                "expiryDate": {
+                    "type": "string",
+                    "example": "1419690600"
+                },
+                "instrumentName": {
+                    "type": "string",
+                    "example": "OPTIDX"
+                },
+                "symbolName": {
+                    "type": "string",
+                    "example": "BANKNIFTY"
+                }
+            }
+        },
+        "models.BFFGetDerivativesOptionTypesResponse": {
+            "type": "object",
+            "properties": {
+                "optionTypes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "CE",
+                        "PE"
+                    ]
+                }
+            }
+        },
+        "models.BFFGetDerivativesScripInformationRequest": {
+            "type": "object",
+            "required": [
+                "exchange",
+                "expiryDate",
+                "instrumentName",
+                "symbolName"
+            ],
+            "properties": {
+                "exchange": {
+                    "type": "string",
+                    "example": "NFO"
+                },
+                "expiryDate": {
+                    "type": "string",
+                    "example": "1419690600"
+                },
+                "instrumentName": {
+                    "type": "string",
+                    "example": "OPTSTK"
+                },
+                "optionType": {
+                    "type": "string",
+                    "example": "PE"
+                },
+                "strikePrice": {
+                    "type": "number",
+                    "example": 152000
+                },
+                "symbolName": {
+                    "type": "string",
+                    "example": "ADANIPORTS"
+                }
+            }
+        },
+        "models.BFFGetDerivativesScripInformationResponse": {
+            "type": "object",
+            "properties": {
+                "boardLotQuantity": {
+                    "type": "integer",
+                    "example": 15
+                },
+                "combinedScripToken": {
+                    "type": "string",
+                    "example": "NA"
+                },
+                "decimalPrecision": {
+                    "type": "integer",
+                    "example": 2
+                },
+                "exchange": {
+                    "type": "string",
+                    "example": "NFO"
+                },
+                "exchangeSegment": {
+                    "type": "string",
+                    "example": "nse_fo"
+                },
+                "expiryDate": {
+                    "type": "string",
+                    "example": "1419690600"
+                },
+                "instrumentName": {
+                    "type": "string",
+                    "example": "OPTIDX"
+                },
+                "multiplier": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "optionType": {
+                    "type": "string",
+                    "example": "CE"
+                },
+                "scripId": {
+                    "type": "string",
+                    "example": "NSE_345654"
+                },
+                "scripToken": {
+                    "type": "string",
+                    "example": "58164"
+                },
+                "segmentIndicator": {
+                    "type": "string",
+                    "example": "EQUITY"
+                },
+                "strikePrice": {
+                    "type": "number",
+                    "example": 36500
+                },
+                "symbolName": {
+                    "type": "string",
+                    "example": "BANKNIFTY"
+                },
+                "tickSize": {
+                    "type": "number",
+                    "example": 5
+                },
+                "tradingSymbol": {
+                    "type": "string",
+                    "example": "BANKNIFTY23NOV36500CE"
+                },
+                "uniqueKey": {
+                    "type": "string",
+                    "example": "BANKNIFTY23NOV36500CE"
+                }
+            }
+        },
+        "models.BFFGetDerivativesScripRequest": {
+            "type": "object",
+            "required": [
+                "exchange",
+                "instrumentName"
+            ],
+            "properties": {
+                "exchange": {
+                    "type": "string",
+                    "example": "NFO"
+                },
+                "instrumentName": {
+                    "type": "string",
+                    "example": "OPTIDX"
+                }
+            }
+        },
+        "models.BFFGetDerivativesScripResponse": {
+            "type": "object",
+            "properties": {
+                "scrips": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "BANKNIFTY",
+                        "NIFTY",
+                        "NIFTYIT"
+                    ]
+                }
+            }
+        },
+        "models.BFFGetDerivativesStrikePriceRequest": {
+            "type": "object",
+            "required": [
+                "exchange",
+                "expiryDate",
+                "instrumentName",
+                "optionType",
+                "symbolName"
+            ],
+            "properties": {
+                "exchange": {
+                    "type": "string",
+                    "example": "NFO"
+                },
+                "expiryDate": {
+                    "type": "string",
+                    "example": "1425047400"
+                },
+                "instrumentName": {
+                    "type": "string",
+                    "example": "OPTIDX"
+                },
+                "optionType": {
+                    "type": "string",
+                    "example": "CE"
+                },
+                "symbolName": {
+                    "type": "string",
+                    "example": "BANKNIFTY"
+                }
+            }
+        },
+        "models.BFFGetDerivativesStrikePriceResponse": {
+            "type": "object",
+            "properties": {
+                "strikePrice": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.BFFStrikePriceList"
+                    }
+                }
+            }
+        },
+        "models.BFFSearchEquityGroupRequest": {
+            "type": "object",
+            "required": [
+                "exchange"
+            ],
+            "properties": {
+                "exchange": {
+                    "type": "string",
+                    "example": "NSE"
+                }
+            }
+        },
+        "models.BFFSearchEquityGroupResponse": {
+            "type": "object",
+            "properties": {
+                "groups": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "AA",
+                        "AB",
+                        "AC",
+                        "AD",
+                        "AG",
+                        "AH",
+                        "AI",
+                        "AJ",
+                        "AK",
+                        "AL",
+                        "AM",
+                        "AN",
+                        "EQ"
+                    ]
+                }
+            }
+        },
+        "models.BFFSearchEquityScrip": {
+            "type": "object",
+            "properties": {
+                "boardLotQuantity": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "decimalPrecision": {
+                    "type": "integer",
+                    "example": 2
+                },
+                "exchange": {
+                    "type": "string",
+                    "example": "NSE"
+                },
+                "exchangeSegment": {
+                    "type": "string",
+                    "example": "nse_cm"
+                },
+                "id": {
+                    "type": "string",
+                    "example": "NSE_4567654"
+                },
+                "isinValue": {
+                    "type": "string",
+                    "example": "INE092A01019"
+                },
+                "multiplier": {
+                    "type": "integer",
+                    "example": 1
+                },
+                "scripName": {
+                    "type": "string",
+                    "example": "TATA CHEMICALS LTD"
+                },
+                "scripToken": {
+                    "type": "string",
+                    "example": "3405"
+                },
+                "tickSize": {
+                    "type": "number",
+                    "example": 5
+                },
+                "tradingSymbol": {
+                    "type": "string",
+                    "example": "TATACHEM-EQ"
+                },
+                "uniqueKey": {
+                    "type": "string",
+                    "example": "TATACHEM"
+                }
+            }
+        },
+        "models.BFFSearchEquityScripRequest": {
+            "type": "object",
+            "required": [
+                "exchange",
+                "group",
+                "searchText"
+            ],
+            "properties": {
+                "exchange": {
+                    "type": "string",
+                    "example": "NSE"
+                },
+                "group": {
+                    "type": "string",
+                    "example": "EQ"
+                },
+                "searchText": {
+                    "type": "string",
+                    "minLength": 3,
+                    "example": "ABB"
+                }
+            }
+        },
+        "models.BFFSearchEquityScripResponse": {
+            "type": "object",
+            "properties": {
+                "scrips": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.BFFSearchEquityScrip"
+                    }
+                }
+            }
+        },
+        "models.BFFStrikePriceList": {
+            "type": "object",
+            "properties": {
+                "displayStrikePrice": {
+                    "type": "number",
+                    "example": 9800
+                },
+                "strikePriceValue": {
+                    "type": "number",
+                    "example": 980000
+                }
+            }
+        },
+        "models.ErrorAPIResponse": {
+            "type": "object",
+            "properties": {
+                "error": {
+                    "type": "string"
+                },
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/models.ErrorMessage"
+                    }
+                }
+            }
+        },
+        "models.ErrorMessage": {
+            "type": "object",
+            "properties": {
+                "errorMessage": {
+                    "type": "string"
+                },
+                "key": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.GetDerivativesInstrument": {
+            "type": "object",
+            "properties": {
+                "future": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "FUTIDX",
+                        "FUTSTK"
+                    ]
+                },
+                "option": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "OPTIDX",
+                        "OPTSTK"
+                    ]
+                },
+                "spreadFuture": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "SP-FUTIDX",
+                        "SP-FUTSTK"
+                    ]
+                }
+            }
+        },
+        "models.contractType": {
+            "type": "string",
+            "enum": [
+                "FUTURE",
+                "OPTION",
+                "SP-FUTURE"
+            ],
+            "x-enum-varnames": [
+                "Future",
+                "Option",
+                "SpreadFuture"
+            ]
+        }
+    },
+    "securityDefinitions": {
+        "ApiKeyAuth": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header",
+            "x-extension-openapi": "{\"example\": \"value on a json format\"}"
+        }
+    }
+}

@@ -1,0 +1,197 @@
+basePath: /v1
+definitions:
+  models.BFFDeleteWatchlistRequest:
+    properties:
+      watchlistId:
+        example: 30
+        type: integer
+    required:
+    - watchlistId
+    type: object
+  models.BFFDeleteWatchlistResponse:
+    properties:
+      message:
+        example: success
+        type: string
+    type: object
+  models.BFFGetWatchlistRequest:
+    properties:
+      brokerId:
+        example: 1
+        type: integer
+      userId:
+        example: 5
+        type: integer
+    required:
+    - brokerId
+    - userId
+    type: object
+  models.BFFPredefine:
+    properties:
+      id:
+        type: integer
+      watchlistName:
+        type: string
+    type: object
+  models.BFFUserdefine:
+    properties:
+      id:
+        type: integer
+      watchlistName:
+        type: string
+    type: object
+  models.BFFWatchlistResponse:
+    properties:
+      predefine:
+        items:
+          $ref: '#/definitions/models.BFFPredefine'
+        type: array
+      userdefine:
+        items:
+          $ref: '#/definitions/models.BFFUserdefine'
+        type: array
+    type: object
+  models.ErrorAPIResponse:
+    properties:
+      error:
+        type: string
+      errors:
+        items:
+          $ref: '#/definitions/models.ErrorMessage'
+        type: array
+    type: object
+  models.ErrorMessage:
+    properties:
+      errorMessage:
+        type: string
+      key:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: Omnenest backend for watchlist micro-service (Middleware layer).
+  title: omnenest-backend
+  version: "1.0"
+paths:
+  /api/watchlist/delete:
+    delete:
+      consumes:
+      - application/json
+      description: Delete Watchlist API for deleting the watchlist created by the
+        user.
+      parameters:
+      - default: "123456789"
+        description: Unique request identifier
+        in: header
+        name: xRequestId
+        required: true
+        type: string
+      - default: PKQ1.180904.001
+        description: Unique device identifier
+        in: header
+        name: deviceId
+        required: true
+        type: string
+      - default: 1.0.0
+        description: Current app version
+        in: header
+        name: appVersion
+        required: true
+        type: string
+      - default: MOB
+        description: Source (MOB or WEB)
+        in: header
+        name: source
+        required: true
+        type: string
+      - description: Bypass (AUTOMATION or CHART)
+        in: header
+        name: bypass
+        type: string
+      - default: ba6eb330-4f7f-11eb-a2fb-67c34e9ac07c
+        description: Unique appInstall identifier
+        in: header
+        name: appInstallId
+        required: true
+        type: string
+      - default: BrokerAppName/3.3.6 (OnePlus ONEPLUS A6010; Android 11 SDK30
+        description: userAgent
+        in: header
+        name: userAgent
+        required: true
+        type: string
+      - default: "1700839140000"
+        description: device current day epoch milliseconds timestamp
+        in: header
+        name: timestamp
+        required: true
+        type: string
+      - description: DeleteWatchlistRequest JSON
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.BFFDeleteWatchlistRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.BFFDeleteWatchlistResponse'
+        "404":
+          description: 'Not Found: User not found'
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete Watchlist API
+      tags:
+      - Delete Watchlist
+  /api/watchlist/get:
+    post:
+      consumes:
+      - application/json
+      description: Returns user's custom and broker's predefined watchlists
+      parameters:
+      - description: Request payload
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.BFFGetWatchlistRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.BFFWatchlistResponse'
+        "204":
+          description: No content found
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ErrorAPIResponse'
+      summary: Get user and broker watchlists
+      tags:
+      - Watchlist
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+    x-extension-openapi: '{"example": "value on a json format"}'
+swagger: "2.0"

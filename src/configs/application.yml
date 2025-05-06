@@ -1,0 +1,77 @@
+swagger:
+  swaggerHost: ""
+  
+server :
+  serverPort: 8080
+
+filePath :
+  encryptionKeysPath : "../../encryptionKeys/"
+  middlewareEncryptionKeysPath : "../../middlewareEncryptionKeys/"
+
+token :
+  accessSecretKey : a%6\d^h#$7s6
+  refreshSecretKey: asdhtcvsgdavcasvuew
+  accessTokenExpiryInDays : 1
+  refreshTokenExpiryInDays: 5
+  secretKey : secret_key
+  enableTokenCompression: false
+
+appConfig: 
+  UseMocks: false
+  UseDBMocks: false
+  EnableUIBFFEncDec: false
+  EnableNestEncryption : true
+  UseFrontendErrorFormat: true
+  EnableRateLimit : false
+  EnableMRVData : true
+  EnableOpenTelemetry : true
+  RateLimitIntervalInSecond : 1
+  RateLimitRequestPerInterval : 1000
+  DefaultMWScripsCount: 30
+  EnableSSL: true
+  EnableIPOCache : false
+  IsMonolith: false  
+  ApplicationName: "app"
+
+websocket:
+  websocketPort: 15678
+  websocketHost: 
+  websocketInsecureSkipVerify: true
+  websocketProtocol: "ws"
+  websocketPingInterval: 30
+  websocketPongTimeout: 60
+  websocketIdleTimeout: 60
+  websocketMaxMessageSize: 1024
+  websocketMaxConnections: 1000
+
+authentication:
+  OtpLength : 4
+  AllowedMaximumLoginCount : 3
+  PasswordValidationRegex: "^[A-Za-z][A-Za-z\\d@$!%*?&]*[\\d@$!%*?&]+[A-Za-z\\d@$!%*?&]*$"
+  OtpExpiryInMinutes: 5
+  ResendOtpTimeout: 1
+
+orders:
+  BasketLimit: 30
+  BasketNameValidationRegex: ^[a-zA-Z][a-zA-Z0-9]*$
+  MaximumBasketOrdersLimit : 2
+
+dbMetrics:
+  cockroachDB: true
+  postgres: true
+
+  
+watchlist:
+  WatchlistLimit: 10
+  ScripLimitPerWatchlist: 10
+  WatchlistNameValidationRegex: "^[a-zA-Z][a-zA-Z0-9]*$"
+
+data-load:
+  ScripMasterTimeZone: "Asia/Kolkata"
+  ScripMasterTimeIntervalInHours: 1
+  ScripMasterBatchSize: 2000
+  CmotsYearMonthRegex: "^Y\\d{6}$"
+  CmotsSchedulerIntervalInDays: 1
+  CmotsSchedulerRunTime: "01:00"
+  CmotsMaxRetryCount: 3
+  

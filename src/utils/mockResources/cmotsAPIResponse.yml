@@ -1,0 +1,325 @@
+YearlyResultBasedRatios:
+  mockResponse:
+    success: true
+    data:
+      - CO_CODE: 6
+        YearEnd: 202403
+        MCAP: 46772.17
+        EV: 45455.939999999995
+        PE: 22.018307724174296
+        PBV: 2.9192557709891744
+        DIVYIELD: 0.30144528252591235
+        DividendPayout: 6.637314992656199
+        EPS: 113.12
+        BookValue: 852.2767168466407
+        ROA: 12.607394077805658
+        ROE: 13.2583
+        ROCE: 16.3211
+        EBIT: 2672.87
+        EBITDA: 3549.14
+        EV_Sales: 2.2782385728312073
+        EV_EBITDA: 12.807592825304157
+        NetIncomeMargin: 10.646629474499843
+        GrossIncomeMargin: 17.01739605046654
+        AssetTurnover: 1.1841676380306199
+        CurrentRatio: 1.6027
+        Debt_Equity: 0.0221
+        NetDebt_EBITDA: -0.37085885594820156
+        EBITDA_Margin: 17.78818708485217
+        TotalShareholdersEquity: 16021.949999999999
+        ShorttermDebt: 131.09
+        LongTermDebt: 223.76
+        EPSDiluted: 112.82
+        NetSales: 19952.23
+        Netprofit: 2124.24
+        AnnualDividend: 140.9925
+        COGS: 12363.03
+      - CO_CODE: 6
+        YearEnd: 202303
+        MCAP: 31299.44
+        EV: 31165.73
+        PE: 35.98008989435689
+        PBV: 2.2288285978779463
+        DIVYIELD: 0.5555714415337782
+        DividendPayout: 19.989510409122783
+        EPS: 46.32
+        BookValue: 747.0078195648705
+        ROA: 5.886488637224863
+        ROE: 4.2778
+        ROCE: 6.2194
+        EBIT: 1259.3100000000002
+        EBITDA: 2094.4
+        EV_Sales: 1.4032315216994888
+        EV_EBITDA: 14.880505156608097
+        NetIncomeMargin: 3.9167545025950052
+        GrossIncomeMargin: 9.082497635071096
+        AssetTurnover: 1.502899564760781
+        CurrentRatio: 1.45
+        Debt_Equity: 0.0109
+        NetDebt_EBITDA: -0.06384167303284949
+        EBITDA_Margin: 9.429999230075502
+        TotalShareholdersEquity: 14043
+        ShorttermDebt: 27.36
+        LongTermDebt: 125.68
+        EPSDiluted: 46.2
+        NetSales: 22209.97
+        Netprofit: 869.91
+        AnnualDividend: 173.89075
+        COGS: 15289.92
+      - CO_CODE: 6
+        YearEnd: 202112
+        MCAP: 41639.95
+        EV: 34361.35
+        PE: 22.875699758826986
+        PBV: 2.9265315990590666
+        DIVYIELD: 2.6184997820602574
+        DividendPayout: 59.900014832964345
+        EPS: 96.93
+        BookValue: 756.8716421086228
+        ROA: 12.194610513678716
+        ROE: 12.7932
+        ROCE: 17.5214
+        EBIT: 2515.02
+        EBITDA: 3112.3
+        EV_Sales: 2.1274599336897535
+        EV_EBITDA: 11.040500594415704
+        NetIncomeMargin: 11.270079590870113
+        GrossIncomeMargin: 18.931358678995874
+        AssetTurnover: 1.0820341076878965
+        CurrentRatio: 1.7165
+        Debt_Equity: 0.0088
+        NetDebt_EBITDA: -2.3386562991999487
+        EBITDA_Margin: 19.2695966591028
+        TotalShareholdersEquity: 14228.43
+        ShorttermDebt: 24.21
+        LongTermDebt: 101.37
+        EPSDiluted: 96.67
+        NetSales: 16151.35
+        Netprofit: 1820.27
+        AnnualDividend: 1090.342
+        COGS: 10159.810000000001
+    message: Sucessful
+  encryptionNeeded: false
+ProftandLoss:
+  mockResponse:
+    success: true
+    data:
+      - COLUMNNAME: "Revenue From Operations "
+        RID: 1
+        Y202403: 19952.23
+        Y202303: 22209.97
+        Y202203: 16151.35
+        rowno: 1
+    message: "Sucessful"
+  encryptionNeeded: false
+Aggregate-Share-Holding:
+  mockResponse:
+    success: true
+    data:
+    - co_code: 476
+      YRC: 202406
+      Promoters: 50.3281
+      Retail: 8.3736
+      ForeignInstitution: 21.7464
+      MutualFund: 7.8374
+      OtherDomesticInstitution: 9.572300000000002
+      Others: 2.1421999999999883
+    - co_code: 476
+      YRC: 202403
+      Promoters: 50.312
+      Retail: 8.3889
+      ForeignInstitution: 22.0559
+      MutualFund: 7.5043
+      OtherDomesticInstitution: 9.5887
+      Others: 2.150199999999998
+    - co_code: 476
+      YRC: 202312
+      Promoters: 50.2958
+      Retail: 8.652099999999999
+      ForeignInstitution: 22.1361
+      MutualFund: 6.9698
+      OtherDomesticInstitution: 9.712700000000002
+      Others: 2.2334999999999923
+    - co_code: 476
+      YRC: 202309
+      Promoters: 50.2656
+      Retail: 8.8042
+      ForeignInstitution: 22.5996
+      MutualFund: 6.5565
+      OtherDomesticInstitution: 9.5169
+      Others: 2.2572000000000116
+    message: Sucessful
+CashFlow:
+  mockResponse:
+    success: true
+    data:
+      - COLUMNNAME: "Cash and Cash Equivalents at Beginning of the year"
+        RID: 1
+        Y202403: 256.63
+        Y202303: 7366.59
+        Y202112: 5849.36
+        rowno: 1
+    message: "Successful"
+  encryptionNeeded: false
+BalanceSheet:
+  mockResponse:
+    success: true
+    data:
+      - COLUMNNAME: 'Non-Current Assets:'
+        RID: 0
+        Y202403: 0
+        Y202303: 0
+        Y202112: 0
+        rowno: 1
+    message: Sucessful
+  encryptionNeeded: false
+CompanyProfile:
+  mockResponse:
+    success: true
+    data:
+      - LNAME: Reliance Industries Ltd
+        ISIN: INE002A01018
+        HSE_S_NAME: Mukesh Ambani
+        INC_DT: "1973"
+        REGADD1: 3rd Floor Maker Chambers IV
+        REGADD2: 222 Nariman Point
+        REGDIST: Mumbai
+        REGSTATE: Maharashtra
+        REGPIN: "400021"
+        TEL1: 91-22-22785000 / 35555000
+        ind_l_name: Refineries
+        TEL2: null
+        FAX1: 91-22-22042268 / 22852214
+        FAX2: null
+        AUDITOR: Deloitte Haskins & Sells LLP/Chaturvedi & Shah LLP
+        FV: 10.0
+        MKT_LOT: 1
+        CHAIRMAN: Mukesh D Ambani
+        CO_SEC: Savithri Parekh
+        CO_CODE: 476.0
+        EMAIL: investor.relations@ril.com
+        INTERNET: http://www.ril.com
+        dir_name: Mukesh D Ambani
+        dir_desg: Chairman & Managing Director
+        co_code1: 476.0
+        ho_add1: Maker Chambers - IV 
+        ho_add2: Nariman Point 
+        ho_add3:  
+        ho_city: Mumbai 
+        ho_stcode: MR 
+        ho_statename: null
+        ho_pin: 400021.0
+        ho_tel1: 91-22-22785000 
+        ho_tel2:  
+        ho_fax1:  
+        ho_fax2:  
+        ho_email: info@ril.com 
+        ho_ctry_name: India 
+        co_code2: null
+        co_add1: null
+        co_add2: null
+        co_add3: null
+        co_city: null
+        co_stcode: null
+        co_statename: null
+        co_pin: null
+        co_tel1: null
+        co_tel2: null
+        co_fax1: null
+        co_fax2: null
+        co_email: null
+        co_ctry_name: null
+        co_code3: 476.0
+        RCODE: "6796 "
+        REG_NAME: KFin Techologies Ltd 
+        REG_ADD1: Karvy Selenium Tow-B
+        REG_ADD2: 31&32 Financial Dist
+        REG_ADD3: Nanakramguda 
+        REG_ADD4: Hyderabad-500032 
+        REG_TEL: 91-40-67162222 
+        REG_FAX: 91-40-23001153/23420
+        REG_EMAIL: einward.ris@kfintech.com 
+        REG_INTERNET: www.kfintech.com 
+        FLAG: "A"
+    message: Sucessful
+  encryptionNeeded: false
+CompanyMaster:
+  mockResponse:
+    success: true
+    data:
+      - co_code: 1234.56
+        bsecode: "500325"
+        companyname: "Reliance Industries Ltd."
+        companyshortname: "RELIANCE"
+        categoryname: "Large Cap"
+        isin: "INE002A01018"
+        bsegroup: "A"
+        mcaptype: "Mega Cap"
+        sectorcode: "101"
+        sectorname: "Oil & Gas"
+        industrycode: "1101"
+        industryname: "Integrated Oil & Gas"
+        bselistedflag: "Y"
+        displaytype: "Active"
+        BSEStatus: "Listed"
+      - co_code: 7890.12
+        bsecode: "532174"
+        companyname: "ICICI Bank Ltd."
+        companyshortname: "ICICIBANK"
+        categoryname: "Banking"
+        isin: "INE090A01021"
+        bsegroup: "A"
+        mcaptype: "Large Cap"
+        sectorcode: "102"
+        sectorname: "Financials"
+        industrycode: "2101"
+        industryname: "Banks"
+        bselistedflag: "Y"
+        displaytype: "Active"
+        BSEStatus: "Listed"
+      - co_code: 4567.89
+        bsecode: "500112"
+        companyname: "State Bank of India"
+        companyshortname: "SBIN"
+        categoryname: "Public Sector"
+        isin: "INE062A01020"
+        bsegroup: "A"
+        mcaptype: "Large Cap"
+        sectorcode: "102"
+        sectorname: "Financials"
+        industrycode: "2102"
+        industryname: "Public Sector Banks"
+        bselistedflag: "Y"
+        displaytype: "Active"
+        BSEStatus: "Listed"
+      - co_code: 3456.78
+        bsecode: "532540"
+        companyname: "Tata Consultancy Services Ltd."
+        companyshortname: "TCS"
+        categoryname: "IT"
+        isin: "INE467B01029"
+        bsegroup: "A"
+        mcaptype: "Large Cap"
+        sectorcode: "103"
+        sectorname: "Information Technology"
+        industrycode: "3101"
+        industryname: "IT Services"
+        bselistedflag: "Y"
+        displaytype: "Active"
+        BSEStatus: "Listed"
+      - co_code: 5678.90
+        bsecode: "500180"
+        companyname: "HDFC Bank Ltd."
+        companyshortname: "HDFCBANK"
+        categoryname: "Banking"
+        isin: "INE040A01034"
+        bsegroup: "A"
+        mcaptype: "Large Cap"
+        sectorcode: "102"
+        sectorname: "Financials"
+        industrycode: "2101"
+        industryname: "Private Banks"
+        bselistedflag: "Y"
+        displaytype: "Active"
+        BSEStatus: "Listed"
+  encryptionNeeded: false
