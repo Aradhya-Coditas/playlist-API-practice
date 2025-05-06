@@ -1,2 +1,0 @@
-@Library('Omnenest') _
-buildAutoTrigger()
