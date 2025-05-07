@@ -77,4 +77,5 @@ const (
 
 const (
 	InvalidActionChoice = "invalid action choice"
+	ServiceFailedToCreatePlaylist = "Service failed to create playlist"
 )

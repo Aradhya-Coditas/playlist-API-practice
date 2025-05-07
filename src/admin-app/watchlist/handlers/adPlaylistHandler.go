@@ -4,6 +4,7 @@ import (
 	"admin-app/watchlist/business"
 	"admin-app/watchlist/commons/constants"
 	"admin-app/watchlist/models"
+	"errors"
 	"net/http"
 	genericConstants "omnenest-backend/src/constants"
 
@@ -28,13 +29,12 @@ func (h *AdPlaylistHandler) HandleModifyPlaylistSongs() gin.HandlerFunc {
 			return
 		}
 
-		// Validate required fields
 		if req.Action != constants.ActionAdd && req.Action != constants.ActionDelete {
-			c.JSON(http.StatusBadRequest, gin.H{"error": genericConstants.InvalidActionChoice})
+			c.JSON(http.StatusBadRequest, errors.New(genericConstants.InvalidActionChoice))
 			return
 		}
 		if len(req.SongIDs) == 0 || req.PlaylistID == 0 || req.UserID == 0 {
-			c.JSON(http.StatusBadRequest, gin.H{"error": genericConstants.MissingRequiredFields})
+			c.JSON(http.StatusBadRequest, errors.New(genericConstants.MissingRequiredFields))
 			return
 		}
 

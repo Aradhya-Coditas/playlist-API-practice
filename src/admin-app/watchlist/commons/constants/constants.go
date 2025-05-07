@@ -210,3 +210,7 @@ const (
 	ActionAdd = "add"
 	ActionDelete = "delete"
 )
+
+const(
+	HandleCreatePlaylistLog = "HandleCreatePlaylist"
+)

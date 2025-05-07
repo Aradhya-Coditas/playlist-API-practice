@@ -29,8 +29,19 @@ func NewPlaylistHandler(service *business.CreateSongPlaylistService) *PlaylistHa
 	}
 }
 
+// CreatePlaylist
+// @Summary Create a new playlist
+// @Description Creates a new playlist for a user with specified songs
+// @Tags Playlists
+// @Accept json
+// @Produce json
+// @Param request body models.BFFPlaylistRequest true "Playlist Creation Request"
+// @Success 200 {object} map[string]interface{} "Successfully created playlist"
+// @Failure 400 {object} models.ErrorMessage "Bad request - Invalid input or validation errors"
+// @Failure 500 {object} models.ErrorMessage "Internal server error"
+// @Router /api/Playlist/create [post]
 func (h *PlaylistHandler) HandleCreatePlaylist(ctx *gin.Context) {
-	spanCtx, span := tracer.AddToSpan(ctx.Request.Context(), "HandleCreatePlaylist")
+	spanCtx, span := tracer.AddToSpan(ctx.Request.Context(), constants.HandleCreatePlaylistLog)
 	defer func() {
 		if span != nil {
 			span.End()
@@ -53,7 +64,7 @@ func (h *PlaylistHandler) HandleCreatePlaylist(ctx *gin.Context) {
 				ErrorMessage: genericConstants.JsonBindingFailedError,
 			}
 		}
-		log.With(zap.Error(err)).Error("JSON binding error")
+		log.With(zap.Error(err)).Error(constants.JSONBindingFailedError)
 		responseUtils.SendBadRequest(ctx, []genericModels.ErrorMessage{errorMsg})
 		return
 	}
@@ -69,7 +80,7 @@ func (h *PlaylistHandler) HandleCreatePlaylist(ctx *gin.Context) {
 
 	playlistID, err := h.service.CreatePlaylist(ctx, spanCtx, req)
 	if err != nil {
-		log.With(zap.Error(err)).Error("Service failed to create playlist")
+		log.With(zap.Error(err)).Error(constants.ServiceFailedToCreatePlaylist)
 		switch err.Error() {
 		case constants.DuplicatePlaylistError:
 			responseUtils.SendBadRequest(ctx, []genericModels.ErrorMessage{

@@ -26,6 +26,22 @@ definitions:
     - brokerId
     - userId
     type: object
+  models.BFFPlaylistRequest:
+    properties:
+      description:
+        type: string
+      name:
+        type: string
+      song_ids:
+        items:
+          type: integer
+        type: array
+      user_id:
+        type: integer
+    required:
+    - name
+    - user_id
+    type: object
   models.BFFPredefine:
     properties:
       id:
@@ -73,6 +89,37 @@ info:
   title: omnenest-backend
   version: "1.0"
 paths:
+  /api/Playlist/create:
+    post:
+      consumes:
+      - application/json
+      description: Creates a new playlist for a user with specified songs
+      parameters:
+      - description: Playlist Creation Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.BFFPlaylistRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successfully created playlist
+          schema:
+            additionalProperties: true
+            type: object
+        "400":
+          description: Bad request - Invalid input or validation errors
+          schema:
+            $ref: '#/definitions/models.ErrorMessage'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/models.ErrorMessage'
+      summary: Create a new playlist
+      tags:
+      - Playlists
   /api/watchlist/delete:
     delete:
       consumes:
