@@ -2,86 +2,84 @@ package business
 
 import (
 	"context"
+	"errors"
 	"fmt"
-	"time"
+	"strings"
 
 	"admin-app/watchlist/commons/constants"
 	"admin-app/watchlist/models"
 	"admin-app/watchlist/repositories"
-
-	genericConstants "omnenest-backend/src/constants"
-	"omnenest-backend/src/utils/logger"
+	genericModels "omnenest-backend/src/models"
 	"omnenest-backend/src/utils/postgres"
 	"omnenest-backend/src/utils/tracer"
 
-	"go.uber.org/zap"
+	"gorm.io/gorm"
 )
 
 type AdSongToPlaylistService struct {
-	repo repositories.AdSongToPlaylistRepository
+	repo repositories.AdSongToPlaylistRepositories
 }
 
-func NewAdSongToPlaylistService(repo repositories.AdSongToPlaylistRepository) *AdSongToPlaylistService {
+func NewAdSongToPlaylistService(repo repositories.AdSongToPlaylistRepositories) *AdSongToPlaylistService {
 	return &AdSongToPlaylistService{
 		repo: repo,
 	}
 }
 
-func (s *AdSongToPlaylistService) ModifyPlaylistSongs(ctx context.Context, spanCtx context.Context, req models.BFFAdPlaylistRequest) (*models.BFFAdPlaylistResponse, error) {
-	childCtx, span := tracer.AddToSpan(spanCtx, "ModifyPlaylistSongsService")
+func (service *AdSongToPlaylistService) AdSongToPlaylist(ctx context.Context, spanCtx context.Context, req models.BFFAdPlaylistRequest) (*models.BFFAdPlaylistResponse, error) {
+	childSpanCtx, span := tracer.AddToSpan(ctx, constants.AdSongToPlaylistLog)
 	defer span.End()
 
 	db := postgres.GetPostGresClient().GormDb
-	if db == nil {
-		return nil, fmt.Errorf(genericConstants.DatabaseInstanceNilError)
+
+	action := strings.ToLower(req.Action)
+	if action != constants.ActionAdd && action != constants.ActionDelete {
+		return nil, fmt.Errorf(constants.InvalidActionChoice)
 	}
 
-	logger := logger.GetLogger(ctx)
-	start := time.Now()
+	var playlistSongs []genericModels.PlaylistSongs
+	for _, songID := range req.SongIDs {
+		playlistSongs = append(playlistSongs, genericModels.PlaylistSongs{
+			PlaylistID: req.PlaylistID,
+			SongID:     songID,
+		})
+	}
 
-	var conditions map[string]interface{}
-	switch req.Action {
+	condition := map[string]interface{}{
+		constants.Playlist_id: req.PlaylistID,
+	}
+	switch action {
 	case constants.ActionAdd:
-		conditions = map[string]interface{}{
-			"action":      constants.ActionAdd,
-			"playlist_id": req.PlaylistID,
-			"song_ids":    req.SongIDs,
+		if err := service.repo.AddSongToPlaylist(childSpanCtx, db, condition, playlistSongs); err != nil {
+			return nil, service.handleDBError(err)
 		}
 	case constants.ActionDelete:
-		conditions = map[string]interface{}{
-			"action":      constants.ActionDelete,
-			"playlist_id": req.PlaylistID,
-			"song_ids":    req.SongIDs,
+		condition[constants.Song_id] = req.SongIDs
+		if err := service.repo.DeleteSongToPlaylist(childSpanCtx, db, condition); err != nil {
+			return nil, service.handleDBError(err)
 		}
-	default:
-		return nil, fmt.Errorf("invalid action: %s", req.Action)
 	}
 
-	if err := s.repo.ModifyPlaylistSongs(childCtx, db, conditions); err != nil {
-		logger.Error("Error modifying playlist songs", zap.Error(err))
-		return nil, fmt.Errorf("failed to modify playlist songs: %w", err)
-	}
-
-	playlist, err := s.repo.GetPlaylistDetails(childCtx, db, req.PlaylistID)
+	songNames, err := service.repo.GetPlaylistSongNames(childSpanCtx, db, req.PlaylistID)
 	if err != nil {
-		logger.Error("Error fetching playlist details", zap.Error(err))
-		return nil, fmt.Errorf("failed to fetch playlist details: %w", err)
-	}
-
-	var songNames []string
-	for _, song := range playlist.Songs {
-		songNames = append(songNames, song.Title)
+		return nil, err
 	}
 
 	response := &models.BFFAdPlaylistResponse{
-		PlaylistID:   playlist.ID,
-		PlaylistName: playlist.Name,
-		SongNames:    songNames,
+		Message:    fmt.Sprintf(constants.SuccessfullyAddedDeletedSongsToPlaylist, action),
+		PlaylistID: req.PlaylistID,
+		SongNames:  songNames,
 	}
 
-	logger.Info("Successfully modified playlist songs",
-		zap.Int("playlistID", req.PlaylistID),
-		zap.Any("latency", time.Since(start).Milliseconds()))
-
 	return response, nil
+}
+
+func (service *AdSongToPlaylistService) handleDBError(err error) error {
+	if errors.Is(err, gorm.ErrRecordNotFound) {
+		return fmt.Errorf(constants.InvalidPlaylistIdExistError)
+	}
+	if strings.Contains(err.Error(), constants.DuplicateKeyViolationError) {
+		return fmt.Errorf(constants.DuplicatePlaylistError)
+	}
+	return err
 }

@@ -4,97 +4,87 @@ import (
 	"admin-app/watchlist/business"
 	"admin-app/watchlist/commons/constants"
 	"admin-app/watchlist/models"
+	"encoding/json"
 	"errors"
 	"fmt"
-	"strings"
-
 	genericConstants "omnenest-backend/src/constants"
 	genericModel "omnenest-backend/src/models"
-	"omnenest-backend/src/utils/logger"
 	"omnenest-backend/src/utils/responseUtils"
 	"omnenest-backend/src/utils/tracer"
 	"omnenest-backend/src/utils/validations"
+	"strings"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
-	"go.uber.org/zap"
 	"gorm.io/gorm"
 )
 
-type AdSongToPlaylistHandler struct {
+type adSongToPlaylistController struct {
 	service *business.AdSongToPlaylistService
 }
 
-func NewAdSongToPlaylistHandler(service *business.AdSongToPlaylistService) *AdSongToPlaylistHandler {
-	return &AdSongToPlaylistHandler{
+func NewAdSongToPlaylistController(service *business.AdSongToPlaylistService) *adSongToPlaylistController {
+	return &adSongToPlaylistController{
 		service: service,
 	}
 }
 
-func (h *AdSongToPlaylistHandler) HandleAdToSongPlaylist(ctx *gin.Context) {
+// HandleAdToSongPlaylist.
+// @Summary Modify Playlist
+// @Description Modify Playlist based on the provided request
+// @Tags Playlist
+// @Accept json
+// @Produce json
+// @Param payload body models.BFFAdPlaylistRequest true "Modify Playlist Request"
+// @Success 200 {object} models.BFFAdPlaylistResponse "Playlist songs data"
+// @Failure 400 {object} models.ErrorMessage "Bad request"
+// @Failure 404 {object} models.ErrorMessage "Resource not found"
+// @Failure 409 {object} models.ErrorMessage "Conflict"
+// @Failure 500 {object} models.ErrorMessage "Internal server error"
+// @Router /api/playlist/modify [post]
+func (controller *adSongToPlaylistController) HandleAdToSongPlaylist(ctx *gin.Context) {
 	spanCtx, span := tracer.AddToSpan(ctx.Request.Context(), "HandleAdToSongPlaylist")
 	defer span.End()
 
-	log := logger.GetLogger(ctx)
-
-	var req models.BFFAdPlaylistRequest
-	if err := ctx.ShouldBindJSON(&req); err != nil {
-		h.sendInvalidRequestResponse(ctx, log, err)
+	var request models.BFFAdPlaylistRequest
+	if err := ctx.ShouldBindJSON(&request); err != nil {
+		var jsonErr *json.UnmarshalTypeError
+		if errors.As(err, &jsonErr) {
+			responseUtils.SendBadRequest(ctx, []genericModel.ErrorMessage{
+				{Key: jsonErr.Field, ErrorMessage: genericConstants.JsonBindingFieldError},
+			})
+			return
+		}
+		responseUtils.SendBadRequest(ctx, []genericModel.ErrorMessage{
+			{Key: "request", ErrorMessage: genericConstants.InvalidRequestFormatError},
+		})
 		return
 	}
 
-	if err := validations.GetBFFValidator(spanCtx).Struct(&req); err != nil {
-		h.sendValidationErrorResponse(ctx, log, err)
+	if err := validations.GetBFFValidator(spanCtx).Struct(&request); err != nil {
+		validationErrors, _ := validations.FormatValidationErrors(spanCtx, err.(validator.ValidationErrors))
+		responseUtils.SendBadRequest(ctx, validationErrors)
 		return
 	}
 
-	response, err := h.service.ModifyPlaylistSongs(ctx, spanCtx, req)
+	response, err := controller.service.AdSongToPlaylist(ctx, spanCtx, request)
 	if err != nil {
-		h.handleServiceError(ctx, log, err)
-		return
-	}
-
-	responseUtils.SendStatusOK(ctx, genericConstants.BFFResponseSuccessMessage, response)
-}
-
-func (h *AdSongToPlaylistHandler) sendInvalidRequestResponse(ctx *gin.Context, log logger.Logger, err error) {
-	log.Error("JSON Binding Error", zap.Error(err))
-	errorMsg := genericModel.ErrorMessage{
-		Key:          constants.Name,
-		ErrorMessage: genericConstants.JsonBindingFieldError,
-	}
-	responseUtils.SendBadRequest(ctx, []genericModel.ErrorMessage{errorMsg})
-}
-
-func (h *AdSongToPlaylistHandler) sendValidationErrorResponse(ctx *gin.Context, log logger.Logger, err error) {
-	validationErrors, _ := validations.FormatValidationErrors(ctx.Request.Context(), err.(validator.ValidationErrors))
-	log.Error("Validation Error", zap.Error(err))
-	responseUtils.SendBadRequest(ctx, validationErrors)
-}
-
-func (h *AdSongToPlaylistHandler) handleServiceError(ctx *gin.Context, log logger.Logger, err error) {
-	log.Error("Service Error", zap.Error(err))
-
-	if strings.Contains(err.Error(), constants.ForeignKeyViolationError) {
 		if strings.Contains(err.Error(), constants.InvalidPlaylistIdExistError) {
 			responseUtils.SendNotFoundJSON(ctx, fmt.Errorf(constants.InvalidPlaylistIdExistError))
 			return
 		}
-		if strings.Contains(err.Error(), constants.InvalidSongIdsError) {
+		if strings.Contains(err.Error(), constants.DuplicatePlaylistError) {
+			responseUtils.SendConflict(ctx, constants.DuplicatePlaylistError)
+			return
+		}
+		if errors.Is(err, gorm.ErrRecordNotFound) {
 			responseUtils.SendNotFoundJSON(ctx, fmt.Errorf(constants.InvalidSongIdsError))
 			return
 		}
-	}
 
-	if errors.Is(err, gorm.ErrRecordNotFound) {
-		responseUtils.SendNotFoundJSON(ctx, fmt.Errorf(constants.InvalidPlaylistIdExistError))
+		responseUtils.SendInternalServerError(ctx, err)
 		return
 	}
 
-	if strings.Contains(err.Error(), genericConstants.DuplicateKeyError) {
-		responseUtils.SendConflict(ctx, constants.DuplicatePlaylistError)
-		return
-	}
-
-	responseUtils.SendInternalServerError(ctx, err)
+	responseUtils.SendStatusOK(ctx, genericConstants.BFFResponseSuccessMessage, response)
 }

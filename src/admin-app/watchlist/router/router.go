@@ -79,9 +79,9 @@ func GetRouter(middlewares ...gin.HandlerFunc) *gin.Engine {
 	createUserService := business.NewCreateSongPlaylistService(createUserPlaylistRepository)
 	createUserController := handlers.NewPlaylistHandler(createUserService)
 
-	modifyPlaylistRepository := repositories.NewAdSongToPlaylistRepository()
+	modifyPlaylistRepository := repositories.NewAdSongToPlaylistRepositories(useDBMocks)
 	modifyPlaylistService := business.NewAdSongToPlaylistService(modifyPlaylistRepository)
-	modifyPlaylistController := handlers.NewAdSongToPlaylistHandler(modifyPlaylistService)
+	modifyPlaylistController := handlers.NewAdSongToPlaylistController(modifyPlaylistService)
 
 	v1Routes := router.Group(genericConstants.RouterV1Config)
 	{

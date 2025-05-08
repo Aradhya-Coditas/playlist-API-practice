@@ -84,4 +84,5 @@ const (
 const (
 	InvalidPlaylistIdExistError = "invalid playlist id"
 	SongsAlreadyExistError = "songs already exist"
+	NoSongsFoundError = "no songs found for playlist ID %d"
 )

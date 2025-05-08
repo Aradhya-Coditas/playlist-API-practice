@@ -128,6 +128,10 @@ const (
 	GetScripMasterDetailsByGroupQuery     = `SELECT "exchange_segment","trading_symbol","scrip_token","exchange","instrument_type","symbol_name","unique_key","display_expiry_date","strike_price","decimal_precision" FROM "scrip_master" WHERE (exchange_segment = $1 AND scrip_token IN ($2,$3,$4,$5,$6))`
 )
 
+const (
+	GetPlaylistSongNamesQuery = `SELECT s.title FROM playlist_songs ps JOIN songs s ON ps.song_id = s.id WHERE ps.playlist_id = ?`
+)
+
 var GetWatchlistsContainingScripColumns = []string{
 	"watchlists.id",
 	"watchlists.watchlist_name",
@@ -163,17 +167,16 @@ const (
 
 const (
 	User_id       = "user_id"
-	Song_ids       = "song_ids"
+	Song_ids      = "song_ids"
 	SongCondition = "song_condition"
 	PlaylistData  = "playlist_data"
 	PlaylistSongs = "playlist_songs"
 	Name          = "name"
 	Song          = "song"
-	Playlist_id   = "playlist_id"
+	Playlist_id   = "playlistID"
 	Song_id       = "song_id"
 	ID_IN         = "id IN"
 	Description   = "description"
-	
 )
 
 const (
@@ -195,27 +198,30 @@ const (
 )
 
 const (
-	UsersTable      = "users"
-	PlaylistsTable = "playlists"
+	UsersTable = "users"
+	Playlist   = "playlists"
 	SongsTable = "songs"
 )
 
 const (
-	SuccessfullyModifiedPlaylist = "successfully modified playlist"
-	SuccessfullyAddedSongInPlaylist = "successfully Added songs in playlist"
-	SuccessfullyDeletedSongFromPlaylist = "successfully Deleted songs from playlist"
+	SuccessfullyModifiedPlaylist        = "successfully modified playlist"
+	SuccessfullyAddedDeletedSongsToPlaylist = "Successfully %sed songs in the playlist"
 )
 
 const (
-	Action = "action"
-	ActionAdd = "add"
+	Action       = "action"
+	ActionAdd    = "add"
 	ActionDelete = "delete"
 )
 
-const(
+const (
 	HandleCreatePlaylistLog = "HandleCreatePlaylist"
 )
 
-const(
+const (
 	ForeignKeyViolationError = "foreign key violation error"
+)
+
+const (
+	AdSongToPlaylistLog = "AdSongToPlaylist"
 )

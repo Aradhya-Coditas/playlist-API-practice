@@ -4,6 +4,7 @@ package constants
 const (
 	StatusCodeKey = "statusCode"
 	LatencyKey    = "latencyMs"
+	ResultKey     = "result"
 	MessageKey    = "msg"
 	LogLevelKey   = "logLevel"
 )
