@@ -26,6 +26,7 @@ const (
 	ScripLimitExceededForFewWatchlistsError = "scrip limit exceeded for few watchlists"
 	AllWatchlistIdsInvalidError             = "all the watchlists are invalid"
 	FewWatchlistIdsInvalidError             = "few watchlist IDs are invalid"
+	NoRowsAffectedError                     = "no rows affected"
 )
 
 // Watchlist BFF Error Messages
@@ -58,7 +59,7 @@ const (
 
 const (
 	SongsFetchingError               = "error while fetching songs"
-	InvalidSongIDsError              = "invalid Song Id"
+	InvalidSongIdsError              = "invalid Song Id"
 	DuplicatePlaylistError           = "playlist Already Created"
 	DuplicateKeyViolationError       = "duplicate key value violates unique constraint"
 	InvalidInputError                = "invalid input error"
@@ -78,4 +79,9 @@ const (
 const (
 	InvalidActionChoice = "invalid action choice"
 	ServiceFailedToCreatePlaylist = "Service failed to create playlist"
+)
+
+const (
+	InvalidPlaylistIdExistError = "invalid playlist id"
+	SongsAlreadyExistError = "songs already exist"
 )

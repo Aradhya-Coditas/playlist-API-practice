@@ -27,12 +27,17 @@ func NewCreateUserPlaylistRepository(useDBMocks bool) CreateUserPlaylistReposito
 
 func (r *createUserPlaylistRepository) CreatePlaylist(ctx context.Context, db *gorm.DB, playlist genericModels.Playlist) (*int, error) {
 	result := db.WithContext(ctx).Table(constants.PlaylistsTable).Create(&playlist)
+
+	if result.RowsAffected == 0 {
+		return nil, fmt.Errorf(constants.NoRowsAffectedError)
+	}
 	if result.Error != nil {
 		if strings.Contains(result.Error.Error(), constants.DuplicateKeyViolationError) {
 			return nil, fmt.Errorf(constants.DuplicatePlaylistError)
 		}
 		return nil, result.Error
 	}
+
 	return &playlist.ID, nil
 }
 

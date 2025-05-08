@@ -36,9 +36,9 @@ func NewPlaylistHandler(service *business.CreateSongPlaylistService) *PlaylistHa
 // @Accept json
 // @Produce json
 // @Param request body models.BFFPlaylistRequest true "Playlist Creation Request"
-// @Success 200 {object} map[string]interface{} "Successfully created playlist"
-// @Failure 400 {object} models.ErrorMessage "Bad request - Invalid input or validation errors"
-// @Failure 500 {object} models.ErrorMessage "Internal server error"
+// @Success 200 {object} models.BFFPlaylistResponse "Successfully created playlist"
+// @Failure 400 {object} models.BFFPlaylistResponse "Bad request - Invalid input or validation errors"
+// @Failure 500 {object} models.BFFPlaylistResponse "Internal server error"
 // @Router /api/Playlist/create [post]
 func (h *PlaylistHandler) HandleCreatePlaylist(ctx *gin.Context) {
 	spanCtx, span := tracer.AddToSpan(ctx.Request.Context(), constants.HandleCreatePlaylistLog)
@@ -99,11 +99,11 @@ func (h *PlaylistHandler) HandleCreatePlaylist(ctx *gin.Context) {
 	}
 
 	resp := models.BFFPlaylistResponse{
-		SuccessMessage: constants.SuccessfullyCreatedPlaylist,
+		Message: constants.SuccessfullyCreatedPlaylist,
 	}
 	respData := map[string]interface{}{
 		"playlist_id": playlistID,
-		"message":     resp.SuccessMessage,
+		"message":     resp.Message,
 	}
 	responseUtils.SendStatusOK(ctx, genericConstants.BFFResponseSuccessMessage, respData)
 }

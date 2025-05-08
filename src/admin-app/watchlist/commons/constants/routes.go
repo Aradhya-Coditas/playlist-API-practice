@@ -8,6 +8,6 @@ const (
 	Metrics                     = "/metrics"
 	GetWatchListScrips          = "/api/watchlist/scrips/list"
 	GetWatchlist                = "/api/watchlist/get"
-	CreatePlaylist              = "/api/Playlist/create"
-	ModifyPlaylist              = "/api/Playlist/modify"
+	CreatePlaylist              = "/api/playlist/create"
+	ModifyPlaylist              = "/api/playlist/modify"
 )

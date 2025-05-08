@@ -1,12 +1,12 @@
 package models
 
 type BFFPlaylistRequest struct {
-	Name        string `json:"name" validate:"required"`
-	Description string `json:"description"`
-	SongIDs     []int  `json:"song_ids"`
-	UserID      int    `json:"user_id" validate:"required"`
+	Name        string `json:"name" validate:"required" example:"Playlist Name"`
+	Description string `json:"description" example:"Playlist Description"`
+	SongIDs     []int  `json:"songIds" example:"[1,2,3]"`
+	UserID      int    `json:"userId" validate:"required" example:"1"`
 }
 
 type BFFPlaylistResponse struct {
-	SuccessMessage string `json:"message"`
+	Message string `json:"message" example:"Successfully created playlist"`
 }

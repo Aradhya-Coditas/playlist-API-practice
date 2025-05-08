@@ -51,7 +51,6 @@ func GetRouter(middlewares ...gin.HandlerFunc) *gin.Engine {
 
 	// useMocks := applicationConfig.AppConfig.UseMocks
 	useDBMocks := applicationConfig.AppConfig.UseDBMocks
-
 	// Initialize controller and services
 	// nestApiWrapper := nestIntegration.GetNestWrapper(useMocks)
 
@@ -80,9 +79,9 @@ func GetRouter(middlewares ...gin.HandlerFunc) *gin.Engine {
 	createUserService := business.NewCreateSongPlaylistService(createUserPlaylistRepository)
 	createUserController := handlers.NewPlaylistHandler(createUserService)
 
-	modifyPlaylistsRepository := repositories.NewAdPlaylistRepository(useDBMocks)
-	modifyPlaylistsService := business.NewAdPlaylistService(modifyPlaylistsRepository)
-	modifyPlaylistsController := handlers.NewAdPlaylistHandler(modifyPlaylistsService)
+	modifyPlaylistRepository := repositories.NewAdSongToPlaylistRepository()
+	modifyPlaylistService := business.NewAdSongToPlaylistService(modifyPlaylistRepository)
+	modifyPlaylistController := handlers.NewAdSongToPlaylistHandler(modifyPlaylistService)
 
 	v1Routes := router.Group(genericConstants.RouterV1Config)
 	{
@@ -104,7 +103,7 @@ func GetRouter(middlewares ...gin.HandlerFunc) *gin.Engine {
 		v1Routes.POST(serviceConstant.GetWatchListScrips, getWatchListController.HandleGetWatchlistScrips)
 		v1Routes.POST(serviceConstant.GetWatchlist, getWatchlistController.HandleGetWatchlist)
 		v1Routes.POST(serviceConstant.CreatePlaylist, createUserController.HandleCreatePlaylist)
-		v1Routes.POST(serviceConstant.ModifyPlaylist, modifyPlaylistsController.HandleModifyPlaylistSongs())
+		v1Routes.POST(serviceConstant.ModifyPlaylist, modifyPlaylistController.HandleAdToSongPlaylist)
 	}
 	return router
 }

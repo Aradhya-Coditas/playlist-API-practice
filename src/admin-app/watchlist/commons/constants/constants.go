@@ -207,10 +207,15 @@ const (
 )
 
 const (
+	Action = "action"
 	ActionAdd = "add"
 	ActionDelete = "delete"
 )
 
 const(
 	HandleCreatePlaylistLog = "HandleCreatePlaylist"
+)
+
+const(
+	ForeignKeyViolationError = "foreign key violation error"
 )
